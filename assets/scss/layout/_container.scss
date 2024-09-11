@@ -1,0 +1,24 @@
+.container{
+    max-width: 1224px !important;
+}
+
+.box-1{
+    max-width: 704px;
+    width: 100%;
+}
+.box-2{
+    max-width: 220px;
+    width: 100%;
+}
+
+@media (max-width:576px) {
+    .container{
+    padding: 0 16px;
+}
+}  
+@media (min-width:576px) {
+      .box-3-576{
+    max-width: 392px;
+    width: 100%;
+}
+} 

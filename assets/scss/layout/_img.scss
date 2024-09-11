@@ -1,5 +1,43 @@
-.b {
-  border: 1px saddlebrown solid;
-  color: red;
-  font-size: 16px;
+*{
+  outline: 1px solid  red;
+}
+
+.img-1{
+  width: 142px;
+  height: 32px;
+}
+
+.img-2{
+  width: 32px;
+  height: 32px;
+}
+
+.img-3{
+  width: 24px;
+  height: 24px;
+}
+
+.img-4{
+  width: 16px;
+  height: 16px;
+}
+
+.img-5{
+    width: 220px;
+    height: 48px;
+}
+
+.img-7{
+  width: 36px;
+  height: 36px;
+}
+@media (min-width:576px) {
+  .img-1-576{
+    width: 220px;
+    height: 48px;
+  }
+  .img-2-576{
+    width: 40px;
+    height: 40px;
+  }
 }
