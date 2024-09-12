@@ -10,7 +10,12 @@
     max-width: 220px;
     width: 100%;
 }
-
+.w-20{
+    width:calc(20% - 18px) !important;
+}
+.w-33{
+    width: calc(33.333%) !important;
+}
 @media (max-width:576px) {
     .container{
     padding: 0 16px;
@@ -20,5 +25,12 @@
       .box-3-576{
     max-width: 392px;
     width: 100%;
+}
+    .box-3-576{
+        max-width: 521px;
+        width: 100%;
+    }
+    .box-4{
+    height: 48px;
 }
 } 
