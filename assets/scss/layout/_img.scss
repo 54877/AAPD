@@ -1,6 +1,6 @@
-*{
-  outline: 1px solid  red;
-}
+// *{
+//   outline: 1px solid  red;
+// }
 
 .img-1{
   width: 142px;
@@ -31,6 +31,42 @@
   width: 36px;
   height: 36px;
 }
+
+.img-8{
+  width: 39px;
+  height: 39px;
+}
+
+.img-9{
+  width: 137px;
+  height: 84px;
+}
+.img-10{
+  width: 257px;
+  height: 158px;
+}
+.img-11{
+  width: 220px;
+  height: 220px;
+}
+.img-12{
+  width: 72px;
+  height: 72px;
+}
+.img-13{
+  width: 20px;
+  height: 20px;
+}
+
+.blue-icon{
+  filter: invert(44%) sepia(12%) saturate(1173%) hue-rotate(177deg) brightness(99%) contrast(85%);
+}
+.fs-over{
+  overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
 @media (min-width:576px) {
   .img-1-576{
     width: 220px;

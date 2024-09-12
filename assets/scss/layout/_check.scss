@@ -4,5 +4,14 @@
 }
 
 .hover-shadow:hover{
-    box-shadow: 0 .5rem 1rem rgba($black, .15);
+    box-shadow: 0 .5rem 1rem rgba($black, .15);;
+}
+
+.focus-1:focus{
+    div:last-child{
+        opacity: 0 !important;
+    }
+    img:first-child{
+        opacity: 1 !important;
+    }
 }
