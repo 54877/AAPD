@@ -16,6 +16,20 @@
 .w-33{
     width: calc(33.333%) !important;
 }
+.w-50-8{
+    width: calc(50% - 8px);
+}
+
+.w-30-de{
+    width: 96px !important;
+}
+
+.w-33-40{
+    width: calc(33.33% - 13px);
+}
+.w-25-48{
+    width: calc(25% - 12px);
+}
 @media (max-width:576px) {
     .container{
     padding: 0 16px;
@@ -33,4 +47,12 @@
     .box-4{
     height: 48px;
 }
+    .box-5{
+        max-width: 640px;
+        width: 100%;
+        height: 360px;
+    }
+    .w-50-992{
+        width: 50% !important;
+    }
 } 
