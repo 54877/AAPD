@@ -1,6 +1,6 @@
-// *{
-//   outline: 1px solid  red;
-// }
+  // *{
+  //   outline: 1px solid  red;
+  // }
 
 .img-1{
   width: 142px;
@@ -57,14 +57,16 @@
   width: 20px;
   height: 20px;
 }
-
-.blue-icon{
-  filter: invert(44%) sepia(12%) saturate(1173%) hue-rotate(177deg) brightness(99%) contrast(85%);
+.img-14{
+  width: 42px;
+  height: 42px;
 }
-.fs-over{
-  overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
+.img-15{
+  width: 96px;
+  height: 96px;
+}
+.img-16{
+  width: 248px;
 }
 
 @media (min-width:576px) {
