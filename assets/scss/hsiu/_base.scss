@@ -1,0 +1,28 @@
+* {
+  font-family: 'Roboto';
+  outline: 0px;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+
+h1 {
+  font-size: 24px;
+}
+@include media-breakpoint-up(md) { 
+    h1 {
+    font-size: 40px;
+  }
+}
+
+.flex-grow-1 { 
+  flex-grow: 1;
+}
+.flex-shrink0{
+  flex-shrink: 0
+}
+
+.w-80 {
+  width: 80%;
+}
