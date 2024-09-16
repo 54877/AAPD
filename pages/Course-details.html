@@ -13,7 +13,7 @@
 
 <body>
     <main class="position-sticky sticky-top border-bottom">
-        <%- include('./layout/nav'); -%>
+        <%- include('./layout/nav-details'); -%>
     </main>
 
     <main class="container px-4 pb-lg-9">
@@ -28,9 +28,20 @@
                  alt="">
             <p class="fs-6 fw-medium text-neutral-66 mb-0 me-1">毛線課程</p>
         </section>
-        <section class="d-lg-flex">
-            <img class="w-100 rounded-3 mb-3 mb-lg-0 box-5 me-lg-4 flex-shrink-0"
-                 src="../assets/images/course-1.png" alt="">
+        <section class="d-lg-flex">  
+                <iframe class="w-100 rounded-3 img-bot mb-3 mb-lg-0 box-5 me-lg-4 flex-shrink-0 d-none d-lg-block"
+                        src="https://www.youtube.com/embed/Qv6JcQy-bqo?si=X-1p24K1a_HFGuFf"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+
+                <iframe class="w-100 rounded-3 img-bot mb-3 d-lg-none"
+                        src="https://www.youtube.com/embed/Qv6JcQy-bqo?si=X-1p24K1a_HFGuFf" height="245.25px"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
             <div class="flex-shrink-1">
                 <h1 class="fs-4 fw-bold text-main-900 mb-3 fs-lg-2">毛線鉤織必修課</h1>
                 <section class="d-flex align-items-center mb-3">
@@ -365,19 +376,19 @@
                                     剪刀：一把小巧且鋒利的剪刀，用於剪斷毛線。</li>
                                 <li class="collapse" id="new-3">
                                     <p
-                                       class="mb-4 mt-4 fw-medium fs-6 text-neutral-500">
+                                       class="mb-0 fw-medium fs-6 text-neutral-500">
                                         縫紉針（毛線針）：用於收尾和拼接作品時，將剩餘的線頭藏好或將不同的編織片段縫合在一起。選擇較大的縫紉針，方便穿入毛線。
                                     </p>
                                 </li>
                                 <li class="collapse" id="new-3">
                                     <p
-                                       class="mb-4 mt-4 fw-medium fs-6 text-neutral-500">
+                                       class="mb-0 fw-medium fs-6 text-neutral-500">
                                         量尺或捲尺：在製作需要準確尺寸的作品時（如圍巾或衣物），量尺可以幫助你測量編織的長度和寬度，確保作品符合預期大小。
                                     </p>
                                 </li>
                                 <li class="collapse" id="new-3">
                                     <p
-                                       class="mb-4 mt-4 fw-medium fs-6 text-neutral-500">
+                                       class="mb-0 fw-medium fs-6 text-neutral-500">
                                         記號扣（或別針）：在編織過程中標記起始點或特定的針數位置，防止在編織複雜花樣時出錯。這樣你可以更容易追蹤自己的進度，尤其是對於長時間的項目。
                                     </p>
                                 </li>
@@ -1253,7 +1264,7 @@
     
                     </div>
     
-                    <!-- 課程評價 -->
+                    <!-- 課程講師 -->
                     <div class="bg-white rounded-6 p-4 px-lg-9  mb-3">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <p class="fs-4 fw-bold text-neutral-950 mb-0 ">課程講師</p>
@@ -1493,7 +1504,7 @@
             </div>
         </section>
     </main>
-
+    <!-- 課程推薦 -->
     <main class="container px-4 d-none d-lg-flex mb-12">
         <!-- pc -->
         <div class=" bg-white ">
