@@ -461,6 +461,8 @@ $theme-colors: (
   "pick-100":    #F9E7E8, 
   "pick-50":     #F6F7F9, 
   "sec-100":     #FFF5D3,
+  "sec-300":      #FFD46D,
+  "bg-444":       #444444,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -577,6 +579,7 @@ $spacers: (
  22: 59px,
  23: 9px,
  24: 14px,
+ 25: 40px,
 ) !default;
 // scss-docs-end spacer-variables-maps
 

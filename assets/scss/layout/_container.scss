@@ -10,6 +10,11 @@
     max-width: 220px;
     width: 100%;
 }
+.box-3{
+    max-width: 830px !important;
+    width: 100%;
+}
+
 .w-20{
     width:calc(20% - 18px) !important;
 }
@@ -54,5 +59,9 @@
     }
     .w-50-992{
         width: 50% !important;
+    }
+    .box-6-992{
+        max-width: 760px;
+        width: 100%;
     }
 } 
