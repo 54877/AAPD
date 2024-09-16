@@ -1,0 +1,1391 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Learning-線上課程網站</title>
+  <script type="module" crossorigin src="/AAPD/assets/main-ceb83f4c.js"></script>
+  <link rel="stylesheet" href="/AAPD/assets/main-610dbe55.css">
+</head>
+
+<body>
+    <main class="position-sticky sticky-top border-bottom">
+        <article class="container bg-white px-4">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-6">
+        <div class="d-flex align-items-center justify-content-between w-100">
+            <div class="me-lg-5">
+                <a class="navbar-toggler p-0 mx-2  rounded-0 border-0"
+                   type="button"
+                   data-bs-toggle="offcanvas"
+                   data-bs-target="#Navbar"
+                   aria-controls="Navbar">
+                    <span class="navbar-toggler-icon align-middle img-3"></span>
+                </a>
+                <a href="index.html">
+                    <img class="img-1 img-1-576"
+                         src="/AAPD/assets/index-logo-638fb9ac.png" alt="">
+                </a>
+            </div>
+
+            <div class="d-lg-flex align-items-center position-relative d-none me-5 flex-grow-1"
+                 id="pc-search" data-bs-toggle="dropdown"
+                 aria-expanded="false">
+                <form class="d-flex w-100">
+                    <input class="form-control ps-5 py-lg-2 rounded-pill"
+                           type="search"
+                           placeholder="想上什麼課呢？"
+                           aria-label="Search">
+                </form>
+                <img class="img-3 position-absolute top-50 translate-middle-y ms-10"
+                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABTlJREFUeF7tnc1S2zAQx6WE92h4ksIRODQcyExPkCcBngQ4dSYcSA/AseFJ6gchUSvHoh4PsVarj93U65nOQMey7P9vtatdS0YrOUgV0KS9S+dKABAbgQAQAMQKEHcvI0AAECtA3L2MAAFArABx9zICBACxAsTdywgYMoDXpx8TNTq4tBoYY44aLSZKKfuvan6vjPvZqLeR0tXJ+cWKWLdk3RcfAU50Y8xVIzTmYSyU1cjoh32HUQzA69PjkdHmLkL0XaAqrfX9ybeLWwxJ6jbZAWQUvqtdpY2e79uIyArgZbn4pZRyvr2Usa1Op7PjUp3F9pMFgPXzRo+tuyktvtOj0mZ9fHL+3QXyWJ2ytU8OoHE51vKpj8oYdXt2PrunvpG+/pMCeH5aXGmtrOVzOdgH6GQAIiy/Fklt1NuW2ntlXUc9Xa2Pg8lGmYnS6qveurTm/8GMWQfnJAAan/8bLIlSSmt9ozbvD6F+upVH3AT0xzYmJAEQONtZabOehwrfFduC2OjxtVbKJnSQozqdzg4hJ5Y8JxpAiPjGqHnqoPj68/HaGAMdDeymqFEAAvx+Vj/cuEA78/LGB230MadkLQoA0Pqziu/cRQAEVq4IDQA65SxpcdDJQA5XiI0baAAvy4Wd9fQO+ZLiOwGAhsFmFKAAQB7SKHV/Np3NsZYR0w7iGimM47NnwgFYLu580z/KB4S4IkoDaYNAAfC5Hw4P9+w3EhZuCAvA9BaYzPowNtGKcUG2LWQUUI5S93zBACD+/3Q6C75urOCftffFAlsOoX6TFiyUb2hzcD8fuYEnS+Zwr+kBZCg3YEcHIFMnL00EA/AOa0ap/v8KoDcB0wwCcKc80VcmJ58JYUZA7wyISwAGzoQEANa/Q9u9LBesDQYzAsQFQekDzsMA6F3rwyG5+RcD6tV4fSs0ZBYEMBL0Kb6k8f/MAwiroF1S+5A0BrsgwDtY8pmFA+EtGjJIGsMBbJcd9i5B4RAHAEmY4pCzBAOw1uXLhjn4Vp/7+btulTwAWy1RACBuiHKpOMj6GVRC8QC2my18C3DJLMw3QusHZ1IywY0A4PJzino7xPo5uEj0C5nQ1QclXRFEfE7Wj3ZBrWkeZAdMkYWxkFeQ9r45WX80AKjF2S2nOUdCyH1wW6CLigHtjBMS8Jrzs2yW8JUb2vfKIT/pZuvRAALWZNZ9WxcwMuvb2FUTmOXpHPeNRQNovfgArU52owG70Rq5QcMZXpF4FFI9TAIA+PZp133Vu95V8xmCXVuURiP9JWAfQJ8GrCAkA2CfOMQfh1hJhnPZQEgKAOmOMugLuiQLCMkBMIFgN2h7d8tsp8e0G7qzAHAQ7KdoEvltkEm7fMPGEaPH0EkBKYRsAJxipT5b0K07BU6PySBkB9CpHV0DXQPU4nv3G+8DhGIAPtyS3fmuzaXe+mjsxzzAWTV3CEUBdM26zmbV+Mh+hqApTLnPlbkA+vHZMq11/ZkyzHJyzhBIAYD9TIITuUIYDADE9LhIYB4UAI4QBgeAG4RBAuAEYbAAuEAYNAAOEAYPgBqCAGhyDKo8QQC0kjwKCAKgk2WXhiAAPilzlIQgAHbUmUpBEAA9hb4SEASAp9IaCCF4Sb4AAJS6gRBQe+MEAAAAIFlDid+8hALegZzmvsLVXW2BFl8AIIyq446ixBcACAAtd3SX4k+lSAxAQkjVTACkUhJ5HQGAFC5VMwGQSknkdQQAUrhUzQRAKiWR1xEASOFSNRMAqZREXkcAIIVL1UwApFISeR0BgBQuVTMBkEpJ5HX+AJQ0Xo5vswgPAAAAAElFTkSuQmCC"
+                     alt="">
+            </div>
+
+            <div class="d-flex align-items-center flex-shrink-0">
+
+                <ul class="navbar-nav d-none d-lg-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active py-0 px-3 me-3 py-2 fw-medium"
+                           aria-current="page"
+                           href="Course-details.html">探索課程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active py-0 px-3 me-3 py-2  fw-medium"
+                           aria-current="page"
+                           href="#">創意市集</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active py-0 px-3 me-9 py-2 fw-bold text-dark-100"
+                           aria-current="page"
+                           href="learn.html">我的課程</a>
+                    </li>
+                </ul>
+
+                <a class="navbar-toggler p-0 me-2 rounded-0 border-0"
+                   type="button"
+                   data-bs-toggle="offcanvas"
+                   data-bs-target="#search"
+                   aria-controls="search">
+                    <img class="img-2 p-1"
+                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJHSURBVHgB1VS9bhNBEJ7ZS6zINFYcm5KjCJwPI90bcCUdSUlnniAu6ey8QVLSxR2lXVHivMGhxGfjILF0yD6i6yIU3w67t5xF0K1/kCnySbu3p52Zb2Z2ZgD+M9B04dl2KSnuHAgQL5DQ1tIUM4QuS9h5MBpx+FeCZ7VakzHRIoKSQYkTYOcyHLVhXYK667QBqKX/KJBbFwEDsJKYZpYHDA6AwNfX0N+6+XkYcB6vRHDHOEHzcvj5NE/JdZwGMmpJZZuAzgbh+A0sI/Acx54x+praFtQYjMYdWADXdT2GyUfpSAmJDi+G426eHMsOiSVa2nHp0RLjCmEYBkB0onXwyCQ3JyDCRkok2DGsiK1C8VTmIJbLr9UePzISeO6+95smHq1YfgpBEKjHDVJDbNs3EsyYpcuRMIA1IfPPF92nBFsiibV9sGFNEKKdfgljIwEUHvDUG1l2qoNhPej03opvRoI0lwh9dZ4VC0ewIp67TkOVKcnODq+uAiNBCsSseprufvboC9yWfTNvSkFtk5yVHSaTiD+s7sn0oM8sfFktVz5NoojnGpdNlqD4ID23VeUNhuPXJoI7o8LzvNLs9kZ1p6eDojMQ0EuQuBBWvI1CzaJXWc/8YebYNPhyp2ndfSJDx1yFuSKKE105mVw+iZWnPJn+ON8tVzrygbj0eAe1J6oMOZF4z0i8vRh+eafkqpWyuvXl5lcrFZxMoz5sGiriuvuU9FITeUkE62JRJBshyCPZK+32ptfX3zdG8BdJnCDrRVEUw73HLwA+/bPHI/qzAAAAAElFTkSuQmCC"
+                         alt="">
+                </a>
+                <img class="img-2 img-2-576 p-lg-2 p-1 me-2"
+                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADKSURBVHgB3ZXBDcIwDEW/YIGOkBEYIRswAl2BG8duwAgdJSMgJghXTmEDSFVbRKqaOq5yaJ/01R6+66TfUYA94aO+9LygAtxgUIhqUAmXNNLK5xrY2g3SXZRm0UnrLBkfkGMwZieu4dCt0N+T3wj9aKnACbyGvD0KGMY0YHkXDf6ZGRRyh3xyilbPeOHHHRQHs4NwprXw6s+oBAe86gQfMg2uUS9smRbjb1q6H6S+CemIBq0vl0E61x+t7zhfh3fUid5vUc+Vvo3yA/o0ekWHCxQoAAAAAElFTkSuQmCC"
+                     alt="">
+                <img class="img-2 img-2-576 p-lg-2 p-1"
+                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJOSURBVHgBzVVdbtNAEJ7ZTSR4qxTSSrxgJCCuSST3BCRvvFFOQHqD9ARJTtDeAHqC5AaEGzhKk5oEqeYNQST8Ag8l3mF3vS6h+CcRfegn2V57Zr6Zncx+AbhLsG3bUtc2MVjkUK/bTSDqSkeXCHZ0EEIIQEMesb7n+0FePM8ld+yeJH8rl5a87q2Z5BpdgdDZrVbx67flKIuD5ZIDdfULwYghtSO6sgSIAyHwiACC2JO6sW86Ulvkyj6vGF1qBxSnk+niOM2v8bx2ItvW0S8CW+e+P4JNdhBx0Y0LhyCLXGEy/XgsSxzFpZrdbpKAAA/jqqgHBUDCM7NwN0qg2gNmWiiiMRSAC7MDwJ39/cePChOsg0qr71AEFu3kmm9+0HOt51waWbkJBYiAm9ZQeHFx+bkwQZJH3VBgGwpByUAM06zpCRD78ROaahQhA3WndkrxIYRIsH4qVXbwM1kZ9oxTgEi9FdFYCB6WGTQJ6Y0su2l20TufzbdLYCocyMdhng8BvZvO5kdZ9lQtUqP6YK+iyF9CAVBq0t5uxXpYqY6/LJfhv/YbcGy7zTmdJMqpdEjeh0iRt8IoUJ9KJW7RirskxQ7Nb6CmiAR0pv78LDOBImdMq6eWCSai9sT/9AFyoGKQaTm3dJyg9nqS6wTrAif76v34edUKgiCEDaD+hEqcBjJQnwnxSxzMFgs96tdjGjF6D6bybcgVfHk4S+X7rUTCeZkNEhtLqv8zz7gVeQLP80IC/toUabmW9beENJzaq4b95AX8JxznqXsbPHcHvwG4PfSoFA0XGQAAAABJRU5ErkJggg=="
+                     alt="">
+            </div>
+            <!-- nav -->
+            <div class="offcanvas offcanvas-start w-100 d-lg-none" tabindex="-1"
+                 id="Navbar"
+                 aria-labelledby="Navbar">
+                <div
+                     class="offcanvas-header py-6 d-flex justify-content-between border-bottom border-neutral-300">
+                    <div>
+                        <button class="navbar-toggler p-0 mx-2 border-0 rounded-0"
+                                type="button">
+                            <span
+                                  class="navbar-toggler-icon align-middle img-3"></span>
+                        </button>
+                        <img class="img-1"
+                             src="/AAPD/assets/index-logo-638fb9ac.png"
+                             alt="">
+                    </div>
+
+                    <button type="button"
+                            class="btn-close text-reset img-4 p-1 m-0 me-6"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body px-8">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mb-3">
+                            <a class="nav-link active py-3 px-2 fw-medium"
+                               aria-current="page"
+                               href="Course-details.html">探索課程</a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a class="nav-link active py-3 px-2 fw-medium"
+                               aria-current="page"
+                               href="#">創意市集</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active py-3 px-2fw-bold text-dark-100"
+                               aria-current="page"
+                               href="learn.html">我的課程</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="offcanvas-footer py-9 px-8">
+                    <button type="button"
+                            class="w-100 btn hover-1 border border-frame-01 text-neutral-950 fw-medium py-2">登出</button>
+                </div>
+            </div>
+            <!-- search -->
+            <div class="offcanvas offcanvas-start collapse  w-100 d-lg-none"
+                 tabindex="-1"
+                 id="search"
+                 aria-labelledby="search">
+
+                <div class="d-flex align-items-center p-3 position-relative">
+                    <form class="d-flex me-3 w-100">
+                        <input class="form-control ps-5 rounded-pill"
+                               type="search"
+                               placeholder="想上什麼課呢？"
+                               aria-label="Search">
+                    </form>
+                    <img class="img-3 position-absolute top-50 translate-middle-y ms-10"
+                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABTlJREFUeF7tnc1S2zAQx6WE92h4ksIRODQcyExPkCcBngQ4dSYcSA/AseFJ6gchUSvHoh4PsVarj93U65nOQMey7P9vtatdS0YrOUgV0KS9S+dKABAbgQAQAMQKEHcvI0AAECtA3L2MAAFArABx9zICBACxAsTdywgYMoDXpx8TNTq4tBoYY44aLSZKKfuvan6vjPvZqLeR0tXJ+cWKWLdk3RcfAU50Y8xVIzTmYSyU1cjoh32HUQzA69PjkdHmLkL0XaAqrfX9ybeLWwxJ6jbZAWQUvqtdpY2e79uIyArgZbn4pZRyvr2Usa1Op7PjUp3F9pMFgPXzRo+tuyktvtOj0mZ9fHL+3QXyWJ2ytU8OoHE51vKpj8oYdXt2PrunvpG+/pMCeH5aXGmtrOVzOdgH6GQAIiy/Fklt1NuW2ntlXUc9Xa2Pg8lGmYnS6qveurTm/8GMWQfnJAAan/8bLIlSSmt9ozbvD6F+upVH3AT0xzYmJAEQONtZabOehwrfFduC2OjxtVbKJnSQozqdzg4hJ5Y8JxpAiPjGqHnqoPj68/HaGAMdDeymqFEAAvx+Vj/cuEA78/LGB230MadkLQoA0Pqziu/cRQAEVq4IDQA65SxpcdDJQA5XiI0baAAvy4Wd9fQO+ZLiOwGAhsFmFKAAQB7SKHV/Np3NsZYR0w7iGimM47NnwgFYLu580z/KB4S4IkoDaYNAAfC5Hw4P9+w3EhZuCAvA9BaYzPowNtGKcUG2LWQUUI5S93zBACD+/3Q6C75urOCftffFAlsOoX6TFiyUb2hzcD8fuYEnS+Zwr+kBZCg3YEcHIFMnL00EA/AOa0ap/v8KoDcB0wwCcKc80VcmJ58JYUZA7wyISwAGzoQEANa/Q9u9LBesDQYzAsQFQekDzsMA6F3rwyG5+RcD6tV4fSs0ZBYEMBL0Kb6k8f/MAwiroF1S+5A0BrsgwDtY8pmFA+EtGjJIGsMBbJcd9i5B4RAHAEmY4pCzBAOw1uXLhjn4Vp/7+btulTwAWy1RACBuiHKpOMj6GVRC8QC2my18C3DJLMw3QusHZ1IywY0A4PJzino7xPo5uEj0C5nQ1QclXRFEfE7Wj3ZBrWkeZAdMkYWxkFeQ9r45WX80AKjF2S2nOUdCyH1wW6CLigHtjBMS8Jrzs2yW8JUb2vfKIT/pZuvRAALWZNZ9WxcwMuvb2FUTmOXpHPeNRQNovfgArU52owG70Rq5QcMZXpF4FFI9TAIA+PZp133Vu95V8xmCXVuURiP9JWAfQJ8GrCAkA2CfOMQfh1hJhnPZQEgKAOmOMugLuiQLCMkBMIFgN2h7d8tsp8e0G7qzAHAQ7KdoEvltkEm7fMPGEaPH0EkBKYRsAJxipT5b0K07BU6PySBkB9CpHV0DXQPU4nv3G+8DhGIAPtyS3fmuzaXe+mjsxzzAWTV3CEUBdM26zmbV+Mh+hqApTLnPlbkA+vHZMq11/ZkyzHJyzhBIAYD9TIITuUIYDADE9LhIYB4UAI4QBgeAG4RBAuAEYbAAuEAYNAAOEAYPgBqCAGhyDKo8QQC0kjwKCAKgk2WXhiAAPilzlIQgAHbUmUpBEAA9hb4SEASAp9IaCCF4Sb4AAJS6gRBQe+MEAAAAIFlDid+8hALegZzmvsLVXW2BFl8AIIyq446ixBcACAAtd3SX4k+lSAxAQkjVTACkUhJ5HQGAFC5VMwGQSknkdQQAUrhUzQRAKiWR1xEASOFSNRMAqZREXkcAIIVL1UwApFISeR0BgBQuVTMBkEpJ5HX+AJQ0Xo5vswgPAAAAAElFTkSuQmCC"
+                         alt="">
+                    <button type="button"
+                            class="btn-close text-reset img-4 p-1 m-0"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body px-3 pt-0">
+                    <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門課程</h3>
+                    <ul class="navbar-nav mb-3">
+                        <li class="nav-item mb-2 py-1">
+                            <p
+                               class="py-1 mb-0 d-inline px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                手作耳環工作坊：從設計到完成</p>
+                        </li>
+                        <li class="nav-item mb-2 py-1">
+                            <p
+                               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                飾品擺拍選修課</p>
+                        </li>
+                        <li class="nav-item mb-2 py-1">
+                            <p
+                               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                手作飾品初級班：設計與製作</p>
+                        </li>
+                        <li class="nav-item mb-2 d-flex">
+                            <p
+                               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                縫紉中級證照課</p>
+                            <p
+                               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                縫紉服飾</p>
+                        </li>
+                        <li class="nav-item py-1">
+                            <p
+                               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                繪畫設計</p>
+                        </li>
+                    </ul>
+                    <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門作品</h3>
+                    <ul class="navbar-nav">
+                        <li class="nav-item mb-2 d-flex">
+                            <p
+                               class="py-1 mb-0 d-inline px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                手作耳環工作坊：從設計到完成</p>
+                        </li>
+                        <li class="nav-item mb-2 d-flex">
+                            <p
+                               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                多媒體藝術品</p>
+                            <p
+                               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                手工織造靠墊</p>
+                        </li>
+                        <li class="nav-item mb-2 d-flex">
+                            <p
+                               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                精緻的刺繡手帕</p>
+                            <p
+                               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                可愛小廢物</p>
+                        </li>
+                        <li class="nav-item py-1">
+                            <p
+                               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                手工項鍊</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- pc-search -->
+            <div class="dropdown-menu mt-3 ms-11 border-0 rounded-3 p-3"
+                 aria-labelledby="pc-search">
+                <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門課程</h3>
+                <ul class="navbar-nav d-lg-block d-none mb-3">
+                    <li class="nav-item mb-2 py-1">
+                        <p
+                           class="py-1 me-2 mb-0 d-inline px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            手作耳環工作坊：從設計到完成</p>
+                        <p
+                           class="d-inline me-2 py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            飾品擺拍選修課</p>
+                        <p
+                           class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            手作飾品初級班：設計與製作</p>
+                    </li>
+                    <li class="nav-item mb-2 d-flex">
+                        <p
+                           class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            縫紉中級證照課</p>
+                        <p
+                           class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            縫紉服飾</p>
+                        <p
+                           class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            繪畫設計</p>
+                    </li>
+                </ul>
+
+                <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門作品</h3>
+                <ul class="navbar-nav d-lg-block d-none ">
+                    <li class="nav-item mb-2 py-1">
+                        <p
+                           class="py-1 mb-0 d-inline me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            手作耳環工作坊：從設計到完成</p>
+                        <p
+                           class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            多媒體藝術品</p>
+                        <p
+                           class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            手工織造靠墊</p>
+                    </li>
+                    <li class="nav-item mb-2 d-flex">
+                        <p
+                           class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            精緻的刺繡手帕</p>
+                        <p
+                           class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            可愛小廢物</p>
+                        <p
+                           class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            手工項鍊</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</article>    </main>
+    <main class="bg-black-80">
+        <article class="container px-0 px-lg-4">
+            <div class="d-flex align-items-center py-2 px-3 px-lg-0 pb-lg-3 pt-lg-4">
+                <p class="fw-medium fs-6 text-btn-03 me-1 mb-0">探索課程</p>
+                <img class="img-3 me-1 white-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7dNBCoMwEEDRMXbRY3QZCoX2CN6kR+gNerTSGwjduMwR3FRQSHRGcKNmkolL/SAuEl6UIQBHU7erft61voAw5Vtw0L+t6j9S1AtalxWO3kI04xY1QjmCdGqOB5RVZWALmIIGQSkaBS7Qpn2UxtRr+04Q2RkfC+P0658HoxRERFOmaRP2b7qC2xv85TlmmK8LglKMBVMwyn9TEjCKm/ILsa8E22kDrLR2844Rbl4AAAAASUVORK5CYII=" alt="">
+                <p class="fw-medium fs-6 text-btn-03 me-1 mb-0">紡織工藝</p>
+                <img class="img-3 me-1 white-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7dNBCoMwEEDRMXbRY3QZCoX2CN6kR+gNerTSGwjduMwR3FRQSHRGcKNmkolL/SAuEl6UIQBHU7erft61voAw5Vtw0L+t6j9S1AtalxWO3kI04xY1QjmCdGqOB5RVZWALmIIGQSkaBS7Qpn2UxtRr+04Q2RkfC+P0658HoxRERFOmaRP2b7qC2xv85TlmmK8LglKMBVMwyn9TEjCKm/ILsa8E22kDrLR2844Rbl4AAAAASUVORK5CYII=" alt="">
+                <p class="fw-medium fs-6 text-btn-03 me-1 mb-0">毛線課程</p>
+                <img class="img-3 me-1 white-icon d-lg-block d-none" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7dNBCoMwEEDRMXbRY3QZCoX2CN6kR+gNerTSGwjduMwR3FRQSHRGcKNmkolL/SAuEl6UIQBHU7erft61voAw5Vtw0L+t6j9S1AtalxWO3kI04xY1QjmCdGqOB5RVZWALmIIGQSkaBS7Qpn2UxtRr+04Q2RkfC+P0658HoxRERFOmaRP2b7qC2xv85TlmmK8LglKMBVMwyn9TEjCKm/ILsa8E22kDrLR2844Rbl4AAAAASUVORK5CYII=" alt="">
+                <p class="fw-medium fs-6 text-btn-03 me-1 mb-0 d-none">毛線鉤織必修課</p>
+            </div>
+            <!-- pc -->
+             <div class="d-flex">
+                <div>
+                    <iframe class=" rounded-3 img-bot d-none d-lg-block"
+                            src="https://www.youtube.com/embed/Qv6JcQy-bqo?si=X-1p24K1a_HFGuFf"
+                            width="830px" height="533px"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                   <div class="d-lg-flex align-items-center box-3 py-3 mb-4 justify-content-center justify-content-lg-between  d-none">
+                       <img class="img-3 white-icon ms-3"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACgSURBVHgB7dOxDcIwEIXhl7AB4ICoqMJhmRlgBEZgE0ZgJBgBOkroIL5I9EgxChISBSi+OF3yt5a+xveA1tWDMGNoNekPcWN+/HqPIUgTbVC4/RPFEqGVmNEzZ3S6RWgtwRbzdF0H8/jlOIKgv3eYcX4eKXUF3C5RKsosHxACvlHLRylauRQp6jU9Ceq95W90nAwud5uf0ETlORHRFF2fXrMYT43xiEsFAAAAAElFTkSuQmCC" alt="">
+                       <img class="img-3 blue-icon-2 me-2"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFZSURBVHgB7ZO/TsJQFMbPLcTFRfsH49ap3P7B8Ah9BDZHHd3kDSijE/EJHNXJ1Q0d3RupxKFsWothMzFyj/dCJIHYi4WQGMKXtDfpd8759ST3A/hPcm27XnHLrTw9Sp5iQlgLEep5enIBFtEGsAGsGOB51Pco9WV+xbZqsCgAGLZBwbZLraNZy6H0WPhIyI1sREFmlgyNv4lPCKkZmhaLU3zXNaOnKHgxrsIgeevfZ80gMEeeYzV4WfC7i0H42G3K+qUbCIm/+9kk7/ApwIFXPt1XjdeXNB3Mh2QPrzpOVdfVwyTtP0wA4jYggysGaHLjGrI20XUBvw073TPIkF5SL/lxsqft3iXpe684bZMdkCjsPJ1DTq08aKMNimw4+OIsJGDKgvUXEUQTZwGwtR3j50fM76wpggVLCMdPHEbPo2xMckApNQsKa/AwmbCEEDEeMqUZRVEMa6FvEJ57mBIVhSQAAAAASUVORK5CYII=" alt="">
+                       <img class="img-3 white-icon me-3"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7dNBCoMwEEDRMXbRY3QZCoX2CN6kR+gNerTSGwjduMwR3FRQSHRGcKNmkolL/SAuEl6UIQBHU7erft61voAw5Vtw0L+t6j9S1AtalxWO3kI04xY1QjmCdGqOB5RVZWALmIIGQSkaBS7Qpn2UxtRr+04Q2RkfC+P0658HoxRERFOmaRP2b7qC2xv85TlmmK8LglKMBVMwyn9TEjCKm/ILsa8E22kDrLR2844Rbl4AAAAASUVORK5CYII=" alt="">
+                   </div>
+                </div>
+                <div class="p-3 flex-grow-1 mb-4 d-none d-lg-block over-f">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-3 me-2 white-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABSSURBVHgB7dKtDsAgEAPgbnqZ2AvveGFCCJofAyGBBMEJRD9zp1pTgBau+jzfK+X82BVhgvMyK0hQEqxvuXdXLdAQlXJIDWc64kyPw5mOONPjZIOLKfv8rjs1AAAAAElFTkSuQmCC" alt="">
+                        <p class="text-white fs-16 fw-semibold mb-0 ">課程目錄</p>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <p class="mb-0 text-white me-2 fw-semibold fs-16">02｜鉤針編織技法篇</p>
+                        <p class="mb-0 text-white fw-medium fs-6">5堂課程・約31分鐘</p>
+                    </div>
+                    <div class="bg-black-44 px-4 py-3 overflew-y-h-457">
+                        <!-- 1 -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-19">
+                                <img class="net-66-icon img-4 me-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgB1ZTBbtNAEIZ31oEKuFhK0kpBSDkli5tI5g3MjRvlCRpu3OANEp/g1vAEiCO38ASUIzcjqmAqpO4RlSAsQQI09g4zCSaNHbc5tiNZWo1nvtnd+WeFuOgGRT9aLeUBJvcFyh0Uoj73YgAgAiuRfhCGei2gW6/b8fWNHi0f099IoNhn0L9wl3we+WwC963xHz/QOioEzmFX33AigOn/GE99nUlQStVL0uxSTI8LlSYnd7PQxTGdZp8+3FaNXXGOtR3V4dj2dnNvZYBLlTmg5TS6Yk1j2CxHKS/1yXSRWIZAGMVGvlxOarzgYquA1pVrPt8zWNS8LBD5wqkBYaZ7iNCJJR61HNXLAoMgiABx35ASckCCcQcDUWjYbTvNo/btxs6Sl7jwX1angWuYmRHM97NiSumCqmjkXa6ymR6xP56cPNd53blUKMjvEMSARctazOAGcQJ3DoaHOU1ysxDAWwj/dFMAXhPVTm5sLMnmYPjpQVgwZrEUHZ6axEg/9Vnp4vh4pLc2KzYd+0m1XNZfR9/eizPMUaoDgHs8UcOPh69yQLbazVvvjInvAcCjzWoVauWK/jIaLR+TrqRS23pGs/wU6ag/J9OHURT9Tv/nHwfXtZPpry7vlJIiJJ2JxaXTjIOHs8dh9awXPl/8CFjSdIEFL+bdZyUYNAOJOPgQfn4rLqX9BfBH4rtys1pcAAAAAElFTkSuQmCC" alt="">
+                                <p class="fs-over fs-6 mb-0 fw-medium text-btn-03">02-01 各種針法的詳細講解與練習(下)</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-white me-3 w-100 rounded-pill">
+                                    <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar" style="width: 75%"
+                                         aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <time class="fw-medium text-btn-03 fs-15">02:30</time>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-19">
+                                <img class="net-66-icon img-4 me-2"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgB1ZTBbtNAEIZ31oEKuFhK0kpBSDkli5tI5g3MjRvlCRpu3OANEp/g1vAEiCO38ASUIzcjqmAqpO4RlSAsQQI09g4zCSaNHbc5tiNZWo1nvtnd+WeFuOgGRT9aLeUBJvcFyh0Uoj73YgAgAiuRfhCGei2gW6/b8fWNHi0f099IoNhn0L9wl3we+WwC963xHz/QOioEzmFX33AigOn/GE99nUlQStVL0uxSTI8LlSYnd7PQxTGdZp8+3FaNXXGOtR3V4dj2dnNvZYBLlTmg5TS6Yk1j2CxHKS/1yXSRWIZAGMVGvlxOarzgYquA1pVrPt8zWNS8LBD5wqkBYaZ7iNCJJR61HNXLAoMgiABx35ASckCCcQcDUWjYbTvNo/btxs6Sl7jwX1angWuYmRHM97NiSumCqmjkXa6ymR6xP56cPNd53blUKMjvEMSARctazOAGcQJ3DoaHOU1ysxDAWwj/dFMAXhPVTm5sLMnmYPjpQVgwZrEUHZ6axEg/9Vnp4vh4pLc2KzYd+0m1XNZfR9/eizPMUaoDgHs8UcOPh69yQLbazVvvjInvAcCjzWoVauWK/jIaLR+TrqRS23pGs/wU6ag/J9OHURT9Tv/nHwfXtZPpry7vlJIiJJ2JxaXTjIOHs8dh9awXPl/8CFjSdIEFL+bdZyUYNAOJOPgQfn4rLqX9BfBH4rtys1pcAAAAAElFTkSuQmCC" alt="">
+                                <p class="fs-over fs-6 mb-0 fw-medium text-btn-03">02-02 各種針法的詳細講解與練習(下)</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-white me-3 w-100 rounded-pill">
+                                    <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar" style="width: 75%"
+                                         aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <time class="fw-medium text-btn-03 fs-15">03:45</time>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-19">
+                                <img class="net-66-icon img-4 me-2"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgB1ZTBbtNAEIZ31oEKuFhK0kpBSDkli5tI5g3MjRvlCRpu3OANEp/g1vAEiCO38ASUIzcjqmAqpO4RlSAsQQI09g4zCSaNHbc5tiNZWo1nvtnd+WeFuOgGRT9aLeUBJvcFyh0Uoj73YgAgAiuRfhCGei2gW6/b8fWNHi0f099IoNhn0L9wl3we+WwC963xHz/QOioEzmFX33AigOn/GE99nUlQStVL0uxSTI8LlSYnd7PQxTGdZp8+3FaNXXGOtR3V4dj2dnNvZYBLlTmg5TS6Yk1j2CxHKS/1yXSRWIZAGMVGvlxOarzgYquA1pVrPt8zWNS8LBD5wqkBYaZ7iNCJJR61HNXLAoMgiABx35ASckCCcQcDUWjYbTvNo/btxs6Sl7jwX1angWuYmRHM97NiSumCqmjkXa6ymR6xP56cPNd53blUKMjvEMSARctazOAGcQJ3DoaHOU1ysxDAWwj/dFMAXhPVTm5sLMnmYPjpQVgwZrEUHZ6axEg/9Vnp4vh4pLc2KzYd+0m1XNZfR9/eizPMUaoDgHs8UcOPh69yQLbazVvvjInvAcCjzWoVauWK/jIaLR+TrqRS23pGs/wU6ag/J9OHURT9Tv/nHwfXtZPpry7vlJIiJJ2JxaXTjIOHs8dh9awXPl/8CFjSdIEFL+bdZyUYNAOJOPgQfn4rLqX9BfBH4rtys1pcAAAAAElFTkSuQmCC" alt="">
+                                <p class="fs-over fs-6 mb-0 fw-medium text-btn-03">02-03 增加針目和減少針目技巧</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-white me-3 w-100 rounded-pill">
+                                    <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar" style="width: 100%"
+                                         aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <time class="fw-medium text-btn-03 fs-15">02:55</time>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-19">
+                                <img class="net-66-icon img-4 me-2"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgB1ZTBbtNAEIZ31oEKuFhK0kpBSDkli5tI5g3MjRvlCRpu3OANEp/g1vAEiCO38ASUIzcjqmAqpO4RlSAsQQI09g4zCSaNHbc5tiNZWo1nvtnd+WeFuOgGRT9aLeUBJvcFyh0Uoj73YgAgAiuRfhCGei2gW6/b8fWNHi0f099IoNhn0L9wl3we+WwC963xHz/QOioEzmFX33AigOn/GE99nUlQStVL0uxSTI8LlSYnd7PQxTGdZp8+3FaNXXGOtR3V4dj2dnNvZYBLlTmg5TS6Yk1j2CxHKS/1yXSRWIZAGMVGvlxOarzgYquA1pVrPt8zWNS8LBD5wqkBYaZ7iNCJJR61HNXLAoMgiABx35ASckCCcQcDUWjYbTvNo/btxs6Sl7jwX1angWuYmRHM97NiSumCqmjkXa6ymR6xP56cPNd53blUKMjvEMSARctazOAGcQJ3DoaHOU1ysxDAWwj/dFMAXhPVTm5sLMnmYPjpQVgwZrEUHZ6axEg/9Vnp4vh4pLc2KzYd+0m1XNZfR9/eizPMUaoDgHs8UcOPh69yQLbazVvvjInvAcCjzWoVauWK/jIaLR+TrqRS23pGs/wU6ag/J9OHURT9Tv/nHwfXtZPpry7vlJIiJJ2JxaXTjIOHs8dh9awXPl/8CFjSdIEFL+bdZyUYNAOJOPgQfn4rLqX9BfBH4rtys1pcAAAAAElFTkSuQmCC" alt="">
+                                <p class="fs-over fs-6 mb-0 fw-medium text-btn-03">02-04 圓形、方形及其他基本圖案的製作</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-white me-3 w-100 rounded-pill">
+                                    <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar" style="width: 0%"
+                                         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <time class="fw-medium text-btn-03 fs-15">02:10</time>
+                            </div>
+                        </div>
+                        <!-- 5 -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-19">
+                                <img class="net-66-icon img-4 me-2"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgB1ZTBbtNAEIZ31oEKuFhK0kpBSDkli5tI5g3MjRvlCRpu3OANEp/g1vAEiCO38ASUIzcjqmAqpO4RlSAsQQI09g4zCSaNHbc5tiNZWo1nvtnd+WeFuOgGRT9aLeUBJvcFyh0Uoj73YgAgAiuRfhCGei2gW6/b8fWNHi0f099IoNhn0L9wl3we+WwC963xHz/QOioEzmFX33AigOn/GE99nUlQStVL0uxSTI8LlSYnd7PQxTGdZp8+3FaNXXGOtR3V4dj2dnNvZYBLlTmg5TS6Yk1j2CxHKS/1yXSRWIZAGMVGvlxOarzgYquA1pVrPt8zWNS8LBD5wqkBYaZ7iNCJJR61HNXLAoMgiABx35ASckCCcQcDUWjYbTvNo/btxs6Sl7jwX1angWuYmRHM97NiSumCqmjkXa6ymR6xP56cPNd53blUKMjvEMSARctazOAGcQJ3DoaHOU1ysxDAWwj/dFMAXhPVTm5sLMnmYPjpQVgwZrEUHZ6axEg/9Vnp4vh4pLc2KzYd+0m1XNZfR9/eizPMUaoDgHs8UcOPh69yQLbazVvvjInvAcCjzWoVauWK/jIaLR+TrqRS23pGs/wU6ag/J9OHURT9Tv/nHwfXtZPpry7vlJIiJJ2JxaXTjIOHs8dh9awXPl/8CFjSdIEFL+bdZyUYNAOJOPgQfn4rLqX9BfBH4rtys1pcAAAAAElFTkSuQmCC" alt="">
+                                <p class="fs-over fs-6 mb-0 fw-medium text-btn-03">02-05 特殊鉤針編織技法</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-white me-3 w-100 rounded-pill">
+                                    <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar" style="width: 0%"
+                                         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <time class="fw-medium text-btn-03 fs-15">02:30</time>
+                            </div>
+                        </div>
+                        <!-- 6 -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-19">
+                                <img class="net-66-icon img-4 me-2"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgB1ZTBbtNAEIZ31oEKuFhK0kpBSDkli5tI5g3MjRvlCRpu3OANEp/g1vAEiCO38ASUIzcjqmAqpO4RlSAsQQI09g4zCSaNHbc5tiNZWo1nvtnd+WeFuOgGRT9aLeUBJvcFyh0Uoj73YgAgAiuRfhCGei2gW6/b8fWNHi0f099IoNhn0L9wl3we+WwC963xHz/QOioEzmFX33AigOn/GE99nUlQStVL0uxSTI8LlSYnd7PQxTGdZp8+3FaNXXGOtR3V4dj2dnNvZYBLlTmg5TS6Yk1j2CxHKS/1yXSRWIZAGMVGvlxOarzgYquA1pVrPt8zWNS8LBD5wqkBYaZ7iNCJJR61HNXLAoMgiABx35ASckCCcQcDUWjYbTvNo/btxs6Sl7jwX1angWuYmRHM97NiSumCqmjkXa6ymR6xP56cPNd53blUKMjvEMSARctazOAGcQJ3DoaHOU1ysxDAWwj/dFMAXhPVTm5sLMnmYPjpQVgwZrEUHZ6axEg/9Vnp4vh4pLc2KzYd+0m1XNZfR9/eizPMUaoDgHs8UcOPh69yQLbazVvvjInvAcCjzWoVauWK/jIaLR+TrqRS23pGs/wU6ag/J9OHURT9Tv/nHwfXtZPpry7vlJIiJJ2JxaXTjIOHs8dh9awXPl/8CFjSdIEFL+bdZyUYNAOJOPgQfn4rLqX9BfBH4rtys1pcAAAAAElFTkSuQmCC" alt="">
+                                <p class="fs-over fs-6 mb-0 fw-medium text-btn-03">02-06 小作業說明</p>
+                            </div>
+                            <div class="d-flex align-items-center ">
+                                <div class="bg-white me-3 w-100 rounded-pill">
+                                    <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar" style="width: 100%"
+                                         aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <time class="fw-medium text-btn-03 fs-15">01:00</time>
+                            </div>
+                        </div>
+
+                        <!-- 1 -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-19">
+                                <img class="net-66-icon img-4 me-2"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgB1ZTBbtNAEIZ31oEKuFhK0kpBSDkli5tI5g3MjRvlCRpu3OANEp/g1vAEiCO38ASUIzcjqmAqpO4RlSAsQQI09g4zCSaNHbc5tiNZWo1nvtnd+WeFuOgGRT9aLeUBJvcFyh0Uoj73YgAgAiuRfhCGei2gW6/b8fWNHi0f099IoNhn0L9wl3we+WwC963xHz/QOioEzmFX33AigOn/GE99nUlQStVL0uxSTI8LlSYnd7PQxTGdZp8+3FaNXXGOtR3V4dj2dnNvZYBLlTmg5TS6Yk1j2CxHKS/1yXSRWIZAGMVGvlxOarzgYquA1pVrPt8zWNS8LBD5wqkBYaZ7iNCJJR61HNXLAoMgiABx35ASckCCcQcDUWjYbTvNo/btxs6Sl7jwX1angWuYmRHM97NiSumCqmjkXa6ymR6xP56cPNd53blUKMjvEMSARctazOAGcQJ3DoaHOU1ysxDAWwj/dFMAXhPVTm5sLMnmYPjpQVgwZrEUHZ6axEg/9Vnp4vh4pLc2KzYd+0m1XNZfR9/eizPMUaoDgHs8UcOPh69yQLbazVvvjInvAcCjzWoVauWK/jIaLR+TrqRS23pGs/wU6ag/J9OHURT9Tv/nHwfXtZPpry7vlJIiJJ2JxaXTjIOHs8dh9awXPl/8CFjSdIEFL+bdZyUYNAOJOPgQfn4rLqX9BfBH4rtys1pcAAAAAElFTkSuQmCC" alt="">
+                                <p class="fs-over fs-6 mb-0 fw-medium text-btn-03">02-01 各種針法的詳細講解與練習(下)
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-white me-3 w-100 rounded-pill">
+                                    <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar"
+                                         style="width: 75%"
+                                         aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <time class="fw-medium text-btn-03 fs-15">02:30</time>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-19">
+                                <img class="net-66-icon img-4 me-2"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgB1ZTBbtNAEIZ31oEKuFhK0kpBSDkli5tI5g3MjRvlCRpu3OANEp/g1vAEiCO38ASUIzcjqmAqpO4RlSAsQQI09g4zCSaNHbc5tiNZWo1nvtnd+WeFuOgGRT9aLeUBJvcFyh0Uoj73YgAgAiuRfhCGei2gW6/b8fWNHi0f099IoNhn0L9wl3we+WwC963xHz/QOioEzmFX33AigOn/GE99nUlQStVL0uxSTI8LlSYnd7PQxTGdZp8+3FaNXXGOtR3V4dj2dnNvZYBLlTmg5TS6Yk1j2CxHKS/1yXSRWIZAGMVGvlxOarzgYquA1pVrPt8zWNS8LBD5wqkBYaZ7iNCJJR61HNXLAoMgiABx35ASckCCcQcDUWjYbTvNo/btxs6Sl7jwX1angWuYmRHM97NiSumCqmjkXa6ymR6xP56cPNd53blUKMjvEMSARctazOAGcQJ3DoaHOU1ysxDAWwj/dFMAXhPVTm5sLMnmYPjpQVgwZrEUHZ6axEg/9Vnp4vh4pLc2KzYd+0m1XNZfR9/eizPMUaoDgHs8UcOPh69yQLbazVvvjInvAcCjzWoVauWK/jIaLR+TrqRS23pGs/wU6ag/J9OHURT9Tv/nHwfXtZPpry7vlJIiJJ2JxaXTjIOHs8dh9awXPl/8CFjSdIEFL+bdZyUYNAOJOPgQfn4rLqX9BfBH4rtys1pcAAAAAElFTkSuQmCC" alt="">
+                                <p class="fs-over fs-6 mb-0 fw-medium text-btn-03">02-02 各種針法的詳細講解與練習(下)
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-white me-3 w-100 rounded-pill">
+                                    <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar"
+                                         style="width: 75%"
+                                         aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <time class="fw-medium text-btn-03 fs-15">03:45</time>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-19">
+                                <img class="net-66-icon img-4 me-2"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgB1ZTBbtNAEIZ31oEKuFhK0kpBSDkli5tI5g3MjRvlCRpu3OANEp/g1vAEiCO38ASUIzcjqmAqpO4RlSAsQQI09g4zCSaNHbc5tiNZWo1nvtnd+WeFuOgGRT9aLeUBJvcFyh0Uoj73YgAgAiuRfhCGei2gW6/b8fWNHi0f099IoNhn0L9wl3we+WwC963xHz/QOioEzmFX33AigOn/GE99nUlQStVL0uxSTI8LlSYnd7PQxTGdZp8+3FaNXXGOtR3V4dj2dnNvZYBLlTmg5TS6Yk1j2CxHKS/1yXSRWIZAGMVGvlxOarzgYquA1pVrPt8zWNS8LBD5wqkBYaZ7iNCJJR61HNXLAoMgiABx35ASckCCcQcDUWjYbTvNo/btxs6Sl7jwX1angWuYmRHM97NiSumCqmjkXa6ymR6xP56cPNd53blUKMjvEMSARctazOAGcQJ3DoaHOU1ysxDAWwj/dFMAXhPVTm5sLMnmYPjpQVgwZrEUHZ6axEg/9Vnp4vh4pLc2KzYd+0m1XNZfR9/eizPMUaoDgHs8UcOPh69yQLbazVvvjInvAcCjzWoVauWK/jIaLR+TrqRS23pGs/wU6ag/J9OHURT9Tv/nHwfXtZPpry7vlJIiJJ2JxaXTjIOHs8dh9awXPl/8CFjSdIEFL+bdZyUYNAOJOPgQfn4rLqX9BfBH4rtys1pcAAAAAElFTkSuQmCC" alt="">
+                                <p class="fs-over fs-6 mb-0 fw-medium text-btn-03">02-03 增加針目和減少針目技巧</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-white me-3 w-100 rounded-pill">
+                                    <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar"
+                                         style="width: 100%"
+                                         aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                                <time class="fw-medium text-btn-03 fs-15">02:55</time>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-19">
+                                <img class="net-66-icon img-4 me-2"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgB1ZTBbtNAEIZ31oEKuFhK0kpBSDkli5tI5g3MjRvlCRpu3OANEp/g1vAEiCO38ASUIzcjqmAqpO4RlSAsQQI09g4zCSaNHbc5tiNZWo1nvtnd+WeFuOgGRT9aLeUBJvcFyh0Uoj73YgAgAiuRfhCGei2gW6/b8fWNHi0f099IoNhn0L9wl3we+WwC963xHz/QOioEzmFX33AigOn/GE99nUlQStVL0uxSTI8LlSYnd7PQxTGdZp8+3FaNXXGOtR3V4dj2dnNvZYBLlTmg5TS6Yk1j2CxHKS/1yXSRWIZAGMVGvlxOarzgYquA1pVrPt8zWNS8LBD5wqkBYaZ7iNCJJR61HNXLAoMgiABx35ASckCCcQcDUWjYbTvNo/btxs6Sl7jwX1angWuYmRHM97NiSumCqmjkXa6ymR6xP56cPNd53blUKMjvEMSARctazOAGcQJ3DoaHOU1ysxDAWwj/dFMAXhPVTm5sLMnmYPjpQVgwZrEUHZ6axEg/9Vnp4vh4pLc2KzYd+0m1XNZfR9/eizPMUaoDgHs8UcOPh69yQLbazVvvjInvAcCjzWoVauWK/jIaLR+TrqRS23pGs/wU6ag/J9OHURT9Tv/nHwfXtZPpry7vlJIiJJ2JxaXTjIOHs8dh9awXPl/8CFjSdIEFL+bdZyUYNAOJOPgQfn4rLqX9BfBH4rtys1pcAAAAAElFTkSuQmCC" alt="">
+                                <p class="fs-over fs-6 mb-0 fw-medium text-btn-03">02-04 圓形、方形及其他基本圖案的製作
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-white me-3 w-100 rounded-pill">
+                                    <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar"
+                                         style="width: 0%"
+                                         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <time class="fw-medium text-btn-03 fs-15">02:10</time>
+                            </div>
+                        </div>
+                        <!-- 5 -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-19">
+                                <img class="net-66-icon img-4 me-2"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgB1ZTBbtNAEIZ31oEKuFhK0kpBSDkli5tI5g3MjRvlCRpu3OANEp/g1vAEiCO38ASUIzcjqmAqpO4RlSAsQQI09g4zCSaNHbc5tiNZWo1nvtnd+WeFuOgGRT9aLeUBJvcFyh0Uoj73YgAgAiuRfhCGei2gW6/b8fWNHi0f099IoNhn0L9wl3we+WwC963xHz/QOioEzmFX33AigOn/GE99nUlQStVL0uxSTI8LlSYnd7PQxTGdZp8+3FaNXXGOtR3V4dj2dnNvZYBLlTmg5TS6Yk1j2CxHKS/1yXSRWIZAGMVGvlxOarzgYquA1pVrPt8zWNS8LBD5wqkBYaZ7iNCJJR61HNXLAoMgiABx35ASckCCcQcDUWjYbTvNo/btxs6Sl7jwX1angWuYmRHM97NiSumCqmjkXa6ymR6xP56cPNd53blUKMjvEMSARctazOAGcQJ3DoaHOU1ysxDAWwj/dFMAXhPVTm5sLMnmYPjpQVgwZrEUHZ6axEg/9Vnp4vh4pLc2KzYd+0m1XNZfR9/eizPMUaoDgHs8UcOPh69yQLbazVvvjInvAcCjzWoVauWK/jIaLR+TrqRS23pGs/wU6ag/J9OHURT9Tv/nHwfXtZPpry7vlJIiJJ2JxaXTjIOHs8dh9awXPl/8CFjSdIEFL+bdZyUYNAOJOPgQfn4rLqX9BfBH4rtys1pcAAAAAElFTkSuQmCC" alt="">
+                                <p class="fs-over fs-6 mb-0 fw-medium text-btn-03">02-05 特殊鉤針編織技法</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-white me-3 w-100 rounded-pill">
+                                    <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar"
+                                         style="width: 0%"
+                                         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <time class="fw-medium text-btn-03 fs-15">02:30</time>
+                            </div>
+                        </div>
+                        <!-- 6 -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-19">
+                                <img class="net-66-icon img-4 me-2"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIISURBVHgB1ZTBbtNAEIZ31oEKuFhK0kpBSDkli5tI5g3MjRvlCRpu3OANEp/g1vAEiCO38ASUIzcjqmAqpO4RlSAsQQI09g4zCSaNHbc5tiNZWo1nvtnd+WeFuOgGRT9aLeUBJvcFyh0Uoj73YgAgAiuRfhCGei2gW6/b8fWNHi0f099IoNhn0L9wl3we+WwC963xHz/QOioEzmFX33AigOn/GE99nUlQStVL0uxSTI8LlSYnd7PQxTGdZp8+3FaNXXGOtR3V4dj2dnNvZYBLlTmg5TS6Yk1j2CxHKS/1yXSRWIZAGMVGvlxOarzgYquA1pVrPt8zWNS8LBD5wqkBYaZ7iNCJJR61HNXLAoMgiABx35ASckCCcQcDUWjYbTvNo/btxs6Sl7jwX1angWuYmRHM97NiSumCqmjkXa6ymR6xP56cPNd53blUKMjvEMSARctazOAGcQJ3DoaHOU1ysxDAWwj/dFMAXhPVTm5sLMnmYPjpQVgwZrEUHZ6axEg/9Vnp4vh4pLc2KzYd+0m1XNZfR9/eizPMUaoDgHs8UcOPh69yQLbazVvvjInvAcCjzWoVauWK/jIaLR+TrqRS23pGs/wU6ag/J9OHURT9Tv/nHwfXtZPpry7vlJIiJJ2JxaXTjIOHs8dh9awXPl/8CFjSdIEFL+bdZyUYNAOJOPgQfn4rLqX9BfBH4rtys1pcAAAAAElFTkSuQmCC" alt="">
+                                <p class="fs-over fs-6 mb-0 fw-medium text-btn-03">02-06 小作業說明</p>
+                            </div>
+                            <div class="d-flex align-items-center ">
+                                <div class="bg-white me-3 w-100 rounded-pill">
+                                    <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar"
+                                         style="width: 100%"
+                                         aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                                <time class="fw-medium text-btn-03 fs-15">01:00</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+            <!-- phone -->
+            <iframe class="w-100 rounded-3 img-bot  mb-2 d-lg-none"
+                    src="https://www.youtube.com/embed/Qv6JcQy-bqo?si=X-1p24K1a_HFGuFf"
+                    height="245.25px"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-between mb-2 d-lg-none">
+                <img class="img-3 white-icon me-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACgSURBVHgB7dOxDcIwEIXhl7AB4ICoqMJhmRlgBEZgE0ZgJBgBOkroIL5I9EgxChISBSi+OF3yt5a+xveA1tWDMGNoNekPcWN+/HqPIUgTbVC4/RPFEqGVmNEzZ3S6RWgtwRbzdF0H8/jlOIKgv3eYcX4eKXUF3C5RKsosHxACvlHLRylauRQp6jU9Ceq95W90nAwud5uf0ETlORHRFF2fXrMYT43xiEsFAAAAAElFTkSuQmCC" alt="">
+                <p class="fw-medium fs-6 text-white me-21 mb-0 ">上一堂</p>
+                <img class="img-3 blue-icon-2 me-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFZSURBVHgB7ZO/TsJQFMbPLcTFRfsH49ap3P7B8Ah9BDZHHd3kDSijE/EJHNXJ1Q0d3RupxKFsWothMzFyj/dCJIHYi4WQGMKXtDfpd8759ST3A/hPcm27XnHLrTw9Sp5iQlgLEep5enIBFtEGsAGsGOB51Pco9WV+xbZqsCgAGLZBwbZLraNZy6H0WPhIyI1sREFmlgyNv4lPCKkZmhaLU3zXNaOnKHgxrsIgeevfZ80gMEeeYzV4WfC7i0H42G3K+qUbCIm/+9kk7/ApwIFXPt1XjdeXNB3Mh2QPrzpOVdfVwyTtP0wA4jYggysGaHLjGrI20XUBvw073TPIkF5SL/lxsqft3iXpe684bZMdkCjsPJ1DTq08aKMNimw4+OIsJGDKgvUXEUQTZwGwtR3j50fM76wpggVLCMdPHEbPo2xMckApNQsKa/AwmbCEEDEeMqUZRVEMa6FvEJ57mBIVhSQAAAAASUVORK5CYII=" alt="">
+                <p class="fw-medium fs-6 text-primary me-21 mb-0 ">下載教材</p>
+                <p class="fw-medium fs-6 text-white me-2 mb-0 ">下一堂</p>
+                <img class="img-3 white-icon me-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7dNBCoMwEEDRMXbRY3QZCoX2CN6kR+gNerTSGwjduMwR3FRQSHRGcKNmkolL/SAuEl6UIQBHU7erft61voAw5Vtw0L+t6j9S1AtalxWO3kI04xY1QjmCdGqOB5RVZWALmIIGQSkaBS7Qpn2UxtRr+04Q2RkfC+P0658HoxRERFOmaRP2b7qC2xv85TlmmK8LglKMBVMwyn9TEjCKm/ILsa8E22kDrLR2844Rbl4AAAAASUVORK5CYII=" alt="">
+            </div>
+            
+            <div class="mx-4 pb-3 d-lg-none">
+                <button type="button" class="btn w-100 bg-white py-2">課程目錄</button>
+            </div>
+        </article>
+    </main>
+    <main class="container">
+        <div class="px-1 py-4 d-flex align-items-center justify-content-between d-lg-none">
+            <div class="d-flex flex-column align-items-center me-4">
+                <img class="img-2 " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAgCAYAAACcuBHKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK2SURBVHgB7Ve9jtNAEJ51DokCITe0kBMSLflTpIjGeQKSFwDfE5AUgK5KrkCIKgktRXJPcEdNcabNjxKJhoozDRIS0qWgQEoc8y04yJ6s/5ITAuk+yfLu7M7O59nZ2THRFf4hiDSTh8NhTghRw/MQ3Rwe6+6Hw6b+7V2HXDLQn+Ft0Yp64pDspOsmIjGdTrOO4/TRNPjY7Y8v5re+nOgKtQE5dJSEjBY3YTQaNUBgqiIg4Vy7GaZqUobO3VfUoF1IgEAbru+gqYdMsX7cuFeFP63QRQR13JfUpgiIGAItleFMJjPA+20+n5+vhW4LRK9TDZ/VwqrZDS2XmuI5dSkpCS8GztGURtZekO12qVTqUQx+bYGgFnEPOlRFjFh8vnI7VqvVmdf8QwCyahICEt4XVz3ifmsqz26SmEwmpuu6WSY+KJfLM0oB8QzHVVA9KFQH9wYJEHjMRAN44JS2gHgK1wtfHLgJYgKxoCMWLvyyxWKxX6lUbNoBF28eNL7uP+p814uEYO8Wi8WmfzzgieVymWP6s10JSHwqvL4jCUjA0w2cPCOUBFjeZ/o2XQ70KDucBJ+cKhgjYEfZiU3bfwOcxGd/R3FUtwLWybG+TWEkkJBspl+jSwDcHyChaZod6Ps7e3t7Mgb8WU7nkZwWUp97tFAovA8l4V1IgWAMucQSQ6E/4HNUGfOIiQxZU9AW8PSMgEFNG/B5ylt0PB6f0WYRYyJ9H1NCoBQ0YbDPxKdYo87nKo8o6oUD4jcg3ChrDIqBTP34iK6CwBxXQFOlE1rUeLdpXzFk47EwdiwDWcaRNOylfAMx8ITUlVg97CKMLHQjiKRF5FbGVtuyzMf2nGyZuGxsi8mPZGoSEtLdSGTSzWZCMnN5ZYNAz1+H7kTCD2+L5M9Pln7/AK2NziGXRbBFrAi+wn+Fn/g0FHhFqAsBAAAAAElFTkSuQmCC" alt="">
+                <p class="fs-6 fw-medium text-neutral-950 mb-0 ">課程進度</p>
+            </div>
+
+            <div class="d-flex flex-column align-items-center me-4">
+                <img class="img-2 " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAgCAYAAACcuBHKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKwSURBVHgB7VexbhNBEH17NsKRKNxQ0CDXNLGNKZHOX0DS0cX5ApwCEDSOqwhS2PkBfP4CnB6Jc2sXpAQJKUdJZykIBXC8vFtHiXe957uzIyVFnrQ6397OzNvZmdkxcIsbBJFm8XA4dIUQWxyulDLPcVD59MRDFh1IuFxyxKePCQ7EGwRJ9SYiMRgMio7jtPjTNb89Gjzvrf36vmER83CGZhIyTtwC7r5OAl9sBEJk/54EEaI1ZHAs36GOVUicu78V8XnEUb8jfzbpTz9SiUBL7mEXC5Bd9JEE1i3TPj2zWy6X+zNzVdlAHjlscFsNGi5oEhk06JGReI221Y5tkswLVPbi3937+W+PP9T+rD0Ip8Odb1cqlR5ioI5AkAxIbBZnqDJG/GQk3uOYj0L4+zT3MPj69DA8136pVBohIaijyMdnjQgzh96oxpKgcI2PjrboVbpUvtC1z2CWisglLN6YD0yBLWPGw5IQL5UxD7rFhrlOIyFbdJ00UpG5jlUg0DXeXRXEUSQwVuc4i6M0lc/KIfSGYCWdRU63o5OQWDfeA1wFpEEio9vRSQgjpRxDeFkIYzNi0XFcE8zj+GG8F3AVkEasGZ5xFn0kbLfjMtBJTBaRyKoYmK2KeZZwFytAFSzoHmXx60eSEDskYKaTpbikhCnvmQtsgakXp7C4JOgJbFBycs6TnrnOfoHts96bwhI1Xj5dJCWwp5qajqGjRx2b5lp7io6xDT02QrpeXHOi7LAk8xJszxEI9U2wY5OJvB2tO5ki4PB5p3RxyrLexEjdBfeYARN6j30Id5yfkxpjU7xFLxWJGCLpEHOUsX2Cak4kPs61bMmMB5SrmSmZmoTSFV7xY7p5Qs8kIzMigTZ+8/9HE7HdWOqO6fyInmFagIoXRqfDZ0z4OMFhEuO3uJH4D1171rQywOyvAAAAAElFTkSuQmCC" alt="">
+                <p class="fs-6 fw-medium text-neutral-950 mb-0">作業進度</p>
+            </div>
+
+            
+            <div class="d-flex flex-column align-items-center me-4">
+                <img class="img-2 ccc-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHISURBVHgB7VbLccIwEH35FOAS1EFIBXE6IBVAB04qwB0kHHMiVJChAnzNCTpAOeZkOki041Us20I/uMGb2RGSVqvnnaddgAvOHVeIQ6ZsomyEdGyVrZRJREIo2yn7PYHtOB5uEY6CD0llJdLxjCaDFO8l5uACDfsJjsOY46xpEpIBgdNib05cBChVMzTCc2Hj8aELH9G72IcSrWBqdMW3Nvwy+IW5Q5dgbonTgTAOF8b6iMkcq4McHg3o4B/K5sY6vd9S2ZuyqbIlr2dw1wUJx5u3ERA8Vpa9FRMQxuU1/CD/bwQS0GKhr1r29kY9HxpLuF+KPHT5IeRoxWemVqAVXIF05PBooELz5aSFDc/3fNBU89RyTqJLOMcQmryEBzMMn1SNw8+t7hF0Pc//XuDrhuR0x4Er9i8wLDw5+5JAqb6X/AESQzFTNue8ZyWgW66rutFr2PYI6MLypOyTf4/ZNxhUfkNb6qJH8tWy74WZgRJN2ggV7HWAINAKkLJwz791WaZxz+sSgRBomY8D/bXIZr11mkf/Y9LpC0obI4enqcRgzcEeIs5kaLOWjGukI6q/+wicJFgKbnj8YRLviAM1mUrZFy64IBF/a02nlsBlqQ0AAAAASUVORK5CYII=" alt="">
+                <p class="fs-6 fw-medium text-neutral-950 mb-0">尚未評價</p>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <img class="img-2 ccc-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJxSURBVHgB5VftcdswDH3t9X+1QbhBvUHVCexOYGWCagOrE6idwNnA9QSyJ7A7gZ0J7A0SIgKOEExGki+XuyTvDscPAyAAAhANfHR8wvVwnqY8X3s64hVReXowVOEVkHlaqUMbs6a5wwsi91R7WnraeTrxQTTOFV+JbjTEsAXruAoVLsMsyicRfufpkJCpUoekkjDngwj/PG08nT39R5tsM0/f0F5Jxntb5iXjbtggmhes5wfrGYQFW740+xRquYYYUQTmRkZypI4d9AVxSIj3PEry5bymaNzx7xnz02+O9ylCt8y34XWGEWjY6qnxgrz/9YycTsYV7xW83mEgnFIyUUpPuEw+4rWeTRCuqeS1yA+Kgnh74LVkdsxzutdFZL80h0pEV+hBheC9Q3t32hgNx/spzyQKObpRqZCAU4eLtzW6GZwhNCZd8weExpMlZEvj3BM+KwMk4aiW/yqjCEcez0wFui2X5jPFo2XEoD8IfWAaMwBGQOOs5r9ZmUXFv42CNmDNY442XIQjjzb7t7jE3qxFRowvEfrIGglIB5SSK9Ta8p14XDKPrQbJEQq3Q7j/BXogZUilk6Fb04IZ0jkAhISzpdxbhjCH9jWiGKTxEM3N2mEgdkoBoVFGlM/I6Y+VeCu9pIkJpD5Ge7ZcKuIn2rsmZVTX1Cc2CInn0OaL8FMp3/L8hsczRqBG/M4KpB8dqY9VKkmfMORBcofW03u0ZUnzKfOIx+QdeU0PFoc2el+ZZ6Z0bjECUpKxR4eL8E8QcsVSb+ml8J2FVxHlOhl1n6droCSm0Nes48XgcPkMb8x61MvnWsSu56owv9m/Zu8Hjz+kArqMSP/gAAAAAElFTkSuQmCC" alt="">
+                <p class="fs-6 fw-medium text-neutral-950 mb-0">完課證明</p>
+            </div>
+        </div>
+    </main>
+
+    <main class="bg-neutral-50">
+        <article class="container px-0 px-lg-4 pt-lg-4 pb-lg-3">
+                <div class="bg-white px-9 py-3 d-lg-flex align-items-center justify-content-start d-none mb-3">
+                    
+                    <p class="fw-bold fs-4 text-neutral-95 mb-0 me-4 flex-shrink-0">課程進度</p> 
+    
+                    <div class="d-flex align-items-center w-100 flex-shrink-1 me-4">
+                        <div class="bg-white me-3 w-100 rounded-pill">
+                            <div class="pt-7 bg-sec-300 rounded-pill" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <time class="fw-medium text-bg-444 fs-15">60%</time>
+                    </div>
+    
+                    <div class="d-flex flex-column align-items-center me-4 flex-shrink-0">
+                        <img class="img-2 "
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAgCAYAAACcuBHKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKwSURBVHgB7VexbhNBEH17NsKRKNxQ0CDXNLGNKZHOX0DS0cX5ApwCEDSOqwhS2PkBfP4CnB6Jc2sXpAQJKUdJZykIBXC8vFtHiXe957uzIyVFnrQ6397OzNvZmdkxcIsbBJFm8XA4dIUQWxyulDLPcVD59MRDFh1IuFxyxKePCQ7EGwRJ9SYiMRgMio7jtPjTNb89Gjzvrf36vmER83CGZhIyTtwC7r5OAl9sBEJk/54EEaI1ZHAs36GOVUicu78V8XnEUb8jfzbpTz9SiUBL7mEXC5Bd9JEE1i3TPj2zWy6X+zNzVdlAHjlscFsNGi5oEhk06JGReI221Y5tkswLVPbi3937+W+PP9T+rD0Ip8Odb1cqlR5ioI5AkAxIbBZnqDJG/GQk3uOYj0L4+zT3MPj69DA8136pVBohIaijyMdnjQgzh96oxpKgcI2PjrboVbpUvtC1z2CWisglLN6YD0yBLWPGw5IQL5UxD7rFhrlOIyFbdJ00UpG5jlUg0DXeXRXEUSQwVuc4i6M0lc/KIfSGYCWdRU63o5OQWDfeA1wFpEEio9vRSQgjpRxDeFkIYzNi0XFcE8zj+GG8F3AVkEasGZ5xFn0kbLfjMtBJTBaRyKoYmK2KeZZwFytAFSzoHmXx60eSEDskYKaTpbikhCnvmQtsgakXp7C4JOgJbFBycs6TnrnOfoHts96bwhI1Xj5dJCWwp5qajqGjRx2b5lp7io6xDT02QrpeXHOi7LAk8xJszxEI9U2wY5OJvB2tO5ki4PB5p3RxyrLexEjdBfeYARN6j30Id5yfkxpjU7xFLxWJGCLpEHOUsX2Cak4kPs61bMmMB5SrmSmZmoTSFV7xY7p5Qs8kIzMigTZ+8/9HE7HdWOqO6fyInmFagIoXRqfDZ0z4OMFhEuO3uJH4D1171rQywOyvAAAAAElFTkSuQmCC"
+                             alt="">
+                        <p class="fs-6 fw-medium text-neutral-950 mb-0">作業進度</p>
+                    </div>
+                
+                
+                    <div class="d-flex flex-column align-items-center me-4 flex-shrink-0">
+                        <img class="img-2 ccc-icon"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHISURBVHgB7VbLccIwEH35FOAS1EFIBXE6IBVAB04qwB0kHHMiVJChAnzNCTpAOeZkOki041Us20I/uMGb2RGSVqvnnaddgAvOHVeIQ6ZsomyEdGyVrZRJREIo2yn7PYHtOB5uEY6CD0llJdLxjCaDFO8l5uACDfsJjsOY46xpEpIBgdNib05cBChVMzTCc2Hj8aELH9G72IcSrWBqdMW3Nvwy+IW5Q5dgbonTgTAOF8b6iMkcq4McHg3o4B/K5sY6vd9S2ZuyqbIlr2dw1wUJx5u3ERA8Vpa9FRMQxuU1/CD/bwQS0GKhr1r29kY9HxpLuF+KPHT5IeRoxWemVqAVXIF05PBooELz5aSFDc/3fNBU89RyTqJLOMcQmryEBzMMn1SNw8+t7hF0Pc//XuDrhuR0x4Er9i8wLDw5+5JAqb6X/AESQzFTNue8ZyWgW66rutFr2PYI6MLypOyTf4/ZNxhUfkNb6qJH8tWy74WZgRJN2ggV7HWAINAKkLJwz791WaZxz+sSgRBomY8D/bXIZr11mkf/Y9LpC0obI4enqcRgzcEeIs5kaLOWjGukI6q/+wicJFgKbnj8YRLviAM1mUrZFy64IBF/a02nlsBlqQ0AAAAASUVORK5CYII=" alt="">
+                        <p class="fs-6 fw-medium text-neutral-950 mb-0">尚未評價</p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center flex-shrink-0">
+                        <img class="img-2 ccc-icon"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJxSURBVHgB5VftcdswDH3t9X+1QbhBvUHVCexOYGWCagOrE6idwNnA9QSyJ7A7gZ0J7A0SIgKOEExGki+XuyTvDscPAyAAAhANfHR8wvVwnqY8X3s64hVReXowVOEVkHlaqUMbs6a5wwsi91R7WnraeTrxQTTOFV+JbjTEsAXruAoVLsMsyicRfufpkJCpUoekkjDngwj/PG08nT39R5tsM0/f0F5Jxntb5iXjbtggmhes5wfrGYQFW740+xRquYYYUQTmRkZypI4d9AVxSIj3PEry5bymaNzx7xnz02+O9ylCt8y34XWGEWjY6qnxgrz/9YycTsYV7xW83mEgnFIyUUpPuEw+4rWeTRCuqeS1yA+Kgnh74LVkdsxzutdFZL80h0pEV+hBheC9Q3t32hgNx/spzyQKObpRqZCAU4eLtzW6GZwhNCZd8weExpMlZEvj3BM+KwMk4aiW/yqjCEcez0wFui2X5jPFo2XEoD8IfWAaMwBGQOOs5r9ZmUXFv42CNmDNY442XIQjjzb7t7jE3qxFRowvEfrIGglIB5SSK9Ta8p14XDKPrQbJEQq3Q7j/BXogZUilk6Fb04IZ0jkAhISzpdxbhjCH9jWiGKTxEM3N2mEgdkoBoVFGlM/I6Y+VeCu9pIkJpD5Ge7ZcKuIn2rsmZVTX1Cc2CInn0OaL8FMp3/L8hsczRqBG/M4KpB8dqY9VKkmfMORBcofW03u0ZUnzKfOIx+QdeU0PFoc2el+ZZ6Z0bjECUpKxR4eL8E8QcsVSb+ml8J2FVxHlOhl1n6droCSm0Nes48XgcPkMb8x61MvnWsSu56owv9m/Zu8Hjz+kArqMSP/gAAAAAElFTkSuQmCC"
+                             alt="">
+                        <p class="fs-6 fw-medium text-neutral-950 mb-0">完課證明</p>
+                    </div>
+                </div>
+
+            <div class="d-lg-flex justify-content-end mb-3 d-none">
+                    <p class="d-inline px-3 py-1 mb-0 fs-6 text-neutral-950 fw-medium bg-white">設定學習目標<img class="img-3 ms-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7dNBCoMwEEDRMXbRY3QZCoX2CN6kR+gNerTSGwjduMwR3FRQSHRGcKNmkolL/SAuEl6UIQBHU7erft61voAw5Vtw0L+t6j9S1AtalxWO3kI04xY1QjmCdGqOB5RVZWALmIIGQSkaBS7Qpn2UxtRr+04Q2RkfC+P0658HoxRERFOmaRP2b7qC2xv85TlmmK8LglKMBVMwyn9TEjCKm/ILsa8E22kDrLR2844Rbl4AAAAASUVORK5CYII=" alt=""></p>
+            </div>
+
+            <div class="d-lg-none  pt-4 mb-3">
+                <div class="swiper mySwiper-1 bg-white ">
+                    <div class="swiper-wrapper">
+                        <div
+                             class="swiper-slide text-center w-30-de py-2 m-0 me-1 border-bottom border-2 border-main-800">
+                            總覽</div>
+                        <div
+                             class="swiper-slide text-center w-30-de py-2 m-0 me-1 ">
+                            介紹
+                        </div>
+                        <div
+                             class="swiper-slide text-center w-30-de py-2 m-0 me-1 ">
+                            課程目錄
+                        </div>
+                        <div
+                             class="swiper-slide text-center w-30-de py-2 m-0 me-1 ">
+                            評價
+                        </div>
+                        <div
+                             class="swiper-slide text-center w-30-de py-2 m-0 me-1 ">
+                            講師
+                        </div>
+                        <div
+                             class="swiper-slide text-center w-30-de py-2 m-0 me-1 ">
+                            作品
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- nav-pc -->
+            <div  class="bg-white px-0 mb-3 d-lg-flex py-3 justify-content-center d-none d">
+                <div tabindex="1"
+                     class="text-center w-30-de py-1 m-0 me-1 fw-medium hover-main-line border-bottom border-2 border-main-800">
+                    討論</div>
+                <div tabindex="1"
+                     class="text-center w-30-de py-1 m-0 me-1 fw-medium hover-main-line">
+                    介紹</div>
+                <div tabindex="1"
+                     class="text-center w-30-de py-1 m-0 me-1 fw-medium hover-main-line">
+                    評價</div>
+                <div tabindex="1"
+                     class="text-center w-30-de py-1 m-0 me-1 fw-medium hover-main-line">
+                    作品</div>
+            </div>
+
+            <!-- 課程總覽 -->
+            <div class="bg-white rounded-6 px-lg-9 p-4 mb-3">
+                <h2 class="fw-bold fs-4 text-neutral-950 mb-3">課程總覽</h2>
+                <div class="d-flex mb-4 box-6-992 mx-auto">
+                    <div class="d-flex align-items-center w-50 me-4">
+                        <img class="img-2 me-6"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQQSURBVHgB1VfNTxNBFH9F/DhobKJnaaInL2z0amzVs0D0LC14l+rVaIuKVyheIS144Qb4BwgoB/HSYqLx1pLohY9QPg58j+83nbcM221ZwMT4Sya7s/Nm3ue895boHyN0FOLTRA4/ojwcVRlhc0iJH2V+TvJzapuoEPTMQAIw4wQzi/NrrNlx6HY0SpFIhC6GNX9aKZepVCrRp6kpmi1o3gU+uI8FGaKTABrzyF8Oh9WrdFotLy+rw1AsFtWzZFJdjUQU7y2eI4rQcSzAm5Osde+TZJJepFIUNtqWWVtoiYF3AGuwDIbQwSKv02kaHtJG6N4hSlNQNDIxtB7K5VzNCvm86ozHFb5j3HQc9bCtTY97sZj+xvtUZyKhSmwFQaa3V9aCCSDMwVDwtKtLHw5GkxMTNV2BNQgJ2u5U6oDwOBNWrcsc/sLm/r4+vRGM7kaj6hr7E4d7sb3wQ23++lL1fWx0VMcArCTCDmWzWjBzk/yBoIEJBTgAzG2T2lgcjunhBwQjhIDVXEtycLIQ+VrMEzYzmNCeby18V3sbqweYrH3uUWvTPQe+7W2saMvYQuBWiEWNK+J+vs8LITbCXDClMJ8fuKGWRlqqhPACNPMDN10h4DqcJTEFxXg+4dXeAZFoi0CyXbHLWi2N3FfrX/vVYQCNV1C4Qc6DFapigSdd8LdN4Bd0XuB2YHjhtRLOguklIG8wL/C0zT8qBwlxEFxtatI+DgKcKUqBFwuQBe8GI0MYuR1AhkNG+9u4wuebOqHriDIu0ALwJGKnWnnf+j1Di+/v0Pr0Wzoq+HbovTtLP/XcaW52UzeKmFTSBr/NUuUazl7gYlG7YEZjMZrjnP+4o6NqLaRHiNTmqquYHxoNcdkuLB/GxyuLl6/TpUcfqRYGczn9HDbPwWzWXTt/67keAtuyKN+mh6hYgCcFVC8A/p8z70EAIdrj8QPV0Q/fZmfd2DK89om919CO2P2rtVI3yuv1CpKMal5DSURCgERk5/A9nYha1NpMRh0G0HgTkZ3YJMtWFSWkRymhSJt2MrJTcT1IxgTtlknFSOd2ljWlvbogneJiZGcrVK7Di9EbtcrDK8SWpxihnbPnp/yKkbGCW5AAuOGk5VhiC4ArmHmRakFiQVoxWEN6AqmMNjhRuVXPBlwnvYBYFK1Zo8559ZtU3Yx6WzKYUPq9ekUKa+igQGtbUmKKR4qCAITYAKltk0q/BwHB6EFrq/4GK0mzCiFt4dGKmabUl3monhD8SLcnEvSS2/ImU6yCtuVYY8vRu0wGTJL8k5KhYyCCoEEM4PrUCkYb8Dmus9EanU/d0hro1wxXNFTJXE7AX7NJjrbcboBfsyP/nPKhUS4gMZ6GlYnoUOXHtMBrhTNEYxtEc/S/4A9q83dJqSuTEQAAAABJRU5ErkJggg=="
+                             alt="">
+                        <div>
+                            <p class="fs-6 text-neutral-500 mb-0">課程時長</p>
+                            <p
+                               class="fs-6 fw-bold fs-6 text-neutral-66 mb-0">
+                                4 時 0 分鐘</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center w-50">
+                        <img class="img-2 me-6"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEvSURBVHgB7ZexasJAGMf/tA4tHQx0Ki0YoWPfoXbp2GYoXYp0bEfbFxDp0MlqZ42Kb6DgpiS+gc4OEnVxkCiOgnoXMKJeQBM0Dt8vHCTHd9/9SPIldwBxbASAOGuzPbW4YL5NnhUFyVQKuq7jJ5FATdM2Ym7DYagfV7i7PrP7uoMJXv57qLJ4WZZX4r9jMZRLJWwlEJQkhFiCRZLQWjI77vwUN5fLFDN2cPi49TESyyniBD5DAp4FMpqJx98OstoQbgjAA1/FPsbTC0TfP5Fjb3iy0sGueLoDD09vaLXb+EunrdJTXqPYFdcCfEI1n7fLi5eeWihYQkGHkhPh+hHcRyLCftnhm+EElSEJkAAJkAAJ+C4g/BuOTBN1tiRvNhrWNT/3imEY2wUeemNC+M4cRSx3Es1ZLT0AAAAASUVORK5CYII="
+                             alt="">
+                        <div>
+                            <p class="fs-6 text-neutral-500 mb-0">單元數</p>
+                            <p
+                               class="fs-6 fw-bold fs-6 text-neutral-66 mb-0">
+                                3 章節 12 單元</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="d-flex mb-4 box-6-992  mx-auto">
+                    <div class="d-flex align-items-center w-50 me-4">
+                        <img class="img-2 me-6"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ2SURBVHgB7VfBitNQFD12OqCDSNGFm5EGRl0XXOmmQT+gMzJbadEPKPMB0ugPpONShCiuBGV05bLWlbt0viABBUGUpCq60DHek+bFSdpxkrSdYWAOfeT2vnfvPfe+m5cEOGScQAFU5PcdqAWAFjlxTwMDH/AxLzBoGTBk9GQEHCuaFg71X4a9CDRPRsRmhiiwd6VWC+4bRjCw7SAN6jZNczchA9OCmUhG9kVx+nJrK8iKx5YVEhFbp3A1WHI6YNae58XOKd/rdIKbjUawUq0GnL9er4fZu44Tr3NE5hx9jNzlxALQZeYqOK8b7bYqL/vAlDVNDpE73H/O3W61YiK0ibbEzBWcZaMz5YjZ0JEEc0Rf38uOc1xD4sr2Ta+nSOvICimbxUwUWEpmiGyl5N1i39D12J4yq4asYMerpmNDLYz2UUN2kIT3RGx3VcHLlABLxZKpvWeDCQELOcG+UFWgr8zbIMFa3G+FyLCOnEgnwjuGDZteV0or5FitapoWyq7rKmcu8hNweR36o9NZnNK3NiHeP8bI0yjTQf8N9KO4STxvL8fy8OcO7jz8iEeWBVWVrPAl8/W1NZi3zuPC2cVYv775IbFujMDVy6di+f2XXyO6uh6WMA/U9l27tITlc+U915VwyChEgNnJaZcY24MBiqCMAqhUKrhrGGO6AyXQbLUwC4wRePZuGMtff/yZaMQOf9DtJnQkNKlRX29/w5ml0v4E5EDwJZy78fRTYsGkw4ME3vb7CV1jdRXVcf/ovPjspnWZX0TTj+U84COctuKj+r8YR/M2PCZwTGCWyHQSyqsV5oX9zoSKvEY1MAV2gFeY50frtPgLve+5zupLbcgAAAAASUVORK5CYII="
+                             alt="">
+                        <div>
+                            <p class="fs-6 text-neutral-500 mb-0">課程人數</p>
+                            <p
+                               class="fs-6 fw-bold fs-6 text-neutral-66 mb-0">
+                                316 位同學</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center w-50">
+                        <img class="img-2 me-6"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIPSURBVHgB7ZbNLztBHMafbbUVie3K73dSBxIJJ9wcicSZuDe74SYRVydBInH0chaKs9TJBVviH+CAW3cTbhK7rYOWds1stDq2OrOiHPSTNNPZfeY7z7ztfIEGfx2p9CcIjJNCwc9gFYDkRwPpTgJ8YFuWW0YVcd+0zYNlGcRAF/OCGkjpuuOHSVV1JjXNVxvaB+2r1G9TNZcHySSst9HVwjRNwHGQ2N7maunkDg0Pe55XNbC+uorLiwvu1JaWwFhc5Or6BwbEDVBmZmcxv7CAWkxpGtlFEja3tmrqlkics9PTqu8C+GWaREQv99co5jLlelCOIdjawWgc8r6YzzDPPmq+bMA+nEYhe1euyyMrCPaywXPpI2RO5io6j+FfXOfGFjIgEijSNYr/8UH4RciACFKk1f3VxcDj+TKzvs09EwjH2NE+318hnz6uMCSjpU/lxhYyECCbTsrJ7/WI7BXlsihW7BMpn4UIQgZa+jSuJkRmJBSr0x4oZG+ZeiAsu1P8HQgZsJJxzzFs7p1gNE83+/U7hm3je0xdCntHH2ofZHRSWOxEiG1CMhoe7tdR5us8sfHLfDoDG2tr2OHc87Ztu2W3rnN19DoWNkCvYcMwwGM3kXDLuMr/4Cif5BZVDdDEYQh8zlIpNx9QaV7wRZiktE1ROqPRqHDj0hL4aUMxTLOclFYaGMPPpuUHaNCA8ApE1fvJ2Q3FeQAAAABJRU5ErkJggg=="
+                             alt="">
+                        <div>
+                            <p class="fs-6 text-neutral-500 mb-0">作業數</p>
+                            <p
+                               class="fs-6 fw-bold fs-6 text-neutral-66 mb-0">
+                                1 份作業</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="d-flex box-6-992  mx-auto">
+                    <div class="d-flex align-items-center w-50 me-4">
+                        <img class="img-2 me-6"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIBSURBVHgB7ZdLSwJRFMf/9iJo0UTQJkiD9k1QtJzpsa8P0MOoVdC6Za3aRrSOrA8QtY80aBWB2qIiAjWwVeGkixJTO2dyJB/NeMd8LPyBzJn7/N/rPeeeAVo0GIdhdAJyFphDHaBJz1JAgO0OozBDAvokaXtUllFLgoEAYpoWRk5AnnbAPaOq2VozrShZmmvZmLcNDabDrDIcDuPS50M1zM3PQ5Ik2BIQIQFrKytwulywA/d3UV9FVWFLgMFTKAQ7dDoclm0afgaEBKRe7xA7XUAydK6/xy82kbja0e2PhxO9Lp2IQgQhAdlkAqmXa3rGfwRFr5F+u9ftDE3MdaJUdAYMugYnMbD+mH/vX/Tm7Z6JDf0nSnPHAYNVt7ukjF1rKVd+7PHYjhemAtj/l8pM/q5pWKX4wIFKI3t/b69sOy4zC0KWAjiIHBwelq3jyWenpvTr9Mbvh91LTOgQFos793r1FVqtsiYCDBHVUiCA7+oZk7j9H9wGg/hTAG+lUmMBkUiEE5LSikYlJAU7wC7FV2g9KTkDI8PDqCe/L2ypG+g1a0yZrEwdTtnvi12Pd298bAyUWbspw/aZjfNJsYy7QBTarl2zc8J11GZLZEzrlAX6N8Myr4xMmXxfGnI6y7Z7phNOEZJXFqCBPbRjR1ZjVySAVqXSQ4EYl18Wf0WLpuAb81N/mgnRodkAAAAASUVORK5CYII="
+                             alt="">
+                        <div>
+                            <p class="fs-6 text-neutral-500 mb-0 ">觀看限制</p>
+                            <p
+                               class="fs-6 fw-bold fs-6 text-neutral-66 mb-0">
+                                無限期觀看</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center w-50">
+                        <img class="img-2 me-6"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIfSURBVHgB7Zc/SAJRHMd/Rn+IhqRoKvIgHKrBhpZoKKmpICmCtv5Qc6gN0ZD/9kCLtkCdI7CGpkpbkqa2AhvUwSEoFISkpF7vd/jn7rx3qZ3a4Aee573H3X3f7/d+33unIRRoIC3QYJoCGi6gNf/nNhSCzfV1qAdngQAYxsbEApB4PA4nXi/Ukq2NDUilUsUOkiMUDJLW4mnNwGfgswTn8mBK1EKr1RZCLoUpYNZoBLWYmp6Gq2AQKhKQrZNB/l8faNNoKmrClPl9PuaYFGYKWDljgQstjzTnwrGyBeBNqoXjOL6VA1PATJkCriXliiZz6HZDPBaDbjrzNequrBJUFLBahS2fU4tFpxvu+4DRgQ6IPGRh3OOBfbsdbA6H/EVqOWE0GiVDHEd253vJy7G+0G72BkXuJ3VC1coQnfM7nQDrXI+oHyOxZdTCEY2EHKoJwJyP9LfLjo0MtItfQLUQgKX2mPiUHQtHMsxSZArAKhA2q8UCSuCiTX91wcHlm6j/LvIOp/dpWDCZZK8r2wd+q2ucIe4llhcX+RlP6Dsh/Jzh27bZzKwqpgBm2SiQr3f95Aq80uO4vhue/H4wGAzMa0oE/GUfEKMLEbHRutflInZBvQF3Wqz7lghQcx+Qx6UUTaIiaEZoNPRtSJZMJuL3esmQTscfWdRkP7BDFx2mwOV08uFXhKgIRoCGmySTyUKfj85eaL1SNPgDDaT5afYDtjFkxSFLpEkAAAAASUVORK5CYII="
+                             alt="">
+                        <div>
+                            <p class="fs-6 text-neutral-500 mb-0">證書</p>
+                            <p
+                               class="fs-6 fw-bold fs-6 text-neutral-66 mb-0">
+                                1 份完課證書</p>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            <!-- 你將學到 -->
+            <div class="p-4 bg-white rounded-6 mb-3">
+                <p class="fw-bold fs-4 text-neutral-950 mb-3">您將學到</p>
+                <p class="text-neutral-600 fs-6 fw-medium mb-0"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADdSURBVHgB7VKxDcIwEHxDk9LJBB4BNkg6yrABTEKYICOkpmKEMAIb4BFMl87cS4+EUJQQsCgin3S62B/fv08mioiYP7TWJk3TG7Ttqy/oRyilaoiB6uANsiyrICVovfdbCglEskI0nonvkqaCc5VsdY+5kTqbH4Z8xiLibJv3TdkziOXinDvSNw1wuIA4sMSU1XNfcs9BC+5pBGqoCOMc07bScAe5Y32W9RrTX2kEy6Fi13U2SRI23YDcLOe+MK9gfqJQwE3qlxfTTDmrPvmJX5JExdMXmN5SRMTf8ABuSEbUiumzDwAAAABJRU5ErkJggg==" alt="">鉤針和毛線的選擇：了解不同類型的鉤針和毛線，選擇最適合的工具和材料。</p>
+                <br>
+                 <p class="text-neutral-600 fs-6 fw-medium mb-0"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADdSURBVHgB7VKxDcIwEHxDk9LJBB4BNkg6yrABTEKYICOkpmKEMAIb4BFMl87cS4+EUJQQsCgin3S62B/fv08mioiYP7TWJk3TG7Ttqy/oRyilaoiB6uANsiyrICVovfdbCglEskI0nonvkqaCc5VsdY+5kTqbH4Z8xiLibJv3TdkziOXinDvSNw1wuIA4sMSU1XNfcs9BC+5pBGqoCOMc07bScAe5Y32W9RrTX2kEy6Fi13U2SRI23YDcLOe+MK9gfqJQwE3qlxfTTDmrPvmJX5JExdMXmN5SRMTf8ABuSEbUiumzDwAAAABJRU5ErkJggg==" alt="">基本鉤織工具介紹：熟悉鉤織過程中常用的工具，如鉤針、剪刀、記號環等。</p>
+                 <br>
+                 <p class="text-neutral-600 fs-6 fw-medium mb-0"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADdSURBVHgB7VKxDcIwEHxDk9LJBB4BNkg6yrABTEKYICOkpmKEMAIb4BFMl87cS4+EUJQQsCgin3S62B/fv08mioiYP7TWJk3TG7Ttqy/oRyilaoiB6uANsiyrICVovfdbCglEskI0nonvkqaCc5VsdY+5kTqbH4Z8xiLibJv3TdkziOXinDvSNw1wuIA4sMSU1XNfcs9BC+5pBGqoCOMc07bScAe5Y32W9RrTX2kEy6Fi13U2SRI23YDcLOe+MK9gfqJQwE3qlxfTTDmrPvmJX5JExdMXmN5SRMTf8ABuSEbUiumzDwAAAABJRU5ErkJggg==" alt="">基本鉤織技巧：鏈針、短針、長針、引拔針。</p>
+            </div>
+            <!-- 最新消息 -->
+            <div class="bg-white rounded-6 px-lg-9 p-4 mb-3">
+                <div class="d-flex justify-content-between mb-3 align-items-center">
+                    <h2 class="fw-bold fs-4 text-neutral-950 mb-0 ">最新消息
+                    </h2>
+            
+                    <a class="text-decoration-none type-1-focus"
+                       data-bs-toggle="collapse" href="#new"
+                       role="button" aria-expanded="false"
+                       aria-controls="new">
+                        <div class="d-flex section-1">
+                            <p
+                               class="mb-0 text-warning-100 fs-6 fw-medium me-1">
+                                展開消息</p>
+                            <img class="warning-icon img-3"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACUSURBVHgB7ZG7DYQwDEDN3QinMAKgXNiBTWCTZARGgE1gAiokREPPZwWMIxqEREJBR14RRc7TK2IAxwuJeTgIHqk7rvYED5vj7HOWELCgU9qi+ztKXDE/zr9ncZyW2mc/fVU+Y944zZUhlrVdXxqDtqgpdhm8itpiGg8sCB5I0hSZFX1wYordRkdpm/iPghQcjufZAOU1UCxCN5IyAAAAAElFTkSuQmCC"
+                                 alt="">
+                        </div>
+                        <div class="d-flex section-2 d-none">
+                            <p
+                               class="mb-0 text-warning-100 fs-6 fw-medium me-1">
+                                收合內容</p>
+                            <img class="warning-icon img-3"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAB/SURBVHgB7c+xDYAgEEDR8xJ7R6BRzEHhCm7iJjqCGziKI2hhYpyCERCtaPTA0vC7u1xecgCp1B3VdaepMlSWDXeLIRiincBmK+bZzKEYhIEdtv1o3WoMQR8xTdK6V3t/f82h77PYJ5TDolGtpOEwH1Ukl9cjIUQBEcXep/7QCd1eKf9F6QPlAAAAAElFTkSuQmCC"
+                                 alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="d-flex">
+                    <time
+                          class="text-neutral-500 fs-6 me-4 flex-shrink-0">2024-08-05</time>
+                    <div class="d-inline flex-shrink-1">
+                        <p
+                           class=" mb-2 fs-6 text-neutral-600 fw-bolder">
+                            增加互動實踐活動</p>
+                        <p class="mb-0 fw-medium fs-6 text-neutral-500 fs-over-2">
+                            為了增強學員的學習體驗，我們增加了新的互動實踐活動。這些活動包括即時答題、互動討論和線上練習等，幫助您更好地掌握鉤針技巧和知識。此外，我們還開放了一個學員分享區域，您可以在這裡展示自己的作品並與其他學員互動。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapse" id="new">
+                    
+                    <div class="d-flex my-4">
+                        <time
+                              class="text-neutral-500 fs-6 me-4 flex-shrink-0">2024-07-20</time>
+                        <div class="d-inline flex-shrink-1 over-f">
+                            <p class=" mb-2 fs-6 text-neutral-600 fw-bold ">
+                                推出全新專題作品項目</p>
+                            <p class="mb-0 fw-medium fs-6 text-neutral-600">
+                                我們推出了一個全新的專題作品項目，旨在引導您完成一件完整的鉤針作品，從設計到製作過程。我們的導師毛線妖怪將親自指導，分享她的專業技術和創作心得。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <time
+                              class="text-neutral-500 fs-6 me-4 flex-shrink-0">2024-07-15</time>
+                        <div class="d-inline flex-shrink-1 over-f">
+                            <p class=" mb-2 fs-6 text-neutral-600 fw-bold">
+                                毛線鉤織必修課 開課囉~~歡迎填寫問卷~~</p>
+                            <p
+                               class="mb-0 fs-over-2 fw-medium fs-6 text-neutral-500">
+                                親愛的手作愛好者們，我們的毛線鉤織必修課即將開課！無論你是初學者還是有一定經驗的編織愛好者，這門課程都將帶你深入鉤針編織的世界，掌握各種技法和創意設計。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- 課前準備 -->
+            <div class="bg-white rounded-6 px-lg-9 p-4 mb-3">
+                <div
+                     class="d-flex justify-content-between mb-3 align-items-center">
+                    <h2 class="fw-bold fs-4 text-neutral-950 mb-0 ">課前準備
+                    </h2>
+                    <a class="text-decoration-none"
+                       data-bs-toggle="collapse"
+                       href="#new-3"
+                       role="button" aria-expanded="false"
+                       aria-controls="new-3">
+                        <div class="d-flex">
+                            <p
+                               class="mb-0 text-warning-100 fs-6 fw-medium me-1">
+                                展開消息</p>
+                            <img class="warning-icon img-3"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACUSURBVHgB7ZG7DYQwDEDN3QinMAKgXNiBTWCTZARGgE1gAiokREPPZwWMIxqEREJBR14RRc7TK2IAxwuJeTgIHqk7rvYED5vj7HOWELCgU9qi+ztKXDE/zr9ncZyW2mc/fVU+Y944zZUhlrVdXxqDtqgpdhm8itpiGg8sCB5I0hSZFX1wYordRkdpm/iPghQcjufZAOU1UCxCN5IyAAAAAElFTkSuQmCC"
+                                 alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- pc -->
+                <div class="d-none d-lg-block">
+                    <p class=" mb-2 fs-6 text-neutral-600 fw-semibold">
+                        在這門課中，你會需要準備：</p>
+                    <ol class="ps-8 mb-4">
+                        <li class="text-neutral-500 fs-6 fw-medium">
+                            鉤針：建議準備幾種常用尺寸的鉤針，通常2.5mm至5mm的鉤針最為常見。你可以選擇金屬、塑料或竹製鉤針，看個人偏好。
+                        </li>
+                        <li class="text-neutral-500 fs-6 fw-medium">
+                            毛線：建議選擇適合新手的中等粗細毛線，如中粗毛線（Worsted Weight
+                            Yarn），不同材質的毛線可以提供不同的質感和效果，常見的材質有棉線、羊毛、亞克力等。
+                        </li>
+                        <li class="text-neutral-500 fs-6 fw-medium">
+                            剪刀：一把小巧且鋒利的剪刀，用於剪斷毛線。</li>
+                        <li class="collapse" id="new-3">
+                            <p
+                               class="mb-0 fw-medium fs-6 text-neutral-500">
+                                縫紉針（毛線針）：用於收尾和拼接作品時，將剩餘的線頭藏好或將不同的編織片段縫合在一起。選擇較大的縫紉針，方便穿入毛線。
+                            </p>
+                        </li>
+                        <li class="collapse" id="new-3">
+                            <p
+                               class="mb-0 fw-medium fs-6 text-neutral-500">
+                                量尺或捲尺：在製作需要準確尺寸的作品時（如圍巾或衣物），量尺可以幫助你測量編織的長度和寬度，確保作品符合預期大小。
+                            </p>
+                        </li>
+                        <li class="collapse" id="new-3">
+                            <p
+                               class="mb-0 fw-medium fs-6 text-neutral-500">
+                                記號扣（或別針）：在編織過程中標記起始點或特定的針數位置，防止在編織複雜花樣時出錯。這樣你可以更容易追蹤自己的進度，尤其是對於長時間的項目。
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+                <!-- phone -->
+                <div class="d-lg-none">
+                    <p class=" mb-2 fs-6 text-neutral-600 fw-semibold">
+                        在這門課中，你會需要準備：</p>
+                    <ol class="ps-8 mb-4">
+                        <li class="text-neutral-500 fs-6 fw-medium">
+                            鉤針：建議準備幾種常用尺寸的鉤針，通常2.5mm至5mm的鉤針最為常見。你可以選擇金屬、塑料或竹製鉤針，看個人偏好。
+                        </li>
+                        <li class="collapse" id="new-3">
+                            <p
+                               class="mb-0 fw-medium fs-6 text-neutral-500">
+                                毛線：建議選擇適合新手的中等粗細毛線，如中粗毛線（Worsted Weight
+                                Yarn），不同材質的毛線可以提供不同的質感和效果，常見的材質有棉線、羊毛、亞克力等。
+                            </p>
+                        </li>
+
+                        <li class="collapse" id="new-3">
+                            <p
+                               class="mb-0 fw-medium fs-6 text-neutral-500">
+                                剪刀：一把小巧且鋒利的剪刀，用於剪斷毛線。
+                            </p>
+                        </li>
+
+
+                        <li class="collapse" id="new-3">
+                            <p
+                               class="mb-0 fw-medium fs-6 text-neutral-500">
+                                縫紉針（毛線針）：用於收尾和拼接作品時，將剩餘的線頭藏好或將不同的編織片段縫合在一起。選擇較大的縫紉針，方便穿入毛線。
+                            </p>
+                        </li>
+                        <li class="collapse" id="new-3">
+                            <p
+                               class="mb-0 fw-medium fs-6 text-neutral-500">
+                                量尺或捲尺：在製作需要準確尺寸的作品時（如圍巾或衣物），量尺可以幫助你測量編織的長度和寬度，確保作品符合預期大小。
+                            </p>
+                        </li>
+                        <li class="collapse" id="new-3">
+                            <p
+                               class="mb-0 fw-medium fs-6 text-neutral-500">
+                                記號扣（或別針）：在編織過程中標記起始點或特定的針數位置，防止在編織複雜花樣時出錯。這樣你可以更容易追蹤自己的進度，尤其是對於長時間的項目。
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- 課程講師 -->
+            <div class="bg-white rounded-6 p-4 px-lg-9 mb-3 mb-lg-0">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <p class="fs-4 fw-bold text-neutral-950 mb-0 ">課程講師</p>
+                    <div class="d-flex">
+                        <p class="mb-0 text-warning-100 fs-6 fw-medium me-1">前往講師介紹頁</p>
+                        <img class="warning-icon img-3 d-lg-none"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACUSURBVHgB7ZG7DYQwDEDN3QinMAKgXNiBTWCTZARGgE1gAiokREPPZwWMIxqEREJBR14RRc7TK2IAxwuJeTgIHqk7rvYED5vj7HOWELCgU9qi+ztKXDE/zr9ncZyW2mc/fVU+Y944zZUhlrVdXxqDtqgpdhm8itpiGg8sCB5I0hSZFX1wYordRkdpm/iPghQcjufZAOU1UCxCN5IyAAAAAElFTkSuQmCC"
+                             alt="">
+                        <img class="warning-icon img-3 d-none d-lg-block"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7dNBCoMwEEDRMXbRY3QZCoX2CN6kR+gNerTSGwjduMwR3FRQSHRGcKNmkolL/SAuEl6UIQBHU7erft61voAw5Vtw0L+t6j9S1AtalxWO3kI04xY1QjmCdGqOB5RVZWALmIIGQSkaBS7Qpn2UxtRr+04Q2RkfC+P0658HoxRERFOmaRP2b7qC2xv85TlmmK8LglKMBVMwyn9TEjCKm/ILsa8E22kDrLR2844Rbl4AAAAASUVORK5CYII="
+                             alt="">
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <img class="img-15 rounded-pill me-3"
+                         src="/AAPD/assets/teacher-1-ef5783f6.png" alt="">
+                    <div>
+                        <p class="text-text-6 fs-6 fw-semibold mb-2">毛線怪獸</p>
+                        <p class="fs-15 mb-2 fw-medium text-btn-03">7 堂課程・512 評價・5 課程認證</p>
+                        <p class="fs-15 fw-medium text-neutral-950 fs-over-6 mb-0">
+                            大家好，我是毛線妖怪，一位熱愛編織的手作愛好者。我從小就喜歡動手做東西，特別是編織，多年的編織經驗讓我掌握了各種針法和技巧，無論是簡單的圍巾還是複雜的花樣圖案，都能得心應手。我希望能在這裡與大家分享我的編織經驗，讓更多人愛上這門藝術，感受到編織帶來的無限樂趣。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 推薦課程 -->
+            <div class="bg-white p-4 px-lg-9 d-lg-none">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <p class="fs-4 fw-bold text-neutral-950 mb-0 ">推薦課程</p>
+                    <p class="mb-0 text-warning-100 fs-6 fw-medium me-1">更多課程</p>
+                </div>
+                <!-- 1 -->
+                <div class="d-flex mb-4 ">
+                    <img class="rounded-6 me-6" src="/AAPD/assets/Picture-7e867be4.png" alt="">
+                    <div class="flex-grow-1">
+                        <div class="d-flex mb-2">
+                            <p
+                               class="d-inline  border border-pink-600 bg-pick-100 rounded-3 py-19 px-2 mb-0 text-pink-600 ">
+                                熱門課程</p>
+                        </div>
+                        <p class="text-text-6 fw-bold fs-16 mb-2">鉤針藝術：從基礎到進階</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center  justify-content-between">
+                                <img class="img-2 me-2 rounded-pill"
+                                     src="/AAPD/assets/teacher-2-079d9fa0.png"
+                                     alt="">
+                                <div>
+                                    <p class="fs-15 fw-semibold text-text-6 mb-0">毛線精靈</p>
+                                    <p class="mb-0 fs-14 fw-medium text-neutral-500">精靈工作室
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="text-end ">
+                                <p
+                                   class="fs-14 text-btn-03 text-decoration-line-through mb-0">
+                                    NT$5,000</p>
+                                <p class="mb-0 fs-6 text-dark-100 fw-medium">NT$3,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- 2 -->
+                <div class="d-flex mb-4 ">
+                    <img class="rounded-6 me-6" src="/AAPD/assets/Picture-2-7d58879f.png" alt="">
+                    <div class="fs-over">
+                        <div class="d-flex mb-2">
+                            <p
+                               class="d-inline  border border-pink-600 bg-pick-100 rounded-3 py-19 px-2 mb-0 text-pink-600 ">
+                                熱門課程</p>
+                        </div>
+                        <p class="text-text-6 fw-bold fs-16 mb-2 fs-over">鉤針花樣：設計與製作獨特配飾</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center  justify-content-between">
+                                <img class="img-2 me-2 rounded-pill"
+                                     src="/AAPD/assets/teacher-1-ef5783f6.png"
+                                     alt="">
+                                <div>
+                                    <p class="fs-15 fw-semibold text-text-6 mb-0">毛線妖怪</p>
+                                    <p class="mb-0 fs-14 fw-medium text-neutral-500">毛線編織工坊
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="text-end ">
+                                <p
+                                   class="fs-14 text-btn-03 text-decoration-line-through mb-0">
+                                    NT$5,200</p>
+                                <p class="mb-0 fs-6 text-dark-100 fw-medium">NT$3,200</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- 3 -->
+                <div class="d-flex mb-4 position-relative ">
+                    <img class="rounded-6 me-6" src="/AAPD/assets/Picture-3-d5b8fef5.png" alt="">
+                    <div tabindex="1" class="focus-1">
+                        <img class="opac-0 img-3 position-absolute top-0 start-0 mt-24 ms-12"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABHJJREFUeF7tnItx1DAQhqVOkkoglUAqIVRCqIR0AlQibg+ZEY7t3ZW0Wvnu90zmJnOyHv+3D0m2LgZcrgpE19bReAAAZyMAAABwVsC5eXgAADgr4Nw8PAAAnBVwbh4ecE8AUkoPIYTl71ce+/Uzxrj8P0ySVX+oXerD0P6YekBK6XMI4cNlUPTJXcvgv5IIFkByfz4VRsD16S2E8D2E8GbRn6vhcT3Qfp8H+SUPUnt7WZ4G3wxDaQRH/TWB0Q1AYV0fW1TfuPcKIsZIn+IrpUT9IEOYoj97He8CIKX0w2Cg6z6/ZhBsrhjUHzKI59bQ1AQgJ7FvA8QvYdCgCca7K1s9GcOoi4zhqQVCNQCHwR5CcO4PQVCFyGUwVQCcB7v0/SXGSEk65PxDnuh5PdZ4ghpADjs/PUdatP1yicO/Qwje4lOXqsJRDYARCXcSvupuqCGoAKSUaFpHVodrX4F/oVEikhjAZKFHMjbPMuJ8oAEA65cjFXuBCACsX658UVLkBVIAsH49g9cY4zN3mxQATTtpGxmXXAHaQX3iirMAEH44CQ+/Z8OQBADCTz2D3X2rpUoJAFplSh6o1Hfzdu9k84AEAFa+9QbC5gEAqBdXcmcXAEnSEspsKkDPth+PtJF4AAA0WNdly/xQYwkArAHqAXTxAABwBoBZUD2ALkkY64B6AF3WAQBQD4DdlpYkYXqxaeSrHvXDne9O9m0JFgCNKaWERFwBl5uCUpVSAEjEegDsFFQDADuiegBs/BcDQBjSqy8JP1oA8AI5B5H1awHQI0nKBXg0yYNgn4SJH8iUbaWUsCbgxRdbv8oDch6AF/AAxNavBpAhIBfsQ1BZfxUAzIh21RfN+9d3ixZi65vyqypIyP8Lw247bKGrAoBQ9E5KdeipmgVteAL2iP6eIWbfgNsLXNUegFnRVdKquF/CaAIACNcTklWH87qEoKWSOz050yx+9TR0K57dGYTqpNtlGrqXUAadUOfXorYlmpKuKYA7WKR1Fb9rCCrJ3ugjzO7iWwK4tU275ummyTrgKNTe0HaFmfhmHlBMT8/uCeqT79r837wQ4xo8sSeQ+HTEqGmhxeljDuCkq+Uh4puHoNXM6CzhaJj4QwGcxBOGij8cwOQQhovvAmBSCOazneHrAC77TzQ7Mp3nczoMmQUdbN55J2aT7QVO9PJ7VwDFgs3j0aa7+G45YMtCBm9lTyH+VABych7x6uM04k8HIEOwfPOOPTSnid89yk6RA9YDMXq82e0xYg/hlzqmBGDgCezv9vQUVVPXtAAKCPRbRS1nErq8vaARVVN2agAZAh2TpeRcA2Fq8adMwjtTVC0El30djeVPnwM2ErN01Xwa8U/jAcWKmYMw1Rxf4hHT54CdkLS1dXE68U/nASWM1YHBU4p/agDFNPVB8hPBknDgUeaUIchDKKs2AcBKWWG9ACAUyqoYAFgpK6wXAIRCWRUDACtlhfUCgFAoq2IAYKWssF4AEAplVQwArJQV1gsAQqGsigGAlbLCev8A3OKzcCDT7+UAAAAASUVORK5CYII="
+                             alt="">
+            
+                        <div
+                             class=" rounded-pill p-1 bg-fav-1-op-15 top-0 start-0 mt-23 ms-22 position-absolute ">
+                            <img class="img-3"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABe9JREFUeF7tXAtyFCEQhZskJ1FPojmJ8SQmJzE5iXoS3E6BhePM9ntAA5NlqqyNtQx0v9dfZhbv1jUUAT909bW4WwQMNoJFwCJgMAKDl18esAgYjMDg5ZcHLAIGIzB4+eUBt0RACOHOOZf+/Yq6v31679P/u0GykUfWFRm6ymPqASGEL865Dxel5FO7kvLfBAQLQqI8nzMj0GR6cc49O+deLOR5MzxNAvb7qOTXqCR7ez5elK8mgzSCa/KakNGMgMy6PtagvnPvGxHee/mErxCCyCGGMIU8R4I3ISCE8MNA0a3MT5EINVd0kkcM4qE2NFUREJPY9w7g52SI0kLGf1e0ejGGXpcYw6caEooJGKDsVRIGyyMkUCEyKVNEwGBlk+yP3ntJ0i7mH/HEkdd9iSfQBMSw87NQ01RqymfqB2Qq+bvkerzE4d/OuRrwxXJTXqmRqSgclRDAJlyJ169HcTtacFLcomrZS+avWm0fvVx6BqmiUAOhSaAICCEIQGJ1yAVXLflkhuWjyPPMxuqMCKSZFFX+hkYEJJgAMvQUJ6UkdFRcQgtqfUf6ilVK5VSUJDN5xPiEBEQeOB8wBCDW30TZTGlRVkIeovQeAbKF8AmxRGQMYRSwF0AEENZfbfl7QBQ2Vk3Bz4xCvADZaoG8ACUAsX6YdcTatmNCCFJ5oZ4gm3n3Jesg94C58Ml7/6DNhxKgKW+qcKyUpBpBu1wTT9wUCxomkAeqBIDh53B7QLMA5vsQgiRlrRqBFGfWPQiLIofWf6hhCCFACz/m1k8mZVXpWvAzeTQvUA0TIUCzOtPY3wosi3kAj1TzAEKA1vmqLFsoP8OcwB6UGg5bEGCe8GYA+yAPaIVBEwLCNQAuO5IqibMCWCsXUKCo+VEF71LzLgKuMFWLD0KAlum7VR21Ftv6/l4esAg4YK4XAVoVtJLwsWs1ScJaH3DLZajWpDbpAzQCVJZbx95Z5gN2adUmFUnCWq0reNxcIgbiv+CihmeVgLgTqSXimwtDyJY00iOhBGiJ+ObCEPB8Qm3CxLhRArRkI3PdjBcg1n8BRI3/MAFgGKJfyZglmbJyANYvv3eAjBsaFAlAvABinVV4pvEtrZ/1APQNhXdbEYGVD1UVwh4QvUDrCWRYk9e2Z7L6JAtQ98tQKgqwBKBeQAkxI9hbmcDQQ1k/FYIyK0ByAS3IzCQQb4PThkd5QEaC1pjJ0HdRFRFxH6r7t4ZWSgAaik5PAhj3oW2HPS8vIoAoS2Vo0VvSM4QkAnw69CT9igkAm7O0TrGAo4gAXjlJolVtw9QSgIYiujwbBTzp3UVxP9etioAo7LsiAXjXJ8dP3W7WDKmaANJipvaE3uAX9QFHjBKNikwx3c4pUes3NaImHpD1B9pzg5y/aUggwa9Kuk36gGtxDdmqze4fTsJI8JuGoJyUs5AwGnxLApjKaEhOIMGvLjePokbTHLDxgmlJmAV8Mw/IkvJ0JLDg156G0qUPUJLyNCSQdX7T3zx3D0GV4aj53tGM4JuHoFlIIJvELpafsDFLwnsuFx9uMEcPVHsCsaspIncFv6sHVCRmOZ1FTjlRz4rbkk7s5w8BfwgBsmiJJ7AkFIBfdfabVu0MTcKNwhH8ugsLvuW5EhoxXXPATohgS9SrJBSc4th0Y00De+/7oQRkeQF5yyIN333Qf0bwh+WAg5DEbGX/QwLZ3crywy1/SBmquShZMsp06TQs9BibqcCfygOycIS+eafxufe9+qO5kklr7pkiB+wkZwsSqpu6GqCnK0M1ZcjtA2264U/eTkdAbNiYoyKPdKx+dURjt+b7KUNQrhBxVOQeDlODP2USPihR5bfKzCGu3TfVSr1geg/IqiO0az4N+KfxAIKEaRos1CNO4wGbvLC3dXE68E/nARsS8h8MnhL8UxOQlal3yBHBaEjoPe6UIag3SJbrLQIs0QXmXgQAIFkOWQRYogvMvQgAQLIcsgiwRBeYexEAgGQ5ZBFgiS4w9yIAAMlyyCLAEl1g7kUAAJLlkEWAJbrA3H8AgjD/fwRiAzoAAAAASUVORK5CYII="
+                                 alt="">
+                        </div>
+                    </div>
+            
+                    <div class="flex-grow-1">
+                        <div class="d-flex mb-2">
+                            <p
+                               class="py-19 d-inline  border border-pink-600 bg-pick-100 rounded-3 px-2 mb-0 text-pink-600 ">
+                                熱門課程</p>
+                        </div>
+                        <p class="text-text-6 fw-bold fs-16 mb-2">縫製你的第一件服裝</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center  justify-content-between">
+                                <img class="img-2 me-2 rounded-pill"
+                                     src="/AAPD/assets/teacher-4-98a2f932.png"
+                                     alt="">
+                                <div>
+                                    <p class="fs-15 fw-semibold text-text-6 mb-0">縫紉巧匠</p>
+                                    <p class="mb-0 fs-14 fw-medium text-neutral-500">巧匠縫紉工坊
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="text-end ">
+                                <p
+                                   class="fs-14 text-btn-03 text-decoration-line-through mb-0">
+                                    NT$6,000</p>
+                                <p class="mb-0 fs-6 text-dark-100 fw-medium">NT$4,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- 4 -->
+                <div class="d-flex  mb-3">
+                    <img class="rounded-6 me-6" src="/AAPD/assets/Picture-4-13696f2e.png" alt="">
+                    <div class="flex-grow-1">
+                        <div class="d-flex mb-2">
+                            <p
+                               class="d-inline  border border-pink-600 bg-pick-100 rounded-3 py-19 px-2 mb-0 text-pink-600 ">
+                                熱門課程</p>
+                        </div>
+                        <p class="text-text-6 fw-bold fs-16 mb-2">創意縫紉：從廢布到寶藏</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center  justify-content-between">
+                                <img class="img-2 me-2 rounded-pill"
+                                     src="/AAPD/assets/teacher-4-98a2f932.png"
+                                     alt="">
+                                <div>
+                                    <p class="fs-15 fw-semibold text-text-6 mb-0">毛線妖怪</p>
+                                    <p class="mb-0 fs-14 fw-medium text-neutral-500">巧匠縫紉工坊
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="text-end ">
+                                <p
+                                   class="fs-14 text-btn-03 text-decoration-line-through mb-0">
+                                    NT$4,600</p>
+                                <p class="mb-0 fs-6 text-dark-100 fw-medium">NT$2,600</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </article>
+
+    </main>
+    <main class="container px-4 d-none d-lg-flex pt-9 pb-12">
+        <!-- pc -->
+        <div class=" bg-white ">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <p class="fs-4 fw-bold text-neutral-950 mb-0 ">推薦課程</p>
+                <p class="mb-0 text-warning-100 fs-6 fw-medium me-1">更多課程</p>
+            </div>
+            <div class="d-none d-lg-flex justify-content-between">
+                <!-- 1 -->
+                <div class="w-25-48 position-relative">
+                    <img class="rounded-6 me-6 w-100 mb-3"
+                         src="/AAPD/assets/course-13-7cd4c86d.png" alt="">
+                    <div tabindex="1" class="focus-1">
+                        <img class="opac-0 img-3 position-absolute top-0 end-0 mt-10 me-8"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABHJJREFUeF7tnItx1DAQhqVOkkoglUAqIVRCqIR0AlQibg+ZEY7t3ZW0Wvnu90zmJnOyHv+3D0m2LgZcrgpE19bReAAAZyMAAABwVsC5eXgAADgr4Nw8PAAAnBVwbh4ecE8AUkoPIYTl71ce+/Uzxrj8P0ySVX+oXerD0P6YekBK6XMI4cNlUPTJXcvgv5IIFkByfz4VRsD16S2E8D2E8GbRn6vhcT3Qfp8H+SUPUnt7WZ4G3wxDaQRH/TWB0Q1AYV0fW1TfuPcKIsZIn+IrpUT9IEOYoj97He8CIKX0w2Cg6z6/ZhBsrhjUHzKI59bQ1AQgJ7FvA8QvYdCgCca7K1s9GcOoi4zhqQVCNQCHwR5CcO4PQVCFyGUwVQCcB7v0/SXGSEk65PxDnuh5PdZ4ghpADjs/PUdatP1yicO/Qwje4lOXqsJRDYARCXcSvupuqCGoAKSUaFpHVodrX4F/oVEikhjAZKFHMjbPMuJ8oAEA65cjFXuBCACsX658UVLkBVIAsH49g9cY4zN3mxQATTtpGxmXXAHaQX3iirMAEH44CQ+/Z8OQBADCTz2D3X2rpUoJAFplSh6o1Hfzdu9k84AEAFa+9QbC5gEAqBdXcmcXAEnSEspsKkDPth+PtJF4AAA0WNdly/xQYwkArAHqAXTxAABwBoBZUD2ALkkY64B6AF3WAQBQD4DdlpYkYXqxaeSrHvXDne9O9m0JFgCNKaWERFwBl5uCUpVSAEjEegDsFFQDADuiegBs/BcDQBjSqy8JP1oA8AI5B5H1awHQI0nKBXg0yYNgn4SJH8iUbaWUsCbgxRdbv8oDch6AF/AAxNavBpAhIBfsQ1BZfxUAzIh21RfN+9d3ixZi65vyqypIyP8Lw247bKGrAoBQ9E5KdeipmgVteAL2iP6eIWbfgNsLXNUegFnRVdKquF/CaAIACNcTklWH87qEoKWSOz050yx+9TR0K57dGYTqpNtlGrqXUAadUOfXorYlmpKuKYA7WKR1Fb9rCCrJ3ugjzO7iWwK4tU275ummyTrgKNTe0HaFmfhmHlBMT8/uCeqT79r837wQ4xo8sSeQ+HTEqGmhxeljDuCkq+Uh4puHoNXM6CzhaJj4QwGcxBOGij8cwOQQhovvAmBSCOazneHrAC77TzQ7Mp3nczoMmQUdbN55J2aT7QVO9PJ7VwDFgs3j0aa7+G45YMtCBm9lTyH+VABych7x6uM04k8HIEOwfPOOPTSnid89yk6RA9YDMXq82e0xYg/hlzqmBGDgCezv9vQUVVPXtAAKCPRbRS1nErq8vaARVVN2agAZAh2TpeRcA2Fq8adMwjtTVC0El30djeVPnwM2ErN01Xwa8U/jAcWKmYMw1Rxf4hHT54CdkLS1dXE68U/nASWM1YHBU4p/agDFNPVB8hPBknDgUeaUIchDKKs2AcBKWWG9ACAUyqoYAFgpK6wXAIRCWRUDACtlhfUCgFAoq2IAYKWssF4AEAplVQwArJQV1gsAQqGsigGAlbLCev8A3OKzcCDT7+UAAAAASUVORK5CYII="
+                             alt="">
+    
+                        <div
+                             class=" rounded-pill p-1 bg-fav-1-op-15 top-0 end-0 mt-6 me-3 position-absolute ">
+                            <img class="img-3"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABe9JREFUeF7tXAtyFCEQhZskJ1FPojmJ8SQmJzE5iXoS3E6BhePM9ntAA5NlqqyNtQx0v9dfZhbv1jUUAT909bW4WwQMNoJFwCJgMAKDl18esAgYjMDg5ZcHLAIGIzB4+eUBt0RACOHOOZf+/Yq6v31679P/u0GykUfWFRm6ymPqASGEL865Dxel5FO7kvLfBAQLQqI8nzMj0GR6cc49O+deLOR5MzxNAvb7qOTXqCR7ez5elK8mgzSCa/KakNGMgMy6PtagvnPvGxHee/mErxCCyCGGMIU8R4I3ISCE8MNA0a3MT5EINVd0kkcM4qE2NFUREJPY9w7g52SI0kLGf1e0ejGGXpcYw6caEooJGKDsVRIGyyMkUCEyKVNEwGBlk+yP3ntJ0i7mH/HEkdd9iSfQBMSw87NQ01RqymfqB2Qq+bvkerzE4d/OuRrwxXJTXqmRqSgclRDAJlyJ169HcTtacFLcomrZS+avWm0fvVx6BqmiUAOhSaAICCEIQGJ1yAVXLflkhuWjyPPMxuqMCKSZFFX+hkYEJJgAMvQUJ6UkdFRcQgtqfUf6ilVK5VSUJDN5xPiEBEQeOB8wBCDW30TZTGlRVkIeovQeAbKF8AmxRGQMYRSwF0AEENZfbfl7QBQ2Vk3Bz4xCvADZaoG8ACUAsX6YdcTatmNCCFJ5oZ4gm3n3Jesg94C58Ml7/6DNhxKgKW+qcKyUpBpBu1wTT9wUCxomkAeqBIDh53B7QLMA5vsQgiRlrRqBFGfWPQiLIofWf6hhCCFACz/m1k8mZVXpWvAzeTQvUA0TIUCzOtPY3wosi3kAj1TzAEKA1vmqLFsoP8OcwB6UGg5bEGCe8GYA+yAPaIVBEwLCNQAuO5IqibMCWCsXUKCo+VEF71LzLgKuMFWLD0KAlum7VR21Ftv6/l4esAg4YK4XAVoVtJLwsWs1ScJaH3DLZajWpDbpAzQCVJZbx95Z5gN2adUmFUnCWq0reNxcIgbiv+CihmeVgLgTqSXimwtDyJY00iOhBGiJ+ObCEPB8Qm3CxLhRArRkI3PdjBcg1n8BRI3/MAFgGKJfyZglmbJyANYvv3eAjBsaFAlAvABinVV4pvEtrZ/1APQNhXdbEYGVD1UVwh4QvUDrCWRYk9e2Z7L6JAtQ98tQKgqwBKBeQAkxI9hbmcDQQ1k/FYIyK0ByAS3IzCQQb4PThkd5QEaC1pjJ0HdRFRFxH6r7t4ZWSgAaik5PAhj3oW2HPS8vIoAoS2Vo0VvSM4QkAnw69CT9igkAm7O0TrGAo4gAXjlJolVtw9QSgIYiujwbBTzp3UVxP9etioAo7LsiAXjXJ8dP3W7WDKmaANJipvaE3uAX9QFHjBKNikwx3c4pUes3NaImHpD1B9pzg5y/aUggwa9Kuk36gGtxDdmqze4fTsJI8JuGoJyUs5AwGnxLApjKaEhOIMGvLjePokbTHLDxgmlJmAV8Mw/IkvJ0JLDg156G0qUPUJLyNCSQdX7T3zx3D0GV4aj53tGM4JuHoFlIIJvELpafsDFLwnsuFx9uMEcPVHsCsaspIncFv6sHVCRmOZ1FTjlRz4rbkk7s5w8BfwgBsmiJJ7AkFIBfdfabVu0MTcKNwhH8ugsLvuW5EhoxXXPATohgS9SrJBSc4th0Y00De+/7oQRkeQF5yyIN333Qf0bwh+WAg5DEbGX/QwLZ3crywy1/SBmquShZMsp06TQs9BibqcCfygOycIS+eafxufe9+qO5kklr7pkiB+wkZwsSqpu6GqCnK0M1ZcjtA2264U/eTkdAbNiYoyKPdKx+dURjt+b7KUNQrhBxVOQeDlODP2USPihR5bfKzCGu3TfVSr1geg/IqiO0az4N+KfxAIKEaRos1CNO4wGbvLC3dXE68E/nARsS8h8MnhL8UxOQlal3yBHBaEjoPe6UIag3SJbrLQIs0QXmXgQAIFkOWQRYogvMvQgAQLIcsgiwRBeYexEAgGQ5ZBFgiS4w9yIAAMlyyCLAEl1g7kUAAJLlkEWAJbrA3H8AgjD/fwRiAzoAAAAASUVORK5CYII="
+                                 alt="">
+                        </div>
+                    </div>
+                    <div class="me-3">
+                        <div class="d-flex mb-2 position-absolute top-0 mt-3 ms-3">
+                            <p
+                               class="d-inline  border border-pink-600 bg-pick-100 rounded-3 py-19 px-2 mb-0 text-pink-600 ">
+                                熱門課程</p>
+                        </div>
+                        <div
+                             class="d-flex mb-2 align-items-center justify-content-between">
+                            <p class="text-text-6 fw-bold fs-16 mb-0 fs-over">
+                                鉤針藝術：從基礎到進階</p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-3 me-19"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABKhJREFUeF7tnet1qzAMx+UscttJSjZpJ0k6SbNJ6CQ3d5HoHgx5A35gvRLnU88J1KCf9ZcshOOgfkQt4ERHr4NDBSA8CSqACkDYAsLDVw+oAIQtIDx89YAKIN8CuIe37my3hkP+f5E907QH4C9sAFdvrjl+yZoxf3SzAPzsd+6vv3XEd6teYBeAn/1u6wE43LoP+M6fh3Jn2gXQOrwy2wEQ1xa9wCQA3MMnOPdzM28Rv9wadnJzOW9kmwDa1Q8Aft7dcusaXOeZQe4scwBugu+93QwGY3sAroPvPQCDwdgUgNnZf4JhzAtsAZib/ScAxrzAFoDWL7x8+WHmc3ANvsuF1bSRzQCIkp+LDHVrgjbNFDJH2wEwnnpOWM3trNSHTABImv3GgrENADHB12hKagPAbd0nXqwNpKTqAfQ1/6HqGW/6/kgD9SH9AOJSzyk06utDqgFkBV9j9SHdAJJSzykn0J2SqgVQZPYbSEn1AlgSfA2lpHoB5Kae40qk9pGlSgCLUs+pUKA0JdUJYFnqaSolFQcwdLd1Jea+zLyCP9kLr9BCzeEWjvAP4NxJ5zvqJLspSACMG3U11PHxZOxQXT9kztLfdzCGFkd3AHfs/z7C7zAQCawoAJEG7a5Tm1FLQzr9vylYyd4VBDAExK4F5FWMWw5aROAPAvA1rb4RalMhJLDpO/WCT+WiAAwQmqEbrXrCPIduzdF16QWN7xOABKadJ3QdyfvqCZNWS17wJQE4l1Zo8vSUuaDx2KzSdxYAL0lFKpUa7Zh1TVnGT5ag+0sjKRlk3b/gSQsbwbI94CxHfdXyNdPUyExnbnosBvCyGVIB4y+WoGuyL5QhJaWZIXEs4gFnOXr+NDU72E6BKArgkqaOvsESmgzavy9u/KIS9NwZEt2DfRIPeKoMKaKgtsR1SQGYL+QVynTI09DQDMA9WCvkFc10xAEMnmClkJdcUAtNQBUAjBTySDIdVQAUF/LYjU+ahs5RH91qYIkflziXONthXYiF7KGzikqX6yuUIP9UrQmBYv7+NSSoaNdzaUICrzSRL8QeShT9mqDzAH0fhoXX/U3zAyjZdl4a4cKnWzmXww+gVan/J9uxxwEJANdbjeVMGtJzXIOsNmEdTHUAPi/VeXdg5AWgWf8vAFj3nqsAHgSNd0HGC6Dse19UsYA1ELMBMKH/AnGAE8DjXp9L5zBiv2d06dZ5xsIcH4CiAfhWp3vvWm1G9hLNRMwXB/gAlFmAtYD4PdV7X/DRJ1scYAFQRP8TZKHIGz1MhTkuAAsKcHlysFiWmApzPADy9H9WbmLFPVuWmApzPABS9T9BbqJBpLfRs8QBLgCRBTi3Azx2QZbkN2GSZYkhDpADiAzAReQm2htiG8WeAkBI/5m0dgxO8CV0AilkfyI23QFBKzcJ3jCziMvLwGLH9ov4lINzjsXHAhxb32XK9U5kS+QbgZMCeNB/QbmJhfEgS8RxgBrAUIDTITfREK5rS8RxgB4AwCF234RYA3Ed52VpBR+Uv1FGCoDLUJbHqQCE6VUAFYCwBYSHrx5QAQhbQHj46gEVgLAFhIevHlABCFtAePjqARWAsAWEh/8PM0k0f3uqw/AAAAAASUVORK5CYII="
+                                     alt="">
+                                <p class="mb-0 text-main-500 fs-6">4.6</p>
+                            </div>
+                        </div>
+                        <div
+                             class="d-flex mb-3 align-items-center justify-content-between">
+                            <div
+                                 class="d-flex align-items-center  justify-content-between">
+                                <img class="img-2 me-2 rounded-pill"
+                                     src="/AAPD/assets/teacher-2-079d9fa0.png"
+                                     alt="">
+                                <div>
+                                    <p class="fs-15 fw-semibold text-text-6 mb-0">
+                                        毛線精靈
+                                    </p>
+                                    <p
+                                       class="mb-0 fs-14 fw-medium text-neutral-500">
+                                        精靈工作室</p>
+                                </div>
+                            </div>
+                            <div class="text-end ">
+                                <p
+                                   class="fs-14 text-btn-03 text-decoration-line-through mb-0">
+                                    NT$5,000</p>
+                                <p class="mb-0 fs-6 text-dark-100 fw-medium">
+                                    NT$3,000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- 2 -->
+                <div class="w-25-48 position-relative">
+                    <img class="rounded-6 me-6 w-100 mb-3 "
+                         src="/AAPD/assets/course-14-ea9db4e7.png" alt="">
+                    <div tabindex="1" class="focus-1">
+                        <img class="opac-0 img-3 position-absolute top-0 end-0 mt-10 me-8"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABHJJREFUeF7tnItx1DAQhqVOkkoglUAqIVRCqIR0AlQibg+ZEY7t3ZW0Wvnu90zmJnOyHv+3D0m2LgZcrgpE19bReAAAZyMAAABwVsC5eXgAADgr4Nw8PAAAnBVwbh4ecE8AUkoPIYTl71ce+/Uzxrj8P0ySVX+oXerD0P6YekBK6XMI4cNlUPTJXcvgv5IIFkByfz4VRsD16S2E8D2E8GbRn6vhcT3Qfp8H+SUPUnt7WZ4G3wxDaQRH/TWB0Q1AYV0fW1TfuPcKIsZIn+IrpUT9IEOYoj97He8CIKX0w2Cg6z6/ZhBsrhjUHzKI59bQ1AQgJ7FvA8QvYdCgCca7K1s9GcOoi4zhqQVCNQCHwR5CcO4PQVCFyGUwVQCcB7v0/SXGSEk65PxDnuh5PdZ4ghpADjs/PUdatP1yicO/Qwje4lOXqsJRDYARCXcSvupuqCGoAKSUaFpHVodrX4F/oVEikhjAZKFHMjbPMuJ8oAEA65cjFXuBCACsX658UVLkBVIAsH49g9cY4zN3mxQATTtpGxmXXAHaQX3iirMAEH44CQ+/Z8OQBADCTz2D3X2rpUoJAFplSh6o1Hfzdu9k84AEAFa+9QbC5gEAqBdXcmcXAEnSEspsKkDPth+PtJF4AAA0WNdly/xQYwkArAHqAXTxAABwBoBZUD2ALkkY64B6AF3WAQBQD4DdlpYkYXqxaeSrHvXDne9O9m0JFgCNKaWERFwBl5uCUpVSAEjEegDsFFQDADuiegBs/BcDQBjSqy8JP1oA8AI5B5H1awHQI0nKBXg0yYNgn4SJH8iUbaWUsCbgxRdbv8oDch6AF/AAxNavBpAhIBfsQ1BZfxUAzIh21RfN+9d3ixZi65vyqypIyP8Lw247bKGrAoBQ9E5KdeipmgVteAL2iP6eIWbfgNsLXNUegFnRVdKquF/CaAIACNcTklWH87qEoKWSOz050yx+9TR0K57dGYTqpNtlGrqXUAadUOfXorYlmpKuKYA7WKR1Fb9rCCrJ3ugjzO7iWwK4tU275ummyTrgKNTe0HaFmfhmHlBMT8/uCeqT79r837wQ4xo8sSeQ+HTEqGmhxeljDuCkq+Uh4puHoNXM6CzhaJj4QwGcxBOGij8cwOQQhovvAmBSCOazneHrAC77TzQ7Mp3nczoMmQUdbN55J2aT7QVO9PJ7VwDFgs3j0aa7+G45YMtCBm9lTyH+VABych7x6uM04k8HIEOwfPOOPTSnid89yk6RA9YDMXq82e0xYg/hlzqmBGDgCezv9vQUVVPXtAAKCPRbRS1nErq8vaARVVN2agAZAh2TpeRcA2Fq8adMwjtTVC0El30djeVPnwM2ErN01Xwa8U/jAcWKmYMw1Rxf4hHT54CdkLS1dXE68U/nASWM1YHBU4p/agDFNPVB8hPBknDgUeaUIchDKKs2AcBKWWG9ACAUyqoYAFgpK6wXAIRCWRUDACtlhfUCgFAoq2IAYKWssF4AEAplVQwArJQV1gsAQqGsigGAlbLCev8A3OKzcCDT7+UAAAAASUVORK5CYII="
+                             alt="">
+    
+                        <div
+                             class=" rounded-pill p-1 bg-fav-1-op-15 top-0 end-0 mt-6 me-3 position-absolute ">
+                            <img class="img-3"
+                                 src="data:image/png;base64,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"
+                                 alt="">
+                        </div>
+                    </div>
+                    <div class="me-3">
+                        <div class="d-flex">
+                            <p
+                               class="d-inline position-absolute top-0 mt-3 ms-3  border border-pink-600 bg-pick-100 rounded-3 py-19 px-2 mb-0 text-pink-600 ">
+                                熱門課程</p>
+                        </div>
+                        <div
+                             class="d-flex mb-2 align-items-center justify-content-between">
+                            <p class="text-text-6 fw-bold fs-16 mb-0 fs-over">
+                                鉤針花樣：設計與製作獨特配飾</p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-3 me-19"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABKhJREFUeF7tnet1qzAMx+UscttJSjZpJ0k6SbNJ6CQ3d5HoHgx5A35gvRLnU88J1KCf9ZcshOOgfkQt4ERHr4NDBSA8CSqACkDYAsLDVw+oAIQtIDx89YAKIN8CuIe37my3hkP+f5E907QH4C9sAFdvrjl+yZoxf3SzAPzsd+6vv3XEd6teYBeAn/1u6wE43LoP+M6fh3Jn2gXQOrwy2wEQ1xa9wCQA3MMnOPdzM28Rv9wadnJzOW9kmwDa1Q8Aft7dcusaXOeZQe4scwBugu+93QwGY3sAroPvPQCDwdgUgNnZf4JhzAtsAZib/ScAxrzAFoDWL7x8+WHmc3ANvsuF1bSRzQCIkp+LDHVrgjbNFDJH2wEwnnpOWM3trNSHTABImv3GgrENADHB12hKagPAbd0nXqwNpKTqAfQ1/6HqGW/6/kgD9SH9AOJSzyk06utDqgFkBV9j9SHdAJJSzykn0J2SqgVQZPYbSEn1AlgSfA2lpHoB5Kae40qk9pGlSgCLUs+pUKA0JdUJYFnqaSolFQcwdLd1Jea+zLyCP9kLr9BCzeEWjvAP4NxJ5zvqJLspSACMG3U11PHxZOxQXT9kztLfdzCGFkd3AHfs/z7C7zAQCawoAJEG7a5Tm1FLQzr9vylYyd4VBDAExK4F5FWMWw5aROAPAvA1rb4RalMhJLDpO/WCT+WiAAwQmqEbrXrCPIduzdF16QWN7xOABKadJ3QdyfvqCZNWS17wJQE4l1Zo8vSUuaDx2KzSdxYAL0lFKpUa7Zh1TVnGT5ag+0sjKRlk3b/gSQsbwbI94CxHfdXyNdPUyExnbnosBvCyGVIB4y+WoGuyL5QhJaWZIXEs4gFnOXr+NDU72E6BKArgkqaOvsESmgzavy9u/KIS9NwZEt2DfRIPeKoMKaKgtsR1SQGYL+QVynTI09DQDMA9WCvkFc10xAEMnmClkJdcUAtNQBUAjBTySDIdVQAUF/LYjU+ahs5RH91qYIkflziXONthXYiF7KGzikqX6yuUIP9UrQmBYv7+NSSoaNdzaUICrzSRL8QeShT9mqDzAH0fhoXX/U3zAyjZdl4a4cKnWzmXww+gVan/J9uxxwEJANdbjeVMGtJzXIOsNmEdTHUAPi/VeXdg5AWgWf8vAFj3nqsAHgSNd0HGC6Dse19UsYA1ELMBMKH/AnGAE8DjXp9L5zBiv2d06dZ5xsIcH4CiAfhWp3vvWm1G9hLNRMwXB/gAlFmAtYD4PdV7X/DRJ1scYAFQRP8TZKHIGz1MhTkuAAsKcHlysFiWmApzPADy9H9WbmLFPVuWmApzPABS9T9BbqJBpLfRs8QBLgCRBTi3Azx2QZbkN2GSZYkhDpADiAzAReQm2htiG8WeAkBI/5m0dgxO8CV0AilkfyI23QFBKzcJ3jCziMvLwGLH9ov4lINzjsXHAhxb32XK9U5kS+QbgZMCeNB/QbmJhfEgS8RxgBrAUIDTITfREK5rS8RxgB4AwCF234RYA3Ed52VpBR+Uv1FGCoDLUJbHqQCE6VUAFYCwBYSHrx5QAQhbQHj46gEVgLAFhIevHlABCFtAePjqARWAsAWEh/8PM0k0f3uqw/AAAAAASUVORK5CYII="
+                                     alt="">
+                                <p class="mb-0 text-main-500 fs-6">4.8</p>
+                            </div>
+                        </div>
+                        <div
+                             class="d-flex align-items-center justify-content-between mb-3">
+                            <div
+                                 class="d-flex align-items-center  justify-content-between">
+                                <img class="img-2 me-2 rounded-pill"
+                                     src="/AAPD/assets/teacher-1-ef5783f6.png"
+                                     alt="">
+                                <div>
+                                    <p class="fs-15 fw-semibold text-text-6 mb-0">
+                                        毛線妖怪
+                                    </p>
+                                    <p
+                                       class="mb-0 fs-14 fw-medium text-neutral-500">
+                                        毛線編織工坊</p>
+                                </div>
+                            </div>
+                            <div class="text-end ">
+                                <p
+                                   class="fs-14 text-btn-03 text-decoration-line-through mb-0">
+                                    NT$5,200</p>
+                                <p class="mb-0 fs-6 text-dark-100 fw-medium">
+                                    NT$3,200</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- 3 -->
+                <div class="w-25-48 position-relative">
+                    <img class="rounded-6 me-6 w-100 mb-3"
+                         src="/AAPD/assets/course-19-c5e3f7b8.png" alt="">
+                    <div tabindex="1" class="focus-1">
+                        <img class="opac-0 img-3 position-absolute top-0 end-0 mt-10 me-8"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABHJJREFUeF7tnItx1DAQhqVOkkoglUAqIVRCqIR0AlQibg+ZEY7t3ZW0Wvnu90zmJnOyHv+3D0m2LgZcrgpE19bReAAAZyMAAABwVsC5eXgAADgr4Nw8PAAAnBVwbh4ecE8AUkoPIYTl71ce+/Uzxrj8P0ySVX+oXerD0P6YekBK6XMI4cNlUPTJXcvgv5IIFkByfz4VRsD16S2E8D2E8GbRn6vhcT3Qfp8H+SUPUnt7WZ4G3wxDaQRH/TWB0Q1AYV0fW1TfuPcKIsZIn+IrpUT9IEOYoj97He8CIKX0w2Cg6z6/ZhBsrhjUHzKI59bQ1AQgJ7FvA8QvYdCgCca7K1s9GcOoi4zhqQVCNQCHwR5CcO4PQVCFyGUwVQCcB7v0/SXGSEk65PxDnuh5PdZ4ghpADjs/PUdatP1yicO/Qwje4lOXqsJRDYARCXcSvupuqCGoAKSUaFpHVodrX4F/oVEikhjAZKFHMjbPMuJ8oAEA65cjFXuBCACsX658UVLkBVIAsH49g9cY4zN3mxQATTtpGxmXXAHaQX3iirMAEH44CQ+/Z8OQBADCTz2D3X2rpUoJAFplSh6o1Hfzdu9k84AEAFa+9QbC5gEAqBdXcmcXAEnSEspsKkDPth+PtJF4AAA0WNdly/xQYwkArAHqAXTxAABwBoBZUD2ALkkY64B6AF3WAQBQD4DdlpYkYXqxaeSrHvXDne9O9m0JFgCNKaWERFwBl5uCUpVSAEjEegDsFFQDADuiegBs/BcDQBjSqy8JP1oA8AI5B5H1awHQI0nKBXg0yYNgn4SJH8iUbaWUsCbgxRdbv8oDch6AF/AAxNavBpAhIBfsQ1BZfxUAzIh21RfN+9d3ixZi65vyqypIyP8Lw247bKGrAoBQ9E5KdeipmgVteAL2iP6eIWbfgNsLXNUegFnRVdKquF/CaAIACNcTklWH87qEoKWSOz050yx+9TR0K57dGYTqpNtlGrqXUAadUOfXorYlmpKuKYA7WKR1Fb9rCCrJ3ugjzO7iWwK4tU275ummyTrgKNTe0HaFmfhmHlBMT8/uCeqT79r837wQ4xo8sSeQ+HTEqGmhxeljDuCkq+Uh4puHoNXM6CzhaJj4QwGcxBOGij8cwOQQhovvAmBSCOazneHrAC77TzQ7Mp3nczoMmQUdbN55J2aT7QVO9PJ7VwDFgs3j0aa7+G45YMtCBm9lTyH+VABych7x6uM04k8HIEOwfPOOPTSnid89yk6RA9YDMXq82e0xYg/hlzqmBGDgCezv9vQUVVPXtAAKCPRbRS1nErq8vaARVVN2agAZAh2TpeRcA2Fq8adMwjtTVC0El30djeVPnwM2ErN01Xwa8U/jAcWKmYMw1Rxf4hHT54CdkLS1dXE68U/nASWM1YHBU4p/agDFNPVB8hPBknDgUeaUIchDKKs2AcBKWWG9ACAUyqoYAFgpK6wXAIRCWRUDACtlhfUCgFAoq2IAYKWssF4AEAplVQwArJQV1gsAQqGsigGAlbLCev8A3OKzcCDT7+UAAAAASUVORK5CYII="
+                             alt="">
+    
+                        <div
+                             class=" rounded-pill p-1 bg-fav-1-op-15 top-0 end-0 mt-6 me-3 position-absolute ">
+                            <img class="img-3"
+                                 src="data:image/png;base64,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"
+                                 alt="">
+                        </div>
+                    </div>
+    
+                    <div class="me-3">
+                        <div class="d-flex position-absolute top-0 mt-3 ms-3">
+                            <p
+                               class="py-19 d-inline  border border-pink-600 bg-pick-100 rounded-3 px-2 mb-0 text-pink-600 ">
+                                熱門課程</p>
+                        </div>
+                        <div
+                             class="d-flex mb-2 align-items-center justify-content-between">
+                            <p class="text-text-6 fw-bold fs-16 mb-0 fs-over">
+                                縫製你的第一件服裝</p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-3 me-19"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABKhJREFUeF7tnet1qzAMx+UscttJSjZpJ0k6SbNJ6CQ3d5HoHgx5A35gvRLnU88J1KCf9ZcshOOgfkQt4ERHr4NDBSA8CSqACkDYAsLDVw+oAIQtIDx89YAKIN8CuIe37my3hkP+f5E907QH4C9sAFdvrjl+yZoxf3SzAPzsd+6vv3XEd6teYBeAn/1u6wE43LoP+M6fh3Jn2gXQOrwy2wEQ1xa9wCQA3MMnOPdzM28Rv9wadnJzOW9kmwDa1Q8Aft7dcusaXOeZQe4scwBugu+93QwGY3sAroPvPQCDwdgUgNnZf4JhzAtsAZib/ScAxrzAFoDWL7x8+WHmc3ANvsuF1bSRzQCIkp+LDHVrgjbNFDJH2wEwnnpOWM3trNSHTABImv3GgrENADHB12hKagPAbd0nXqwNpKTqAfQ1/6HqGW/6/kgD9SH9AOJSzyk06utDqgFkBV9j9SHdAJJSzykn0J2SqgVQZPYbSEn1AlgSfA2lpHoB5Kae40qk9pGlSgCLUs+pUKA0JdUJYFnqaSolFQcwdLd1Jea+zLyCP9kLr9BCzeEWjvAP4NxJ5zvqJLspSACMG3U11PHxZOxQXT9kztLfdzCGFkd3AHfs/z7C7zAQCawoAJEG7a5Tm1FLQzr9vylYyd4VBDAExK4F5FWMWw5aROAPAvA1rb4RalMhJLDpO/WCT+WiAAwQmqEbrXrCPIduzdF16QWN7xOABKadJ3QdyfvqCZNWS17wJQE4l1Zo8vSUuaDx2KzSdxYAL0lFKpUa7Zh1TVnGT5ag+0sjKRlk3b/gSQsbwbI94CxHfdXyNdPUyExnbnosBvCyGVIB4y+WoGuyL5QhJaWZIXEs4gFnOXr+NDU72E6BKArgkqaOvsESmgzavy9u/KIS9NwZEt2DfRIPeKoMKaKgtsR1SQGYL+QVynTI09DQDMA9WCvkFc10xAEMnmClkJdcUAtNQBUAjBTySDIdVQAUF/LYjU+ahs5RH91qYIkflziXONthXYiF7KGzikqX6yuUIP9UrQmBYv7+NSSoaNdzaUICrzSRL8QeShT9mqDzAH0fhoXX/U3zAyjZdl4a4cKnWzmXww+gVan/J9uxxwEJANdbjeVMGtJzXIOsNmEdTHUAPi/VeXdg5AWgWf8vAFj3nqsAHgSNd0HGC6Dse19UsYA1ELMBMKH/AnGAE8DjXp9L5zBiv2d06dZ5xsIcH4CiAfhWp3vvWm1G9hLNRMwXB/gAlFmAtYD4PdV7X/DRJ1scYAFQRP8TZKHIGz1MhTkuAAsKcHlysFiWmApzPADy9H9WbmLFPVuWmApzPABS9T9BbqJBpLfRs8QBLgCRBTi3Azx2QZbkN2GSZYkhDpADiAzAReQm2htiG8WeAkBI/5m0dgxO8CV0AilkfyI23QFBKzcJ3jCziMvLwGLH9ov4lINzjsXHAhxb32XK9U5kS+QbgZMCeNB/QbmJhfEgS8RxgBrAUIDTITfREK5rS8RxgB4AwCF234RYA3Ed52VpBR+Uv1FGCoDLUJbHqQCE6VUAFYCwBYSHrx5QAQhbQHj46gEVgLAFhIevHlABCFtAePjqARWAsAWEh/8PM0k0f3uqw/AAAAAASUVORK5CYII="
+                                     alt="">
+                                <p class="mb-0 text-main-500 fs-6">4.6</p>
+                            </div>
+                        </div>
+                        <div
+                             class="d-flex align-items-center justify-content-between">
+                            <div
+                                 class="d-flex align-items-center  justify-content-between">
+                                <img class="img-2 me-2 rounded-pill"
+                                     src="/AAPD/assets/teacher-4-98a2f932.png"
+                                     alt="">
+                                <div>
+                                    <p class="fs-15 fw-semibold text-text-6 mb-0">
+                                        縫紉巧匠
+                                    </p>
+                                    <p
+                                       class="mb-0 fs-14 fw-medium text-neutral-500">
+                                        巧匠縫紉工坊</p>
+                                </div>
+                            </div>
+                            <div class="text-end ">
+                                <p
+                                   class="fs-14 text-btn-03 text-decoration-line-through mb-0">
+                                    NT$6,000</p>
+                                <p class="mb-0 fs-6 text-dark-100 fw-medium">
+                                    NT$4,000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- 4 -->
+                <div class="w-25-48 position-relative">
+                    <img class="rounded-6 me-6 w-100 mb-3"
+                         src="/AAPD/assets/course-9-3a778bd0.png" alt="">
+                    <div tabindex="1" class="focus-1">
+                        <img class="opac-0 img-3 position-absolute top-0 end-0 mt-10 me-8"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABHJJREFUeF7tnItx1DAQhqVOkkoglUAqIVRCqIR0AlQibg+ZEY7t3ZW0Wvnu90zmJnOyHv+3D0m2LgZcrgpE19bReAAAZyMAAABwVsC5eXgAADgr4Nw8PAAAnBVwbh4ecE8AUkoPIYTl71ce+/Uzxrj8P0ySVX+oXerD0P6YekBK6XMI4cNlUPTJXcvgv5IIFkByfz4VRsD16S2E8D2E8GbRn6vhcT3Qfp8H+SUPUnt7WZ4G3wxDaQRH/TWB0Q1AYV0fW1TfuPcKIsZIn+IrpUT9IEOYoj97He8CIKX0w2Cg6z6/ZhBsrhjUHzKI59bQ1AQgJ7FvA8QvYdCgCca7K1s9GcOoi4zhqQVCNQCHwR5CcO4PQVCFyGUwVQCcB7v0/SXGSEk65PxDnuh5PdZ4ghpADjs/PUdatP1yicO/Qwje4lOXqsJRDYARCXcSvupuqCGoAKSUaFpHVodrX4F/oVEikhjAZKFHMjbPMuJ8oAEA65cjFXuBCACsX658UVLkBVIAsH49g9cY4zN3mxQATTtpGxmXXAHaQX3iirMAEH44CQ+/Z8OQBADCTz2D3X2rpUoJAFplSh6o1Hfzdu9k84AEAFa+9QbC5gEAqBdXcmcXAEnSEspsKkDPth+PtJF4AAA0WNdly/xQYwkArAHqAXTxAABwBoBZUD2ALkkY64B6AF3WAQBQD4DdlpYkYXqxaeSrHvXDne9O9m0JFgCNKaWERFwBl5uCUpVSAEjEegDsFFQDADuiegBs/BcDQBjSqy8JP1oA8AI5B5H1awHQI0nKBXg0yYNgn4SJH8iUbaWUsCbgxRdbv8oDch6AF/AAxNavBpAhIBfsQ1BZfxUAzIh21RfN+9d3ixZi65vyqypIyP8Lw247bKGrAoBQ9E5KdeipmgVteAL2iP6eIWbfgNsLXNUegFnRVdKquF/CaAIACNcTklWH87qEoKWSOz050yx+9TR0K57dGYTqpNtlGrqXUAadUOfXorYlmpKuKYA7WKR1Fb9rCCrJ3ugjzO7iWwK4tU275ummyTrgKNTe0HaFmfhmHlBMT8/uCeqT79r837wQ4xo8sSeQ+HTEqGmhxeljDuCkq+Uh4puHoNXM6CzhaJj4QwGcxBOGij8cwOQQhovvAmBSCOazneHrAC77TzQ7Mp3nczoMmQUdbN55J2aT7QVO9PJ7VwDFgs3j0aa7+G45YMtCBm9lTyH+VABych7x6uM04k8HIEOwfPOOPTSnid89yk6RA9YDMXq82e0xYg/hlzqmBGDgCezv9vQUVVPXtAAKCPRbRS1nErq8vaARVVN2agAZAh2TpeRcA2Fq8adMwjtTVC0El30djeVPnwM2ErN01Xwa8U/jAcWKmYMw1Rxf4hHT54CdkLS1dXE68U/nASWM1YHBU4p/agDFNPVB8hPBknDgUeaUIchDKKs2AcBKWWG9ACAUyqoYAFgpK6wXAIRCWRUDACtlhfUCgFAoq2IAYKWssF4AEAplVQwArJQV1gsAQqGsigGAlbLCev8A3OKzcCDT7+UAAAAASUVORK5CYII="
+                             alt="">
+    
+                        <div
+                             class=" rounded-pill p-1 bg-fav-1-op-15 top-0 end-0 mt-6 me-3 position-absolute ">
+                            <img class="img-3"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABe9JREFUeF7tXAtyFCEQhZskJ1FPojmJ8SQmJzE5iXoS3E6BhePM9ntAA5NlqqyNtQx0v9dfZhbv1jUUAT909bW4WwQMNoJFwCJgMAKDl18esAgYjMDg5ZcHLAIGIzB4+eUBt0RACOHOOZf+/Yq6v31679P/u0GykUfWFRm6ymPqASGEL865Dxel5FO7kvLfBAQLQqI8nzMj0GR6cc49O+deLOR5MzxNAvb7qOTXqCR7ez5elK8mgzSCa/KakNGMgMy6PtagvnPvGxHee/mErxCCyCGGMIU8R4I3ISCE8MNA0a3MT5EINVd0kkcM4qE2NFUREJPY9w7g52SI0kLGf1e0ejGGXpcYw6caEooJGKDsVRIGyyMkUCEyKVNEwGBlk+yP3ntJ0i7mH/HEkdd9iSfQBMSw87NQ01RqymfqB2Qq+bvkerzE4d/OuRrwxXJTXqmRqSgclRDAJlyJ169HcTtacFLcomrZS+avWm0fvVx6BqmiUAOhSaAICCEIQGJ1yAVXLflkhuWjyPPMxuqMCKSZFFX+hkYEJJgAMvQUJ6UkdFRcQgtqfUf6ilVK5VSUJDN5xPiEBEQeOB8wBCDW30TZTGlRVkIeovQeAbKF8AmxRGQMYRSwF0AEENZfbfl7QBQ2Vk3Bz4xCvADZaoG8ACUAsX6YdcTatmNCCFJ5oZ4gm3n3Jesg94C58Ml7/6DNhxKgKW+qcKyUpBpBu1wTT9wUCxomkAeqBIDh53B7QLMA5vsQgiRlrRqBFGfWPQiLIofWf6hhCCFACz/m1k8mZVXpWvAzeTQvUA0TIUCzOtPY3wosi3kAj1TzAEKA1vmqLFsoP8OcwB6UGg5bEGCe8GYA+yAPaIVBEwLCNQAuO5IqibMCWCsXUKCo+VEF71LzLgKuMFWLD0KAlum7VR21Ftv6/l4esAg4YK4XAVoVtJLwsWs1ScJaH3DLZajWpDbpAzQCVJZbx95Z5gN2adUmFUnCWq0reNxcIgbiv+CihmeVgLgTqSXimwtDyJY00iOhBGiJ+ObCEPB8Qm3CxLhRArRkI3PdjBcg1n8BRI3/MAFgGKJfyZglmbJyANYvv3eAjBsaFAlAvABinVV4pvEtrZ/1APQNhXdbEYGVD1UVwh4QvUDrCWRYk9e2Z7L6JAtQ98tQKgqwBKBeQAkxI9hbmcDQQ1k/FYIyK0ByAS3IzCQQb4PThkd5QEaC1pjJ0HdRFRFxH6r7t4ZWSgAaik5PAhj3oW2HPS8vIoAoS2Vo0VvSM4QkAnw69CT9igkAm7O0TrGAo4gAXjlJolVtw9QSgIYiujwbBTzp3UVxP9etioAo7LsiAXjXJ8dP3W7WDKmaANJipvaE3uAX9QFHjBKNikwx3c4pUes3NaImHpD1B9pzg5y/aUggwa9Kuk36gGtxDdmqze4fTsJI8JuGoJyUs5AwGnxLApjKaEhOIMGvLjePokbTHLDxgmlJmAV8Mw/IkvJ0JLDg156G0qUPUJLyNCSQdX7T3zx3D0GV4aj53tGM4JuHoFlIIJvELpafsDFLwnsuFx9uMEcPVHsCsaspIncFv6sHVCRmOZ1FTjlRz4rbkk7s5w8BfwgBsmiJJ7AkFIBfdfabVu0MTcKNwhH8ugsLvuW5EhoxXXPATohgS9SrJBSc4th0Y00De+/7oQRkeQF5yyIN333Qf0bwh+WAg5DEbGX/QwLZ3crywy1/SBmquShZMsp06TQs9BibqcCfygOycIS+eafxufe9+qO5kklr7pkiB+wkZwsSqpu6GqCnK0M1ZcjtA2264U/eTkdAbNiYoyKPdKx+dURjt+b7KUNQrhBxVOQeDlODP2USPihR5bfKzCGu3TfVSr1geg/IqiO0az4N+KfxAIKEaRos1CNO4wGbvLC3dXE68E/nARsS8h8MnhL8UxOQlal3yBHBaEjoPe6UIag3SJbrLQIs0QXmXgQAIFkOWQRYogvMvQgAQLIcsgiwRBeYexEAgGQ5ZBFgiS4w9yIAAMlyyCLAEl1g7kUAAJLlkEWAJbrA3H8AgjD/fwRiAzoAAAAASUVORK5CYII="
+                                 alt="">
+                        </div>
+                    </div>
+                    <div class="me-3">
+                        <div class="d-flex mb-2">
+                            <p
+                               class="d-inline position-absolute top-0 mt-3 ms-3  border border-pink-600 bg-pick-100 rounded-3 py-19 px-2 mb-0 text-pink-600 ">
+                                熱門課程</p>
+                        </div>
+                        <div
+                             class="d-flex mb-2 align-items-center justify-content-between">
+                            <p class="text-text-6 fw-bold fs-16 mb-0 fs-over">
+                                創意縫紉：從廢布到寶藏</p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-3 me-19"
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABKhJREFUeF7tnet1qzAMx+UscttJSjZpJ0k6SbNJ6CQ3d5HoHgx5A35gvRLnU88J1KCf9ZcshOOgfkQt4ERHr4NDBSA8CSqACkDYAsLDVw+oAIQtIDx89YAKIN8CuIe37my3hkP+f5E907QH4C9sAFdvrjl+yZoxf3SzAPzsd+6vv3XEd6teYBeAn/1u6wE43LoP+M6fh3Jn2gXQOrwy2wEQ1xa9wCQA3MMnOPdzM28Rv9wadnJzOW9kmwDa1Q8Aft7dcusaXOeZQe4scwBugu+93QwGY3sAroPvPQCDwdgUgNnZf4JhzAtsAZib/ScAxrzAFoDWL7x8+WHmc3ANvsuF1bSRzQCIkp+LDHVrgjbNFDJH2wEwnnpOWM3trNSHTABImv3GgrENADHB12hKagPAbd0nXqwNpKTqAfQ1/6HqGW/6/kgD9SH9AOJSzyk06utDqgFkBV9j9SHdAJJSzykn0J2SqgVQZPYbSEn1AlgSfA2lpHoB5Kae40qk9pGlSgCLUs+pUKA0JdUJYFnqaSolFQcwdLd1Jea+zLyCP9kLr9BCzeEWjvAP4NxJ5zvqJLspSACMG3U11PHxZOxQXT9kztLfdzCGFkd3AHfs/z7C7zAQCawoAJEG7a5Tm1FLQzr9vylYyd4VBDAExK4F5FWMWw5aROAPAvA1rb4RalMhJLDpO/WCT+WiAAwQmqEbrXrCPIduzdF16QWN7xOABKadJ3QdyfvqCZNWS17wJQE4l1Zo8vSUuaDx2KzSdxYAL0lFKpUa7Zh1TVnGT5ag+0sjKRlk3b/gSQsbwbI94CxHfdXyNdPUyExnbnosBvCyGVIB4y+WoGuyL5QhJaWZIXEs4gFnOXr+NDU72E6BKArgkqaOvsESmgzavy9u/KIS9NwZEt2DfRIPeKoMKaKgtsR1SQGYL+QVynTI09DQDMA9WCvkFc10xAEMnmClkJdcUAtNQBUAjBTySDIdVQAUF/LYjU+ahs5RH91qYIkflziXONthXYiF7KGzikqX6yuUIP9UrQmBYv7+NSSoaNdzaUICrzSRL8QeShT9mqDzAH0fhoXX/U3zAyjZdl4a4cKnWzmXww+gVan/J9uxxwEJANdbjeVMGtJzXIOsNmEdTHUAPi/VeXdg5AWgWf8vAFj3nqsAHgSNd0HGC6Dse19UsYA1ELMBMKH/AnGAE8DjXp9L5zBiv2d06dZ5xsIcH4CiAfhWp3vvWm1G9hLNRMwXB/gAlFmAtYD4PdV7X/DRJ1scYAFQRP8TZKHIGz1MhTkuAAsKcHlysFiWmApzPADy9H9WbmLFPVuWmApzPABS9T9BbqJBpLfRs8QBLgCRBTi3Azx2QZbkN2GSZYkhDpADiAzAReQm2htiG8WeAkBI/5m0dgxO8CV0AilkfyI23QFBKzcJ3jCziMvLwGLH9ov4lINzjsXHAhxb32XK9U5kS+QbgZMCeNB/QbmJhfEgS8RxgBrAUIDTITfREK5rS8RxgB4AwCF234RYA3Ed52VpBR+Uv1FGCoDLUJbHqQCE6VUAFYCwBYSHrx5QAQhbQHj46gEVgLAFhIevHlABCFtAePjqARWAsAWEh/8PM0k0f3uqw/AAAAAASUVORK5CYII="
+                                     alt="">
+                                <p class="mb-0 text-main-500 fs-6">4.2</p>
+                            </div>
+                        </div>
+                        <div
+                             class="d-flex align-items-center justify-content-between mb-3">
+                            <div
+                                 class="d-flex align-items-center  justify-content-between">
+                                <img class="img-2 me-2 rounded-pill"
+                                     src="/AAPD/assets/teacher-2-079d9fa0.png"
+                                     alt="">
+                                <div>
+                                    <p class="fs-15 fw-semibold text-text-6 mb-0">
+                                        毛線妖怪
+                                    </p>
+                                    <p
+                                       class="mb-0 fs-14 fw-medium text-neutral-500">
+                                        巧匠縫紉工坊</p>
+                                </div>
+                            </div>
+                            <div class="text-end ">
+                                <p
+                                   class="fs-14 text-btn-03 text-decoration-line-through mb-0">
+                                    NT$4,600</p>
+                                <p class="mb-0 fs-6 text-dark-100 fw-medium">
+                                    NT$2,600</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main class="bg-neutral-50">
+    <article class="container p-4">
+        <section class="px-lg-0 pt-lg-12 pb-5">
+            <section class="d-lg-flex pb-3 pb-lg-9 mb-lg-4 border-bottom border-btn-03 mb-3">
+                <div class="mb-4 mb-lg-0 me-lg-5 box-3-576">
+                    <img class="img-5 mb-3" src="/AAPD/assets/index-logo-638fb9ac.png" alt="">
+                    <p class="d-lg-none fw-medium fs-6 text-text-5 mb-3">Craftio 是專為設計創作者打造的平台，提供各種創意相關課程。</p>
+                    <p class="d-none d-lg-block fw-medium fs-6 text-text-5 mb-3">Craftio 是專為設計創作者打造的平台，提供各種創意相關課程。您可以在創意市集上架學習後的延伸作品，未來也可以接案、開課...等，用多種方式將創意變現。</p>
+                    <div class="d-flex">
+                        <img class="img-7 me-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPJSURBVHgBxZhdUhNBEMe7JwkIqAQtCvkoKjxCoSSAD76FE6AnAE+AngA8gdwAOYFyAvDJB8UNShWPrJSAiED4DEnYGbt3SVhgszsLAX5VW7uZ9O78t7tnZnsQQmIYXxK1IjYsFSYRMK1Axak5fvp3FgBNBGUiqjmUxZnu1AsTQoC6hovG/CggjgCoNIQCMxGUk919g9Na1kEGP42vaYGRKfJEAq4BdWQKVBNBwioKMgwjHgU5gQhjUEUEwmReinepVCoLuoKWDCNhofpI4UnCDWB7SxWGvPILvcRIVLPXDdFVRZ0TxGGqQWXctBhX95miwiF3+IT7b86Z2xPDqGStkOPulrKHnGENU3AHKCWHnqaez/F12UOIOA53hEBRdoQtiL1T7VBFozFtWwWQWFr4NmLfZ7cgjtnNFRBCgJQSgmC7xqZH0Bh/VL7n8GAfdrb+wclJEerq6sGSFhTy+Uv3WkqM0mkanTlHLvt11N6ZgM2Ndc8HuWnr6IR71OlFisUiRCIROhdgdcWseL+owYRQwhoGH4SIQG3tPejo7KI3b6po9+Bho6cYJhZzwscvxN6rSFG+FEphGnyQ5OISj5tboLml1TM/Ghru+z3GDiGzm92u3JeCZFQBJvzyh8nljuz4M+wJPvb3duGAjnz+WCu/TihsHHZ/ME1JHTy6tjb/2vlReku3MLszSlgObRWIcw9xPwvuqKW13fZSJTiEbrFecGLrCvKFc4g9EJQjQRQotDqwoGyQEc8j1+Xw8EDHLEvfSxgo6JjC9Wdt1fbUVeBwHfuE/AxlkofUHGihIHek89DL6HqYnEOfuagyOsbHuRzU1ddDWNg7B/u7WrZcqQiUkRkdY07utd8robzE89M63aNLnsom+3toMfN9Nkx5w0vEk7YO36HOYvgFdEcX9Z/pTQ6m7NVeKjVN2Z32M+fOeU2775oQK8Fh2lhfDSEGOIEmndMp5KVlr1m7vuEBfVI0lZcOP9gr2Z1t2KP1Smc5cWH2Jge6+CJaalHKeo0oZi9aHh3u2weHiSfHGvISr95ROrhTaVl2XhUKeVrfsmGFOFABWb50ty8uzL+n0f0GbhMKVW/fwNvSz3NZWaSKkksTuD1Mp88zzgni+ojqpFe8gwG3IYYKxYsl9aVxSwYmF283K4oLRBZzuZT2nEhORaVKQ7G6WmDSqVa9940Ct2N+UIkk7Jrt2mWSKQSO9jzr/+xnpL1h5QhTVC5hyB0RWrwRPvRWa8PqIrQhQVt61jAXB05xiXScbenRA7PUToskZCAmPvX09P+CEPwH4WGsaUVtaV8AAAAASUVORK5CYII=" alt="">
+                        <img class="img-7 me-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANgSURBVHgBzVhdThNRFD7ntqVFQGoMEgkhNT5BEDuoD76VFaArAFfgEsAdsANwBcoKqE8+qJn6k/BkGBvBEKIWiYUyzD2eO+1Mp9NpZypT4Esmnd450/v13Ht+vovQI3T9bS4tUouSMI+ABQLK8nC28bgCgAYCGYhURGluTmuPDegBGNXwi/5hGRCXAKgAPQFLCZRr0/cfvoxkHWbwWX9XEJhYZ0/k4BzgiQyBtBpGrCMhXdezSZCriPAcYoRAWKtJ8ULTtApEJbSt6zkL6RUvTx76ANtbdLoQtL8wiIxE2jrvEv0vqRZCapkGkPR+k/FMXzIJF7zLJ7yP1Z7pRCadTsPg4DWIF5RPC7niHXE9VA9rWA96bWJyCjINMqZpwm55B6SUEBstkgv3tEdFde96CBFXgoyVVzIez6RSKRi5PgpxQqBwHWETUt7ptFRSWm1jlhWfdxQIILf98f2SS4jd0zHX1Go1OKz8dr8fV6tQ/XsEccMisWxTqeccuRP2ghCCrwScnZnQL4gBzCVJWItA3StIMplquXdIOSS9cJ6pqBxIZ0Balu3lSH/ElE+SRFgIs5u6c7fl+973MpwcV2FoeATGxm83yXAE7u2W4RaPZXwp4ujPIfw82O8anZIgLwgwBzHCmyK8UJE5PjEZ8jYWeFPHl5WTnBK8y+uHP4UEgAt6s7mKBbXaCRzs/4BT3jej2Rtwc2y85fnQ0LC93J0ICYgZ+3u7NhkFlS6OfZMrL3aDIlSBmKCSqD+aHHLuhL6o9KHC/RLGRyggg6uwjw4y1KYuwhUBO4fbXKQSXBEopSJQJjbhiqDGsklMa5rB3Ipw6aCSxu2sHfaSKJJm6itYjagPm9Cc9mBDKc5OtqpGeS8Hqi/yjptmewFVtctrE9RfMYzZhl5LOiNE1jNEsRVkXTa+Bg3bfVE5pDc6rPyyr65gAencupna7mkbbrtQ8JyzHjXbUjpMVpRKmsDFwajP2UQLIaWPWCc97bafYiXDQtEvqduKKxsYSrz1l5QSiIpMu5QOrPYNUlpf9hT/Zl2tBp8bhR7HfGKJJGzNdu5GzhACl2fm5t90M4p8YFUnRiyXsMcTEVLRuzEb14GVH3wgwUd61qISB3VxiXw1j/T4Bys8zkUSSpASr2dm5r9BD/gHuPaFNh1C0mIAAAAASUVORK5CYII=" alt="">
+                        <img class="img-7 " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMASURBVHgBzZjfThNBFMa/M91tKwQtQri1txDELuqFd+UJ0CcAn4D4BOAb8AbAEyhPYL3ywj9b/wRMTMx6YQyRSLUhUJbu8cy2lJYWurO00F+y2cnO7O63M2dmzzcEQ1z3TTal7PmAKUegPIMzcjlTry4B5BHYI+ICBf7mpPPIgwEUteEX9/0iiBYAzsMIKiYoWJ2892AjUutuDT67b/OKEmvSE1lcAnmRp4hXugk7V5DruhkLwQoRltBDFGG1EqjnjuOUEFXQtutmq8QvZHhy6ANhb/HRXKf4ok5iAuJXlx2iuKJaBOlhShK7/RbT9PqizzTXPHxWc7WOGQayMODGjSGMjo0jmUpDKdVS9/3b1y53cy6leFkKzxoSTwq1aY01GKCFjN4eP7e+u6C6LA7m7joPC7rc+CQiWoYBlm1fKMYERarREaEg3TumcaOHqlfoMNn++G5Bl2sxRLQUXjbAsuy2a6XSHv783kEcqqwW5bSh9DTv1XrjHx4iPpzf2vpwR7GqzmNQ8IPHFjPlTe4ZHh6BSigk0+m2uvTQUMvKVv73FyYEjJzFoKxJ/IxNTHSMH83IzVvhoalUKsaC5GvyMsv6syoH1SpikNHTPoM+EATxBFmGN6AiM8lXPuyk3TZ0x8c+/CM/LB8eHCAOWpD+sUXupZ1fP8OzXqX1r6OZvd1dlMumcdNCSfIlKmFgYE8HdQEDgnSOpLnERQwI2qkoChKbGBAqYpvUpON4oq2Aa4eLjqSzYfoRMEfyTH1F3Ig+hYJmnPvr2nHi+vCm636tkTEyV5/iuhADeVJsCApz2nq3Xa0YrE43udkWm+CLo9TWBFeHV3vnKW1GUbxZ1haj2C0LSEtOfTav3t8v40jSjshixCg6FxlFU1Hx0Qax8sTpYKVVp+biJEU9OX2JKXlmza123jfquh3zSSySCj3bpXvLU4oWp2ZmX1/UKPKGVU0Yi10iQ4fCevauT/dqw+osOr5S4lS0OaiZS5LjdEtPHliS6/KTRBG2ejk1NfsDBvwHfwsjjHlILnsAAAAASUVORK5CYII=" alt="">
+                    </div>
+                </div>
+    
+                <div class="d-flex mb-4 w-100 mb-lg-0 ">
+                    <ul class="list-group rounded-0 w-50 me-8 me-lg-5 w-100">
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 text-main-800 fw-bold fs-5">關於</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">關於我們</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">加入Craftio</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">新聞媒體中心</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">使用者合約</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">服務契約</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 fw-medium fs-6 text-text-5 fs-6">隱私權政策</li>
+                    </ul>
+                    <ul class="list-group rounded-0 me-lg-5 w-100">
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 text-main-800 fw-bold fs-5">幫助</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">我要開課</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">課程許願</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">投資夥伴</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">異業合作</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">異業合作</li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-block box-2">
+                    <button type="button" class="w-100 px-13 hover-shadow d-inline bg-white fw-medium border border-btn-03 fs-6 py-2 text-neutral-950 rounded-3">
+                        聯絡我們
+                    </button>
+                </div>
+                    <button type="button"
+                            class="w-100 d-lg-none px-13 hover-shadow d-inline bg-white fw-medium border border-btn-03 fs-6 py-2 text-neutral-950 rounded-3">
+                        聯絡我們
+                    </button>
+            </section>
+
+            <p class="mb-0 text-text-5 fw-medium fs-6 text-center">Copyright © 2024 uiux44team</p>
+        </section>
+    </article>
+</main>        
+        <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+            var swiper = new Swiper(".mySwiper-1", {
+                loop: true,
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                freeMode: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+</body>
+
+</html>
