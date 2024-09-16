@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Learning-線上課程網站</title>
+    <script type="module" crossorigin src="/AAPD/assets/index-41b7bbf2.js"></script>
+    <link rel="stylesheet" href="/AAPD/assets/index-62198504.css">
+  </head>
+  <body>
+    <main class="position-sticky sticky-top">
+      <article class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-6">
+    <div class="d-flex align-items-center justify-content-between w-100">
+      <div class="me-lg-5">
+        <a class="navbar-toggler p-0 mx-2  rounded-0 border-0"
+           type="button"
+           data-bs-toggle="offcanvas"
+           data-bs-target="#Navbar"
+           aria-controls="Navbar">
+          <span class="navbar-toggler-icon align-middle img-3"></span>
+        </a>
+        <a href="index.html">
+          <img class="img-1 img-1-576" src="/AAPD/assets/index-logo-638fb9ac.png" alt="">
+        </a>
+      </div>
+
+      <div class="d-lg-flex align-items-center position-relative d-none me-5 flex-grow-1"
+              id="pc-search" data-bs-toggle="dropdown"
+              aria-expanded="false" >
+        <form class="d-flex w-100">
+          <input class="form-control ps-5 py-lg-2 rounded-pill" type="search"
+                 placeholder="想上什麼課呢？"
+                 aria-label="Search">
+        </form>
+        <img class="img-3 position-absolute top-50 translate-middle-y ms-10"
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABTlJREFUeF7tnc1S2zAQx6WE92h4ksIRODQcyExPkCcBngQ4dSYcSA/AseFJ6gchUSvHoh4PsVarj93U65nOQMey7P9vtatdS0YrOUgV0KS9S+dKABAbgQAQAMQKEHcvI0AAECtA3L2MAAFArABx9zICBACxAsTdywgYMoDXpx8TNTq4tBoYY44aLSZKKfuvan6vjPvZqLeR0tXJ+cWKWLdk3RcfAU50Y8xVIzTmYSyU1cjoh32HUQzA69PjkdHmLkL0XaAqrfX9ybeLWwxJ6jbZAWQUvqtdpY2e79uIyArgZbn4pZRyvr2Usa1Op7PjUp3F9pMFgPXzRo+tuyktvtOj0mZ9fHL+3QXyWJ2ytU8OoHE51vKpj8oYdXt2PrunvpG+/pMCeH5aXGmtrOVzOdgH6GQAIiy/Fklt1NuW2ntlXUc9Xa2Pg8lGmYnS6qveurTm/8GMWQfnJAAan/8bLIlSSmt9ozbvD6F+upVH3AT0xzYmJAEQONtZabOehwrfFduC2OjxtVbKJnSQozqdzg4hJ5Y8JxpAiPjGqHnqoPj68/HaGAMdDeymqFEAAvx+Vj/cuEA78/LGB230MadkLQoA0Pqziu/cRQAEVq4IDQA65SxpcdDJQA5XiI0baAAvy4Wd9fQO+ZLiOwGAhsFmFKAAQB7SKHV/Np3NsZYR0w7iGimM47NnwgFYLu580z/KB4S4IkoDaYNAAfC5Hw4P9+w3EhZuCAvA9BaYzPowNtGKcUG2LWQUUI5S93zBACD+/3Q6C75urOCftffFAlsOoX6TFiyUb2hzcD8fuYEnS+Zwr+kBZCg3YEcHIFMnL00EA/AOa0ap/v8KoDcB0wwCcKc80VcmJ58JYUZA7wyISwAGzoQEANa/Q9u9LBesDQYzAsQFQekDzsMA6F3rwyG5+RcD6tV4fSs0ZBYEMBL0Kb6k8f/MAwiroF1S+5A0BrsgwDtY8pmFA+EtGjJIGsMBbJcd9i5B4RAHAEmY4pCzBAOw1uXLhjn4Vp/7+btulTwAWy1RACBuiHKpOMj6GVRC8QC2my18C3DJLMw3QusHZ1IywY0A4PJzino7xPo5uEj0C5nQ1QclXRFEfE7Wj3ZBrWkeZAdMkYWxkFeQ9r45WX80AKjF2S2nOUdCyH1wW6CLigHtjBMS8Jrzs2yW8JUb2vfKIT/pZuvRAALWZNZ9WxcwMuvb2FUTmOXpHPeNRQNovfgArU52owG70Rq5QcMZXpF4FFI9TAIA+PZp133Vu95V8xmCXVuURiP9JWAfQJ8GrCAkA2CfOMQfh1hJhnPZQEgKAOmOMugLuiQLCMkBMIFgN2h7d8tsp8e0G7qzAHAQ7KdoEvltkEm7fMPGEaPH0EkBKYRsAJxipT5b0K07BU6PySBkB9CpHV0DXQPU4nv3G+8DhGIAPtyS3fmuzaXe+mjsxzzAWTV3CEUBdM26zmbV+Mh+hqApTLnPlbkA+vHZMq11/ZkyzHJyzhBIAYD9TIITuUIYDADE9LhIYB4UAI4QBgeAG4RBAuAEYbAAuEAYNAAOEAYPgBqCAGhyDKo8QQC0kjwKCAKgk2WXhiAAPilzlIQgAHbUmUpBEAA9hb4SEASAp9IaCCF4Sb4AAJS6gRBQe+MEAAAAIFlDid+8hALegZzmvsLVXW2BFl8AIIyq446ixBcACAAtd3SX4k+lSAxAQkjVTACkUhJ5HQGAFC5VMwGQSknkdQQAUrhUzQRAKiWR1xEASOFSNRMAqZREXkcAIIVL1UwApFISeR0BgBQuVTMBkEpJ5HX+AJQ0Xo5vswgPAAAAAElFTkSuQmCC"
+             alt="">
+      </div>
+
+      <div class="d-flex align-items-center flex-shrink-0">
+
+        <ul class="navbar-nav d-none d-lg-flex align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active py-0 px-3 me-3 py-2 fw-medium"
+               aria-current="page"
+               href="#">探索課程</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active py-0 px-3 me-3 py-2  fw-medium"
+               aria-current="page"
+               href="#">創意市集</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active py-0 px-3 me-9 py-2 fw-medium"
+               aria-current="page"
+               href="#">我的課程</a>
+          </li>
+        </ul>
+
+        <a class="navbar-toggler p-0 me-2 rounded-0 border-0"
+           type="button"
+           data-bs-toggle="offcanvas"
+           data-bs-target="#search"
+           aria-controls="search">
+          <img class="img-2 p-1"
+               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJHSURBVHgB1VS9bhNBEJ7ZS6zINFYcm5KjCJwPI90bcCUdSUlnniAu6ey8QVLSxR2lXVHivMGhxGfjILF0yD6i6yIU3w67t5xF0K1/kCnySbu3p52Zb2Z2ZgD+M9B04dl2KSnuHAgQL5DQ1tIUM4QuS9h5MBpx+FeCZ7VakzHRIoKSQYkTYOcyHLVhXYK667QBqKX/KJBbFwEDsJKYZpYHDA6AwNfX0N+6+XkYcB6vRHDHOEHzcvj5NE/JdZwGMmpJZZuAzgbh+A0sI/Acx54x+praFtQYjMYdWADXdT2GyUfpSAmJDi+G426eHMsOiSVa2nHp0RLjCmEYBkB0onXwyCQ3JyDCRkok2DGsiK1C8VTmIJbLr9UePzISeO6+95smHq1YfgpBEKjHDVJDbNs3EsyYpcuRMIA1IfPPF92nBFsiibV9sGFNEKKdfgljIwEUHvDUG1l2qoNhPej03opvRoI0lwh9dZ4VC0ewIp67TkOVKcnODq+uAiNBCsSseprufvboC9yWfTNvSkFtk5yVHSaTiD+s7sn0oM8sfFktVz5NoojnGpdNlqD4ID23VeUNhuPXJoI7o8LzvNLs9kZ1p6eDojMQ0EuQuBBWvI1CzaJXWc/8YebYNPhyp2ndfSJDx1yFuSKKE105mVw+iZWnPJn+ON8tVzrygbj0eAe1J6oMOZF4z0i8vRh+eafkqpWyuvXl5lcrFZxMoz5sGiriuvuU9FITeUkE62JRJBshyCPZK+32ptfX3zdG8BdJnCDrRVEUw73HLwA+/bPHI/qzAAAAAElFTkSuQmCC"
+               alt="">
+        </a>
+        <img class="img-2 img-2-576 p-lg-2 p-1 me-2"
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADKSURBVHgB3ZXBDcIwDEW/YIGOkBEYIRswAl2BG8duwAgdJSMgJghXTmEDSFVbRKqaOq5yaJ/01R6+66TfUYA94aO+9LygAtxgUIhqUAmXNNLK5xrY2g3SXZRm0UnrLBkfkGMwZieu4dCt0N+T3wj9aKnACbyGvD0KGMY0YHkXDf6ZGRRyh3xyilbPeOHHHRQHs4NwprXw6s+oBAe86gQfMg2uUS9smRbjb1q6H6S+CemIBq0vl0E61x+t7zhfh3fUid5vUc+Vvo3yA/o0ekWHCxQoAAAAAElFTkSuQmCC" alt="">
+        <img class="img-2 img-2-576 p-lg-2 p-1"
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJOSURBVHgBzVVdbtNAEJ7ZTSR4qxTSSrxgJCCuSST3BCRvvFFOQHqD9ARJTtDeAHqC5AaEGzhKk5oEqeYNQST8Ag8l3mF3vS6h+CcRfegn2V57Zr6Zncx+AbhLsG3bUtc2MVjkUK/bTSDqSkeXCHZ0EEIIQEMesb7n+0FePM8ld+yeJH8rl5a87q2Z5BpdgdDZrVbx67flKIuD5ZIDdfULwYghtSO6sgSIAyHwiACC2JO6sW86Ulvkyj6vGF1qBxSnk+niOM2v8bx2ItvW0S8CW+e+P4JNdhBx0Y0LhyCLXGEy/XgsSxzFpZrdbpKAAA/jqqgHBUDCM7NwN0qg2gNmWiiiMRSAC7MDwJ39/cePChOsg0qr71AEFu3kmm9+0HOt51waWbkJBYiAm9ZQeHFx+bkwQZJH3VBgGwpByUAM06zpCRD78ROaahQhA3WndkrxIYRIsH4qVXbwM1kZ9oxTgEi9FdFYCB6WGTQJ6Y0su2l20TufzbdLYCocyMdhng8BvZvO5kdZ9lQtUqP6YK+iyF9CAVBq0t5uxXpYqY6/LJfhv/YbcGy7zTmdJMqpdEjeh0iRt8IoUJ9KJW7RirskxQ7Nb6CmiAR0pv78LDOBImdMq6eWCSai9sT/9AFyoGKQaTm3dJyg9nqS6wTrAif76v34edUKgiCEDaD+hEqcBjJQnwnxSxzMFgs96tdjGjF6D6bybcgVfHk4S+X7rUTCeZkNEhtLqv8zz7gVeQLP80IC/toUabmW9beENJzaq4b95AX8JxznqXsbPHcHvwG4PfSoFA0XGQAAAABJRU5ErkJggg==" alt="">
+      </div>
+      <!-- nav -->
+      <div class="offcanvas offcanvas-start w-100 d-lg-none" tabindex="-1"
+           id="Navbar"
+           aria-labelledby="Navbar">
+        <div
+             class="offcanvas-header py-6 d-flex justify-content-between border-bottom border-neutral-300">
+          <div>
+            <button class="navbar-toggler p-0 mx-2 border-0 rounded-0"
+                    type="button">
+              <span class="navbar-toggler-icon align-middle img-3"></span>
+            </button>
+            <img class="img-1" src="/AAPD/assets/index-logo-638fb9ac.png"
+                 alt="">
+          </div>
+
+          <button type="button" class="btn-close text-reset img-4 p-1 m-0 me-6"
+                  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body px-8">
+          <ul class="navbar-nav">
+            <li class="nav-item mb-3">
+              <a class="nav-link active py-3 px-2 fw-medium" aria-current="page"
+                 href="#">探索課程</a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link active py-3 px-2 fw-medium" aria-current="page"
+                 href="#">創意市集</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active py-3 px-2 fw-medium" aria-current="page"
+                 href="#">我的課程</a>
+            </li>
+          </ul>
+        </div>
+        <div class="offcanvas-footer py-9 px-8">
+          <button type="button"
+                  class="w-100 btn hover-1 border border-frame-01 text-neutral-950 fw-medium py-2">登出</button>
+        </div>
+      </div>
+      <!-- search -->
+      <div class="offcanvas offcanvas-start collapse  w-100 d-lg-none"
+           tabindex="-1"
+           id="search"
+           aria-labelledby="search">
+
+        <div class="d-flex align-items-center p-3 position-relative">
+          <form class="d-flex me-3 w-100">
+            <input class="form-control ps-5 rounded-pill" type="search"
+                   placeholder="想上什麼課呢？"
+                   aria-label="Search">
+          </form>
+          <img class="img-3 position-absolute top-50 translate-middle-y ms-10"
+               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABTlJREFUeF7tnc1S2zAQx6WE92h4ksIRODQcyExPkCcBngQ4dSYcSA/AseFJ6gchUSvHoh4PsVarj93U65nOQMey7P9vtatdS0YrOUgV0KS9S+dKABAbgQAQAMQKEHcvI0AAECtA3L2MAAFArABx9zICBACxAsTdywgYMoDXpx8TNTq4tBoYY44aLSZKKfuvan6vjPvZqLeR0tXJ+cWKWLdk3RcfAU50Y8xVIzTmYSyU1cjoh32HUQzA69PjkdHmLkL0XaAqrfX9ybeLWwxJ6jbZAWQUvqtdpY2e79uIyArgZbn4pZRyvr2Usa1Op7PjUp3F9pMFgPXzRo+tuyktvtOj0mZ9fHL+3QXyWJ2ytU8OoHE51vKpj8oYdXt2PrunvpG+/pMCeH5aXGmtrOVzOdgH6GQAIiy/Fklt1NuW2ntlXUc9Xa2Pg8lGmYnS6qveurTm/8GMWQfnJAAan/8bLIlSSmt9ozbvD6F+upVH3AT0xzYmJAEQONtZabOehwrfFduC2OjxtVbKJnSQozqdzg4hJ5Y8JxpAiPjGqHnqoPj68/HaGAMdDeymqFEAAvx+Vj/cuEA78/LGB230MadkLQoA0Pqziu/cRQAEVq4IDQA65SxpcdDJQA5XiI0baAAvy4Wd9fQO+ZLiOwGAhsFmFKAAQB7SKHV/Np3NsZYR0w7iGimM47NnwgFYLu580z/KB4S4IkoDaYNAAfC5Hw4P9+w3EhZuCAvA9BaYzPowNtGKcUG2LWQUUI5S93zBACD+/3Q6C75urOCftffFAlsOoX6TFiyUb2hzcD8fuYEnS+Zwr+kBZCg3YEcHIFMnL00EA/AOa0ap/v8KoDcB0wwCcKc80VcmJ58JYUZA7wyISwAGzoQEANa/Q9u9LBesDQYzAsQFQekDzsMA6F3rwyG5+RcD6tV4fSs0ZBYEMBL0Kb6k8f/MAwiroF1S+5A0BrsgwDtY8pmFA+EtGjJIGsMBbJcd9i5B4RAHAEmY4pCzBAOw1uXLhjn4Vp/7+btulTwAWy1RACBuiHKpOMj6GVRC8QC2my18C3DJLMw3QusHZ1IywY0A4PJzino7xPo5uEj0C5nQ1QclXRFEfE7Wj3ZBrWkeZAdMkYWxkFeQ9r45WX80AKjF2S2nOUdCyH1wW6CLigHtjBMS8Jrzs2yW8JUb2vfKIT/pZuvRAALWZNZ9WxcwMuvb2FUTmOXpHPeNRQNovfgArU52owG70Rq5QcMZXpF4FFI9TAIA+PZp133Vu95V8xmCXVuURiP9JWAfQJ8GrCAkA2CfOMQfh1hJhnPZQEgKAOmOMugLuiQLCMkBMIFgN2h7d8tsp8e0G7qzAHAQ7KdoEvltkEm7fMPGEaPH0EkBKYRsAJxipT5b0K07BU6PySBkB9CpHV0DXQPU4nv3G+8DhGIAPtyS3fmuzaXe+mjsxzzAWTV3CEUBdM26zmbV+Mh+hqApTLnPlbkA+vHZMq11/ZkyzHJyzhBIAYD9TIITuUIYDADE9LhIYB4UAI4QBgeAG4RBAuAEYbAAuEAYNAAOEAYPgBqCAGhyDKo8QQC0kjwKCAKgk2WXhiAAPilzlIQgAHbUmUpBEAA9hb4SEASAp9IaCCF4Sb4AAJS6gRBQe+MEAAAAIFlDid+8hALegZzmvsLVXW2BFl8AIIyq446ixBcACAAtd3SX4k+lSAxAQkjVTACkUhJ5HQGAFC5VMwGQSknkdQQAUrhUzQRAKiWR1xEASOFSNRMAqZREXkcAIIVL1UwApFISeR0BgBQuVTMBkEpJ5HX+AJQ0Xo5vswgPAAAAAElFTkSuQmCC"
+               alt="">
+          <button type="button" class="btn-close text-reset img-4 p-1 m-0"
+                  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body px-3 pt-0">
+          <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門課程</h3>
+          <ul class="navbar-nav mb-3">
+            <li class="nav-item mb-2 py-1">
+              <p
+                 class="py-1 mb-0 d-inline px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                手作耳環工作坊：從設計到完成</p>
+            </li>
+            <li class="nav-item mb-2 py-1">
+              <p
+                 class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                飾品擺拍選修課</p>
+            </li>
+            <li class="nav-item mb-2 py-1">
+              <p
+                 class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                手作飾品初級班：設計與製作</p>
+            </li>
+            <li class="nav-item mb-2 d-flex">
+              <p
+                 class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                縫紉中級證照課</p>
+              <p
+                 class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                縫紉服飾</p>
+            </li>
+            <li class="nav-item py-1">
+              <p
+                 class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                繪畫設計</p>
+            </li>
+          </ul>
+          <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門作品</h3>
+          <ul class="navbar-nav">
+            <li class="nav-item mb-2 d-flex">
+              <p
+                 class="py-1 mb-0 d-inline px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                手作耳環工作坊：從設計到完成</p>
+            </li>
+            <li class="nav-item mb-2 d-flex">
+              <p
+                 class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                多媒體藝術品</p>
+              <p
+                 class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                手工織造靠墊</p>
+            </li>
+            <li class="nav-item mb-2 d-flex">
+              <p
+                 class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                精緻的刺繡手帕</p>
+              <p
+                 class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                可愛小廢物</p>
+            </li>
+            <li class="nav-item py-1">
+              <p
+                 class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                手工項鍊</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- pc-search -->
+      <div class="dropdown-menu mt-3 ms-11 border-0 rounded-3 p-3" aria-labelledby="pc-search">
+        <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門課程</h3>
+        <ul class="navbar-nav d-lg-block d-none mb-3">
+          <li class="nav-item mb-2 py-1">
+            <p
+               class="py-1 me-2 mb-0 d-inline px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              手作耳環工作坊：從設計到完成</p>
+            <p
+               class="d-inline me-2 py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              飾品擺拍選修課</p>
+            <p
+               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              手作飾品初級班：設計與製作</p>
+          </li>
+          <li class="nav-item mb-2 d-flex">
+            <p
+               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              縫紉中級證照課</p>
+            <p
+               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              縫紉服飾</p>
+            <p
+               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              繪畫設計</p>
+          </li>
+        </ul>
+
+        <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門作品</h3>
+        <ul class="navbar-nav d-lg-block d-none ">
+          <li class="nav-item mb-2 py-1">
+            <p
+               class="py-1 mb-0 d-inline me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              手作耳環工作坊：從設計到完成</p>
+            <p
+               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              多媒體藝術品</p>
+            <p
+               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              手工織造靠墊</p>
+          </li>
+          <li class="nav-item mb-2 d-flex">
+            <p
+               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              精緻的刺繡手帕</p>
+            <p
+               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              可愛小廢物</p>
+            <p
+               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              手工項鍊</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</article>
+
+    </main>
+
+
+
+
+
+    <main class="bg-neutral-50">
+    <article class="container">
+        <section class="p-4 px-lg-0 pt-lg-12 pb-5">
+            <section class="d-lg-flex pb-3 pb-lg-9 mb-lg-4 border-bottom border-btn-03 mb-3">
+                <div class="mb-4 mb-lg-0 me-lg-5 box-3-576">
+                    <img class="img-5 mb-3" src="/AAPD/assets/index-logo-638fb9ac.png" alt="">
+                    <p class="d-lg-none fw-medium fs-6 text-text-5 mb-3">Craftio 是專為設計創作者打造的平台，提供各種創意相關課程。</p>
+                    <p class="d-none d-lg-block fw-medium fs-6 text-text-5 mb-3">Craftio 是專為設計創作者打造的平台，提供各種創意相關課程。您可以在創意市集上架學習後的延伸作品，未來也可以接案、開課...等，用多種方式將創意變現。</p>
+                    <div class="d-flex">
+                        <img class="img-7 me-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPJSURBVHgBxZhdUhNBEMe7JwkIqAQtCvkoKjxCoSSAD76FE6AnAE+AngA8gdwAOYFyAvDJB8UNShWPrJSAiED4DEnYGbt3SVhgszsLAX5VW7uZ9O78t7tnZnsQQmIYXxK1IjYsFSYRMK1Axak5fvp3FgBNBGUiqjmUxZnu1AsTQoC6hovG/CggjgCoNIQCMxGUk919g9Na1kEGP42vaYGRKfJEAq4BdWQKVBNBwioKMgwjHgU5gQhjUEUEwmReinepVCoLuoKWDCNhofpI4UnCDWB7SxWGvPILvcRIVLPXDdFVRZ0TxGGqQWXctBhX95miwiF3+IT7b86Z2xPDqGStkOPulrKHnGENU3AHKCWHnqaez/F12UOIOA53hEBRdoQtiL1T7VBFozFtWwWQWFr4NmLfZ7cgjtnNFRBCgJQSgmC7xqZH0Bh/VL7n8GAfdrb+wclJEerq6sGSFhTy+Uv3WkqM0mkanTlHLvt11N6ZgM2Ndc8HuWnr6IR71OlFisUiRCIROhdgdcWseL+owYRQwhoGH4SIQG3tPejo7KI3b6po9+Bho6cYJhZzwscvxN6rSFG+FEphGnyQ5OISj5tboLml1TM/Ghru+z3GDiGzm92u3JeCZFQBJvzyh8nljuz4M+wJPvb3duGAjnz+WCu/TihsHHZ/ME1JHTy6tjb/2vlReku3MLszSlgObRWIcw9xPwvuqKW13fZSJTiEbrFecGLrCvKFc4g9EJQjQRQotDqwoGyQEc8j1+Xw8EDHLEvfSxgo6JjC9Wdt1fbUVeBwHfuE/AxlkofUHGihIHek89DL6HqYnEOfuagyOsbHuRzU1ddDWNg7B/u7WrZcqQiUkRkdY07utd8robzE89M63aNLnsom+3toMfN9Nkx5w0vEk7YO36HOYvgFdEcX9Z/pTQ6m7NVeKjVN2Z32M+fOeU2775oQK8Fh2lhfDSEGOIEmndMp5KVlr1m7vuEBfVI0lZcOP9gr2Z1t2KP1Smc5cWH2Jge6+CJaalHKeo0oZi9aHh3u2weHiSfHGvISr95ROrhTaVl2XhUKeVrfsmGFOFABWb50ty8uzL+n0f0GbhMKVW/fwNvSz3NZWaSKkksTuD1Mp88zzgni+ojqpFe8gwG3IYYKxYsl9aVxSwYmF283K4oLRBZzuZT2nEhORaVKQ7G6WmDSqVa9940Ct2N+UIkk7Jrt2mWSKQSO9jzr/+xnpL1h5QhTVC5hyB0RWrwRPvRWa8PqIrQhQVt61jAXB05xiXScbenRA7PUToskZCAmPvX09P+CEPwH4WGsaUVtaV8AAAAASUVORK5CYII=" alt="">
+                        <img class="img-7 me-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANgSURBVHgBzVhdThNRFD7ntqVFQGoMEgkhNT5BEDuoD76VFaArAFfgEsAdsANwBcoKqE8+qJn6k/BkGBvBEKIWiYUyzD2eO+1Mp9NpZypT4Esmnd450/v13Ht+vovQI3T9bS4tUouSMI+ABQLK8nC28bgCgAYCGYhURGluTmuPDegBGNXwi/5hGRCXAKgAPQFLCZRr0/cfvoxkHWbwWX9XEJhYZ0/k4BzgiQyBtBpGrCMhXdezSZCriPAcYoRAWKtJ8ULTtApEJbSt6zkL6RUvTx76ANtbdLoQtL8wiIxE2jrvEv0vqRZCapkGkPR+k/FMXzIJF7zLJ7yP1Z7pRCadTsPg4DWIF5RPC7niHXE9VA9rWA96bWJyCjINMqZpwm55B6SUEBstkgv3tEdFde96CBFXgoyVVzIez6RSKRi5PgpxQqBwHWETUt7ptFRSWm1jlhWfdxQIILf98f2SS4jd0zHX1Go1OKz8dr8fV6tQ/XsEccMisWxTqeccuRP2ghCCrwScnZnQL4gBzCVJWItA3StIMplquXdIOSS9cJ6pqBxIZ0Balu3lSH/ElE+SRFgIs5u6c7fl+973MpwcV2FoeATGxm83yXAE7u2W4RaPZXwp4ujPIfw82O8anZIgLwgwBzHCmyK8UJE5PjEZ8jYWeFPHl5WTnBK8y+uHP4UEgAt6s7mKBbXaCRzs/4BT3jej2Rtwc2y85fnQ0LC93J0ICYgZ+3u7NhkFlS6OfZMrL3aDIlSBmKCSqD+aHHLuhL6o9KHC/RLGRyggg6uwjw4y1KYuwhUBO4fbXKQSXBEopSJQJjbhiqDGsklMa5rB3Ipw6aCSxu2sHfaSKJJm6itYjagPm9Cc9mBDKc5OtqpGeS8Hqi/yjptmewFVtctrE9RfMYzZhl5LOiNE1jNEsRVkXTa+Bg3bfVE5pDc6rPyyr65gAencupna7mkbbrtQ8JyzHjXbUjpMVpRKmsDFwajP2UQLIaWPWCc97bafYiXDQtEvqduKKxsYSrz1l5QSiIpMu5QOrPYNUlpf9hT/Zl2tBp8bhR7HfGKJJGzNdu5GzhACl2fm5t90M4p8YFUnRiyXsMcTEVLRuzEb14GVH3wgwUd61qISB3VxiXw1j/T4Bys8zkUSSpASr2dm5r9BD/gHuPaFNh1C0mIAAAAASUVORK5CYII=" alt="">
+                        <img class="img-7 " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMASURBVHgBzZjfThNBFMa/M91tKwQtQri1txDELuqFd+UJ0CcAn4D4BOAb8AbAEyhPYL3ywj9b/wRMTMx6YQyRSLUhUJbu8cy2lJYWurO00F+y2cnO7O63M2dmzzcEQ1z3TTal7PmAKUegPIMzcjlTry4B5BHYI+ICBf7mpPPIgwEUteEX9/0iiBYAzsMIKiYoWJ2892AjUutuDT67b/OKEmvSE1lcAnmRp4hXugk7V5DruhkLwQoRltBDFGG1EqjnjuOUEFXQtutmq8QvZHhy6ANhb/HRXKf4ok5iAuJXlx2iuKJaBOlhShK7/RbT9PqizzTXPHxWc7WOGQayMODGjSGMjo0jmUpDKdVS9/3b1y53cy6leFkKzxoSTwq1aY01GKCFjN4eP7e+u6C6LA7m7joPC7rc+CQiWoYBlm1fKMYERarREaEg3TumcaOHqlfoMNn++G5Bl2sxRLQUXjbAsuy2a6XSHv783kEcqqwW5bSh9DTv1XrjHx4iPpzf2vpwR7GqzmNQ8IPHFjPlTe4ZHh6BSigk0+m2uvTQUMvKVv73FyYEjJzFoKxJ/IxNTHSMH83IzVvhoalUKsaC5GvyMsv6syoH1SpikNHTPoM+EATxBFmGN6AiM8lXPuyk3TZ0x8c+/CM/LB8eHCAOWpD+sUXupZ1fP8OzXqX1r6OZvd1dlMumcdNCSfIlKmFgYE8HdQEDgnSOpLnERQwI2qkoChKbGBAqYpvUpON4oq2Aa4eLjqSzYfoRMEfyTH1F3Ig+hYJmnPvr2nHi+vCm636tkTEyV5/iuhADeVJsCApz2nq3Xa0YrE43udkWm+CLo9TWBFeHV3vnKW1GUbxZ1haj2C0LSEtOfTav3t8v40jSjshixCg6FxlFU1Hx0Qax8sTpYKVVp+biJEU9OX2JKXlmza123jfquh3zSSySCj3bpXvLU4oWp2ZmX1/UKPKGVU0Yi10iQ4fCevauT/dqw+osOr5S4lS0OaiZS5LjdEtPHliS6/KTRBG2ejk1NfsDBvwHfwsjjHlILnsAAAAASUVORK5CYII=" alt="">
+                    </div>
+                </div>
+    
+                <div class="d-flex mb-4 w-100 mb-lg-0 ">
+                    <ul class="list-group rounded-0 w-50 me-8 me-lg-5 w-100">
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 text-main-800 fw-bold fs-5">關於</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">關於我們</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">加入Craftio</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">新聞媒體中心</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">使用者合約</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">服務契約</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 fw-medium fs-6 text-text-5 fs-6">隱私權政策</li>
+                    </ul>
+                    <ul class="list-group rounded-0 me-lg-5 w-100">
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 text-main-800 fw-bold fs-5">幫助</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">我要開課</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">課程許願</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">投資夥伴</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">異業合作</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">異業合作</li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-block box-2">
+                    <button type="button" class="w-100 px-13 hover-shadow d-inline bg-white fw-medium border border-btn-03 fs-6 py-2 text-neutral-950 rounded-3">
+                        聯絡我們
+                    </button>
+                </div>
+                    <button type="button"
+                            class="w-100 d-lg-none px-13 hover-shadow d-inline bg-white fw-medium border border-btn-03 fs-6 py-2 text-neutral-950 rounded-3">
+                        聯絡我們
+                    </button>
+            </section>
+
+            <p class="mb-0 text-text-5 fw-medium fs-6 text-center">Copyright © 2024 uiux44team</p>
+        </section>
+    </article>
+</main>    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
