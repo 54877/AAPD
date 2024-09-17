@@ -51,6 +51,7 @@ $btn-02:      #482200!default;
 $btn-03:      #AAAAAA!default;
 $frame-01:    #cccccc!default;
 $barley-400:  #A48C64!default;
+$secondary-500: #FF9D0A;
 
 
 // scss-docs-end gray-color-variables
@@ -451,7 +452,8 @@ $theme-colors: (
   "btn-02":     $btn-02,
   "btn-03":     $btn-03,    
   "frame-01":   $frame-01,
-  "barley-400": $barley-400, 
+  "barley-400": $barley-400,
+  "secondary-500":$secondary-500, 
 ) !default;
 // scss-docs-end theme-colors-map
 
