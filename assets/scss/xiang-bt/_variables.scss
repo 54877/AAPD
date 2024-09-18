@@ -463,6 +463,7 @@ $theme-colors: (
   "sec-100":     #FFF5D3,
   "sec-300":      #FFD46D,
   "bg-444":       #444444,
+  "bg-eee":       #eeeeee,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -580,6 +581,7 @@ $spacers: (
  23: 9px,
  24: 14px,
  25: 40px,
+ 26: 1px,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
