@@ -1,0 +1,258 @@
+<article class="container bg-white px-4">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-6">
+        <div class="d-flex align-items-center justify-content-between w-100">
+            <div class="me-lg-5">
+                <a class="navbar-toggler p-0 mx-2  rounded-0 border-0"
+                   type="button"
+                   data-bs-toggle="offcanvas"
+                   data-bs-target="#Navbar"
+                   aria-controls="Navbar">
+                    <span class="navbar-toggler-icon align-middle img-3"></span>
+                </a>
+                <a href="index.html">
+                    <img class="img-1 img-1-576"
+                         src="../assets/images/icon/index-logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="d-lg-flex align-items-center position-relative d-none me-5 flex-grow-1"
+                 id="pc-search" data-bs-toggle="dropdown"
+                 aria-expanded="false">
+                <form class="d-flex w-100">
+                    <input class="form-control ps-5 py-lg-2 rounded-pill"
+                           type="search"
+                           placeholder="想上什麼課呢？"
+                           aria-label="Search">
+                </form>
+                <img class="img-3 position-absolute top-50 translate-middle-y ms-10"
+                     src="../assets/images/icon/Icon/search_24dp_B6B0AA_FILL0_wght400_GRAD0_opsz24.png"
+                     alt="">
+            </div>
+
+            <div class="d-flex align-items-center flex-shrink-0">
+
+                <ul class="navbar-nav d-none d-lg-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active py-0 px-3 me-3 py-2 fw-medium"
+                           aria-current="page"
+                           href="Course-details.html">探索課程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active py-0 px-3 me-3 py-2  fw-medium"
+                           aria-current="page"
+                           href="#">創意市集</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active py-0 px-3 me-9 py-2 fw-bold text-dark-100"
+                           aria-current="page"
+                           href="learn.html">我的課程</a>
+                    </li>
+                </ul>
+
+                <a class="navbar-toggler p-0 me-2 rounded-0 border-0"
+                   type="button"
+                   data-bs-toggle="offcanvas"
+                   data-bs-target="#search"
+                   aria-controls="search">
+                    <img class="img-2 p-1"
+                         src="../assets/images/icon/Icon/search, Style=Outline.png"
+                         alt="">
+                </a>
+                <img class="img-2 img-2-576 p-lg-2 p-1 me-2"
+                     src="../assets/images/icon/Icon/cart, Style=Outline.png"
+                     alt="">
+                <img class="img-2 img-2-576 p-lg-2 p-1"
+                     src="../assets/images/icon/Icon/user, Style=Outline.png"
+                     alt="">
+            </div>
+            <!-- nav -->
+            <div class="offcanvas offcanvas-start w-100 d-lg-none" tabindex="-1"
+                 id="Navbar"
+                 aria-labelledby="Navbar">
+                <div
+                     class="offcanvas-header py-6 d-flex justify-content-between border-bottom border-neutral-300">
+                    <div>
+                        <button class="navbar-toggler p-0 mx-2 border-0 rounded-0"
+                                type="button">
+                            <span
+                                  class="navbar-toggler-icon align-middle img-3"></span>
+                        </button>
+                        <img class="img-1"
+                             src="../assets/images/icon/index-logo.png"
+                             alt="">
+                    </div>
+
+                    <button type="button"
+                            class="btn-close text-reset img-4 p-1 m-0 me-6"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body px-8">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mb-3">
+                            <a class="nav-link active py-3 px-2 fw-medium"
+                               aria-current="page"
+                               href="Course-details.html">探索課程</a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a class="nav-link active py-3 px-2 fw-medium"
+                               aria-current="page"
+                               href="#">創意市集</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active py-3 px-2 fw-bold text-dark-100"
+                               aria-current="page"
+                               href="learn.html">我的課程</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="offcanvas-footer py-9 px-8">
+                    <button type="button"
+                            class="w-100 btn hover-1 border border-frame-01 text-neutral-950 fw-medium py-2">登出</button>
+                </div>
+            </div>
+            <!-- search -->
+            <div class="offcanvas offcanvas-start collapse  w-100 d-lg-none"
+                 tabindex="-1"
+                 id="search"
+                 aria-labelledby="search">
+
+                <div class="d-flex align-items-center p-3 position-relative">
+                    <form class="d-flex me-3 w-100">
+                        <input class="form-control ps-5 rounded-pill"
+                               type="search"
+                               placeholder="想上什麼課呢？"
+                               aria-label="Search">
+                    </form>
+                    <img class="img-3 position-absolute top-50 translate-middle-y ms-10"
+                         src="../assets/images/icon/Icon/search_24dp_B6B0AA_FILL0_wght400_GRAD0_opsz24.png"
+                         alt="">
+                    <button type="button"
+                            class="btn-close text-reset img-4 p-1 m-0"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body px-3 pt-0">
+                    <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門課程</h3>
+                    <ul class="navbar-nav mb-3">
+                        <li class="nav-item mb-2 py-1">
+                            <p
+                               class="py-1 mb-0 d-inline px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                手作耳環工作坊：從設計到完成</p>
+                        </li>
+                        <li class="nav-item mb-2 py-1">
+                            <p
+                               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                飾品擺拍選修課</p>
+                        </li>
+                        <li class="nav-item mb-2 py-1">
+                            <p
+                               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                手作飾品初級班：設計與製作</p>
+                        </li>
+                        <li class="nav-item mb-2 d-flex">
+                            <p
+                               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                縫紉中級證照課</p>
+                            <p
+                               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                縫紉服飾</p>
+                        </li>
+                        <li class="nav-item py-1">
+                            <p
+                               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                繪畫設計</p>
+                        </li>
+                    </ul>
+                    <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門作品</h3>
+                    <ul class="navbar-nav">
+                        <li class="nav-item mb-2 d-flex">
+                            <p
+                               class="py-1 mb-0 d-inline px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                手作耳環工作坊：從設計到完成</p>
+                        </li>
+                        <li class="nav-item mb-2 d-flex">
+                            <p
+                               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                多媒體藝術品</p>
+                            <p
+                               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                手工織造靠墊</p>
+                        </li>
+                        <li class="nav-item mb-2 d-flex">
+                            <p
+                               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                精緻的刺繡手帕</p>
+                            <p
+                               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                可愛小廢物</p>
+                        </li>
+                        <li class="nav-item py-1">
+                            <p
+                               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                                手工項鍊</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- pc-search -->
+            <div class="dropdown-menu mt-3 ms-11 border-0 rounded-3 p-3"
+                 aria-labelledby="pc-search">
+                <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門課程</h3>
+                <ul class="navbar-nav d-lg-block d-none mb-3">
+                    <li class="nav-item mb-2 py-1">
+                        <p
+                           class="py-1 me-2 mb-0 d-inline px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            手作耳環工作坊：從設計到完成</p>
+                        <p
+                           class="d-inline me-2 py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            飾品擺拍選修課</p>
+                        <p
+                           class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            手作飾品初級班：設計與製作</p>
+                    </li>
+                    <li class="nav-item mb-2 d-flex">
+                        <p
+                           class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            縫紉中級證照課</p>
+                        <p
+                           class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            縫紉服飾</p>
+                        <p
+                           class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            繪畫設計</p>
+                    </li>
+                </ul>
+
+                <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門作品</h3>
+                <ul class="navbar-nav d-lg-block d-none ">
+                    <li class="nav-item mb-2 py-1">
+                        <p
+                           class="py-1 mb-0 d-inline me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            手作耳環工作坊：從設計到完成</p>
+                        <p
+                           class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            多媒體藝術品</p>
+                        <p
+                           class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            手工織造靠墊</p>
+                    </li>
+                    <li class="nav-item mb-2 d-flex">
+                        <p
+                           class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            精緻的刺繡手帕</p>
+                        <p
+                           class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            可愛小廢物</p>
+                        <p
+                           class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                            手工項鍊</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</article>

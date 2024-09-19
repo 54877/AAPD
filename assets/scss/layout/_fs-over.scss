@@ -1,0 +1,42 @@
+.fs-over{
+  overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
+.fs-over-2{ 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+.fs-over-3{ 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+.fs-over-4{ 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+}
+.fs-over-6{ 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  overflow: hidden;
+}
+.over-f{
+  overflow: hidden;
+}
+
+.overflew-y-h-457{
+  height: 457px;
+  overflow-y: auto;
+}

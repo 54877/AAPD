@@ -1,12 +1,15 @@
-*{
-  outline: 1px solid  #f8f8f8;
-}
+
+   *{
+     outline: 1px solid  red;
+   }
 
 .img-1{
   width: 142px;
   height: 32px;
 }
-
+.img-bot{
+  vertical-align: middle;
+}
 .img-2{
   width: 32px;
   height: 32px;
@@ -31,6 +34,44 @@
   width: 36px;
   height: 36px;
 }
+
+.img-8{
+  width: 39px;
+  height: 39px;
+}
+
+.img-9{
+  width: 137px;
+  height: 84px;
+}
+.img-10{
+  width: 257px;
+  height: 158px;
+}
+.img-11{
+  width: 220px;
+  height: 220px;
+}
+.img-12{
+  width: 72px;
+  height: 72px;
+}
+.img-13{
+  width: 20px;
+  height: 20px;
+}
+.img-14{
+  width: 42px;
+  height: 42px;
+}
+.img-15{
+  width: 96px;
+  height: 96px;
+}
+.img-16{
+  width: 248px;
+}
+
 @media (min-width:576px) {
   .img-1-576{
     width: 220px;

@@ -32,7 +32,7 @@ $main-500: #ffc001!default;
 $main-600: #e29400!default;
 $main-700: #bb6902!default;
 $main-800: #984c08!default;
-$main-900: #482200!default;
+$main-900: #7C3E0B!default;
 $main-950: #7c420b!default;
 $neutral:  #666666!default;
 $neutral-50:  #f6f5f5!default;
@@ -424,7 +424,8 @@ $theme-colors: (
   "text-2":     $text-2, 
   "text-3":     $text-3,
   "text-4":     $text-4,
-  "text-5":     $text-5,  
+  "text-5":     $text-5, 
+  "text-6":    #101828,
   "accent":     $accent,
   "main-50":    $main-50,
   "main-100":   $main-100,
@@ -454,6 +455,22 @@ $theme-colors: (
   "frame-01":   $frame-01,
   "barley-400": $barley-400,
   "secondary-500":$secondary-500, 
+  "corn-500":   #987E5A,
+  "neutral-66": #666666,
+  "sec-500":    #FF9D0A,
+  "warning-100":#FF8A00,
+  "pink-600":   #bc464c,
+  "punch-100":  #ffe3df,
+  "dark-100":   #985108, 
+  "blue-x":     #5F7698,
+  "blue-x-2":   #EBEEF3,
+  "sec-600":     #FF8601,
+  "pick-100":    #F9E7E8, 
+  "pick-50":     #F6F7F9, 
+  "sec-100":     #FFF5D3,
+  "sec-300":      #FFD46D,
+  "bg-444":       #444444,
+  "bg-eee":       #eeeeee,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -516,7 +533,7 @@ $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
 $enable-rfs:                  false !default;
 $enable-validation-icons:     true !default;
-$enable-negative-margins:     false !default;
+$enable-negative-margins:     true !default;
 $enable-deprecation-messages: true !default;
 $enable-important-utilities:  true !default;
 
@@ -559,6 +576,19 @@ $spacers: (
  11: 268px,
  12: 64px,
  13: 72px,
+ 14: 38px,
+ 15: 34px,
+ 16: 56px,
+ 17: 58px,
+ 18: 39px,
+ 19: 2px,
+ 20: 26px,
+ 21: 36px,
+ 22: 59px,
+ 23: 9px,
+ 24: 14px,
+ 25: 40px,
+ 26: 1px,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -798,9 +828,11 @@ $font-sizes: (
  11: 13px,
  12: 11px,
  13: 9px,
- 14: 18px,
  sm: $font-size-sm,//14px
  xs: $font-size-xs,//12px
+ 14: 12px,
+ 15: 14px,
+ 16: 18px, //hs-14:18px
 ) !default;
 // scss-docs-end font-sizes
 

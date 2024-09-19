@@ -4,5 +4,33 @@
 }
 
 .hover-shadow:hover{
-    box-shadow: 0 .5rem 1rem rgba($black, .15);
+    box-shadow: 0 .5rem 1rem rgba($black, .15);;
+}
+
+.focus-1:focus{
+    div:last-child{
+        opacity: 0 !important;
+    }
+    img:first-child{
+        opacity: 1 !important;
+    }
+}
+
+
+.hover-main-line:hover{
+    color: $main-800 !important;
+    border-radius: 8px 8px 0 0 !important;
+    background:  #FFF5D3 !important;
+    border-bottom: 2px solid $main-800 !important;
+}
+
+.type-1-focus:focus>.section-1{
+    display: none !important;
+}
+.type-1-focus:focus>.section-2{
+    display: flex !important;
+}
+
+.type-2:focus{
+    transform: rotate(180deg);
 }
