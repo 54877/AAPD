@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Learning-線上課程網站 探索課程</title>
+    <script type="module" crossorigin src="/AAPD/assets/main-71e4e0c9.js"></script>
+    <link rel="stylesheet" href="/AAPD/assets/main-c6bb3b27.css">
+  </head>
+  <body>
+    <div class="position-sticky sticky-top">
+      <article class="container bg-white px-4">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-6">
+    <div class="d-flex align-items-center justify-content-between w-100">
+      <div class="me-lg-5 d-flex align-items-center">
+        <a class="navbar-toggler p-0 mx-2  rounded-0 border-0"
+           type="button"
+           data-bs-toggle="offcanvas"
+           data-bs-target="#Navbar"
+           aria-controls="Navbar">
+           <img class="align-middle img-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABSSURBVHgB7dKtDsAgEAPgbnqZ2AvveGFCCJofAyGBBMEJRD9zp1pTgBau+jzfK+X82BVhgvMyK0hQEqxvuXdXLdAQlXJIDWc64kyPw5mOONPjZIOLKfv8rjs1AAAAAElFTkSuQmCC" alt="">
+        </a>
+        <a href="index.html">
+          <img class="img-1 img-1-576" src="/AAPD/assets/index-logo-638fb9ac.png" alt="">
+        </a>
+      </div>
+
+      <div class="d-lg-flex align-items-center position-relative d-none me-5 flex-grow-1"
+              id="pc-search" data-bs-toggle="dropdown"
+              aria-expanded="false" >
+        <form class="d-flex w-100">
+          <input class="form-control ps-5 py-lg-2 rounded-pill" type="search"
+                 placeholder="想上什麼課呢？"
+                 aria-label="Search">
+        </form>
+        <img class="img-3 position-absolute top-50 translate-middle-y ms-10"
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABTlJREFUeF7tnc1S2zAQx6WE92h4ksIRODQcyExPkCcBngQ4dSYcSA/AseFJ6gchUSvHoh4PsVarj93U65nOQMey7P9vtatdS0YrOUgV0KS9S+dKABAbgQAQAMQKEHcvI0AAECtA3L2MAAFArABx9zICBACxAsTdywgYMoDXpx8TNTq4tBoYY44aLSZKKfuvan6vjPvZqLeR0tXJ+cWKWLdk3RcfAU50Y8xVIzTmYSyU1cjoh32HUQzA69PjkdHmLkL0XaAqrfX9ybeLWwxJ6jbZAWQUvqtdpY2e79uIyArgZbn4pZRyvr2Usa1Op7PjUp3F9pMFgPXzRo+tuyktvtOj0mZ9fHL+3QXyWJ2ytU8OoHE51vKpj8oYdXt2PrunvpG+/pMCeH5aXGmtrOVzOdgH6GQAIiy/Fklt1NuW2ntlXUc9Xa2Pg8lGmYnS6qveurTm/8GMWQfnJAAan/8bLIlSSmt9ozbvD6F+upVH3AT0xzYmJAEQONtZabOehwrfFduC2OjxtVbKJnSQozqdzg4hJ5Y8JxpAiPjGqHnqoPj68/HaGAMdDeymqFEAAvx+Vj/cuEA78/LGB230MadkLQoA0Pqziu/cRQAEVq4IDQA65SxpcdDJQA5XiI0baAAvy4Wd9fQO+ZLiOwGAhsFmFKAAQB7SKHV/Np3NsZYR0w7iGimM47NnwgFYLu580z/KB4S4IkoDaYNAAfC5Hw4P9+w3EhZuCAvA9BaYzPowNtGKcUG2LWQUUI5S93zBACD+/3Q6C75urOCftffFAlsOoX6TFiyUb2hzcD8fuYEnS+Zwr+kBZCg3YEcHIFMnL00EA/AOa0ap/v8KoDcB0wwCcKc80VcmJ58JYUZA7wyISwAGzoQEANa/Q9u9LBesDQYzAsQFQekDzsMA6F3rwyG5+RcD6tV4fSs0ZBYEMBL0Kb6k8f/MAwiroF1S+5A0BrsgwDtY8pmFA+EtGjJIGsMBbJcd9i5B4RAHAEmY4pCzBAOw1uXLhjn4Vp/7+btulTwAWy1RACBuiHKpOMj6GVRC8QC2my18C3DJLMw3QusHZ1IywY0A4PJzino7xPo5uEj0C5nQ1QclXRFEfE7Wj3ZBrWkeZAdMkYWxkFeQ9r45WX80AKjF2S2nOUdCyH1wW6CLigHtjBMS8Jrzs2yW8JUb2vfKIT/pZuvRAALWZNZ9WxcwMuvb2FUTmOXpHPeNRQNovfgArU52owG70Rq5QcMZXpF4FFI9TAIA+PZp133Vu95V8xmCXVuURiP9JWAfQJ8GrCAkA2CfOMQfh1hJhnPZQEgKAOmOMugLuiQLCMkBMIFgN2h7d8tsp8e0G7qzAHAQ7KdoEvltkEm7fMPGEaPH0EkBKYRsAJxipT5b0K07BU6PySBkB9CpHV0DXQPU4nv3G+8DhGIAPtyS3fmuzaXe+mjsxzzAWTV3CEUBdM26zmbV+Mh+hqApTLnPlbkA+vHZMq11/ZkyzHJyzhBIAYD9TIITuUIYDADE9LhIYB4UAI4QBgeAG4RBAuAEYbAAuEAYNAAOEAYPgBqCAGhyDKo8QQC0kjwKCAKgk2WXhiAAPilzlIQgAHbUmUpBEAA9hb4SEASAp9IaCCF4Sb4AAJS6gRBQe+MEAAAAIFlDid+8hALegZzmvsLVXW2BFl8AIIyq446ixBcACAAtd3SX4k+lSAxAQkjVTACkUhJ5HQGAFC5VMwGQSknkdQQAUrhUzQRAKiWR1xEASOFSNRMAqZREXkcAIIVL1UwApFISeR0BgBQuVTMBkEpJ5HX+AJQ0Xo5vswgPAAAAAElFTkSuQmCC"
+             alt="">
+      </div>
+
+      <div class="d-flex align-items-center flex-shrink-0">
+
+        <ul class="navbar-nav d-none d-lg-flex align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active py-0 px-3 me-3 py-2 fw-medium"
+               aria-current="page"
+               href="Course-details.html">探索課程</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active py-0 px-3 me-3 py-2  fw-medium"
+               aria-current="page"
+               href="../pages/market.html">創意市集</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active py-0 px-3 me-9 py-2 fw-medium"
+               aria-current="page"
+               href="learn.html">我的課程</a>
+          </li>
+        </ul>
+
+        <a class="navbar-toggler p-0 me-2 rounded-0 border-0"
+           type="button"
+           data-bs-toggle="offcanvas"
+           data-bs-target="#search"
+           aria-controls="search">
+          <img class="img-2 p-1"
+               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASPSURBVHgB7Zq/b9tGFMffOyaO7KCoAFtO0SXK0FZWXFjdOjJ/QZyxk5OxU9y/wPLWrfZfEGUqOrUeO1XeupVBBYm1+4PeCokGGKAN8sPkyz3KMURKVkTqzoaS+wy29WiavO/d+3HvDGAwGAwGg8FgeD9B0EytXC6G83M2oCgSRDfZJgQGFNJRiOS124cOXCJaBOBBnywUNhFogwDKMP4FPEBqUiget1y3CReMUgFqlUo5tKItIrwPOWAxKMIHFymEMgFur6xsCsGDhyJMCSI1rP9ffuN4XgCaUSLA57crDSLagPMf4klXcAgo6H/GovxSBAJ73D1WhHcc1/VAI1MLcO7gEQIg2gnpVaPT+edo1L1lGSsWCoV1Ycn7R4hxESJMJcBq9bMd+e3h8BWq//fs5a6XYQlXK5X7KGgLU0EzFuHZiy90uUNuAdjnEaPvBm0UL3XrXrvdzpXaKjKIXrHo0dBqIGi2On/cAQ1YkAOO9mDR9/LHwhsbDz6Uy7XT6biQE9/3g27v+PGN5dItfszZBYRyaWnpac8//hUUIyAH/VSXjPY8eFeRr1pXC5ss6KBNZoYtri9AMZkF4NkfzvNUdxUGKsdxAnalpBWLJ/PXNkAxmQUILUoEPZ6pVvtgGxTDcUSmzUbKvA6KySyAHLCdMERUB01IAXYTBgR7ZeXWTVBIJgHi4EcDwUkSgtgHTcQbJYRERrFgTukqyCTAyZVkjubqztVfqTUTz0SqgUKyuUBIa4MfkcgD3RA+ST4TlGaCbAIgJR5OXO7qxopSz8BLFOASIBJaRc4mAKH+GU8hy23lxc8gmQRAxKcpi9KANAoKYS1lUToJmQSwomRElhG6pqM8TYBopwxNUEgmAeJ9eSrwvbo+dxc0cVp32IM2pFBpEzVzEJSz3kh8jvL1/yYhFMnBc9n9u/un0sIreymMuJcwyPJ0tVKxQTHx7ANtpZ7eBMVkFqDVkh1bTMUCQY9Ux4J4y53qDoWRUL7pylcHICZehF9UblV/BEWsViv19JZbpsMdHWV3ro5Qt+t7N5aXeMa/PDPKrs1yabH28fUPfv43CJ5DTnjw6aXPvn8Sia+5YwSKyV0JWlfnt9NdG6nCerhw7be+/2aDXajfZE37vXxJeXKka9M1VVeYm5iWoF9wxPFXfLgRiu23tbTPjtGQHo4/VMHtVtutg2KmPhcYJ0IfcuTgmkDWE4r6KwYFlGXg/DAiWOdiavLTJPUiKDkZitvZgrhFrqRZwa4lEH6SwmwOX1UrQq4gmOa0nf3D0mLpSEpak6rmTokc7eWhylcHh3/tyaDKFjv1K/ZyqYTdnt8EBSgR4A0933d6veNdFgIxdomPJroxLq/pWznweweHf+8Fp1lEirqvWwSt/yDBriHTjI0YrqEQiZ2jPE/0kNDh2v5t5e1q9VOZGbA+fGV6d9D+HyKq0CWCUhfQiS53mBkBGB0izJQAjGoRZk4AZqwIi6X9ru97MCEzKQBzrghIHl+b8M/MrgDMKBHkrvFBll3jzKTBcVSrn9QE4F2MoqbqlpnBYDAYDAaDwWB4N3kNeIn+4BxJN0MAAAAASUVORK5CYII="
+               alt="">
+        </a>
+        <img class="img-2 img-2-576 p-lg-2 p-1 me-2"
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMKSURBVHgB7dpdbtpAEAfw/9qI0jxxBPqSWHxI5AbcoOkJSk+QcILQE9CcAHoDeoJwgyKVIBqpCjcoD1UfKvB0l8qNWTuVdj1LQN3fQ0SMWMx4PDu7MuB5nud5nud53v9IwFA9irphSAMiVB+P0rgUB73pYrHEkTEOQKt+9kBALfsOrWQQzo8tCAEMkUhf+TRRXQsa4sgYB0CQ6MkMWOa/iU4zijo4Isa3gK7ZOLsFoYNnJn/IMo6pf7e4/2jyOeMMyH6zeI8DoOqSCPABhgoHYDZbTGT4JzgABLGCoeIZoBxIFgjQCIYK14BEQ06PYmd6pP5sfu80MK3G6ZBIdLffJmvA3fzrKxjiyQB1AnEmC67atVoVjrRapxfJj9+SBRAW2AJQrlTGMp9S96DsC07Kl3BlIwbJy+3VN6z+CbYATKfTFYj0KuwkC1r1qJvuRgOsr2CJLQBKqXxyk8mCly/egh1d/30lC9+X+bdPsMQagLwsEALWVydPsx7101d/EweFCi1rABQ9C9TJygXUazBoR1FNCLp8HJtGi4KLL/YA5GWBXDqzZMEmjK/Ty/CiV19hD4CSqQUMiyR19XemPdlnLBiW3k4CoLJANkWj9DER0FD9CFhQn9sEdJv8r6a9Hz9/3YABWyeoi+RJlwJ6gAMUU9d23tc5yQClov7sTIk8ijQ9eZwFYB2gCwJvEyQDSgjfgJGTW0Dds2vO9FeZFGMai7A3n8+nYFSCA2q6UpuHCduV2j6w3wLZ6QrWK7V9YA/AOtzdGeYuWtz4i6C2QSrIfJ9un9iLoNwl/s5e/XPY7gLrXEyDrFX6Kba7wDr+GrAR71w0QHlsdoF17AFQCxQZhHP5cgyXtr3B4c4u3rFw1wrLfkAO3v6zgVHs+QHu8dLYA7Bdu4f0mTJTod3zA9zj6diL4CaIB5TbB9g9P8A9no49AHJqunjyTUFtPPN4Ov5G6J89gDDvELnH0+y3EySy6Q24x9uxv05QHltT0IMh7vF07jtBdfKEiTpms43NPZ7neZ7neZ7neZ7yGy5SbqscpmDMAAAAAElFTkSuQmCC" alt="">
+        <img class="img-2 img-2-576 p-lg-2 p-1"
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATjSURBVHgB7ZnNUhtHEMe7Z4Ut4kpFFT7sykk5GISARLnlKG65GZ4gcMwp8ASIJ4CcUjkZn1w5GY45WXmCyAVIK0hV9kgsXKVUviDSTqdHISm0u5JZbS/E5fkdYD+0szv/meme7gawWCwWi8VisVjeShBugVI+nzvPZnMZgLw518pv3/mj49U8rw03zI0JUCwWSwr0Mnf3Eb+2FP0rqiFS1fGdr2qu68ENkLoApUIh33XoMRCU4zzHQuw6vtpKWwgHUmR+bm4dHHrKnS9AbLCkEdanp6bwZeusCimRmgALxdkdHsVNPsxCMsr3pydzL1uvvoMUSGUJmM7zvy8h+o1t0nrXUVgjpb3eNd/JaSC2D1jGS8MYegxh5+CouQHCiAuwUCxU2JhtBq8TgAeaKkfu8ZNhzxcLhVVUtBklBBFsHDWaOyCIqAA9g6fop9ANgupvf16seNd0cwVuJ6Nomw+XAw21M1p9ImkYFQjiO3oz4vLeYaO55MXw8S538LDeXOHhqfbfwVwX2aMIIiaAGX0iXL16zUz7rsaR121mbHylt3SuglAuPnxYAiHEBPAdChs9XvNugulaq9XYYOJW8Loaw0cghJgAPFLlwLn3OoN3Hequu2s8R3/buAxCyNkAgsC0pCoIwZZ6N3BeMvEECCAiQKkYXpM8SnsgBeGL4KWLcXwPBBARoKuc0Gg42heL7EgFDCGTIScPAoi6wTcREQEy3fAIaUflQQhEHZphvo+/gAAyMyCbbYcbJjFfDRpCbq9+clIDAUQEMP6aTXPfBwU3RYkgLPedAoh03iDoBilg9TH30fzM55CQxWJhlQKBkUJdBSHEBOhqFdr08CyoJPHXZnsdFVl2OGUGQogJ0NvyBoIXM3Ld8bvPYET8DG0HR5+Adl3BaFA0HO6FsQ79wF8ZGHXa4zB247phrJk13XssXEQekYOrDyUFEE2JnZ2dtacmJy84e/NZ/x0sEMLyg+mJ9s+tVy+GtdFb82POUz6M8CJUqTea+yBIKimxxfnZbc7erEP0C3mpcJygYZ9I9dwnKp7m6H/MK3KVQrPn8jnUnBI7+f+nxP5lmAhxSavzhtS2woS4H0pmjNIOt+EIWv0g4jOgxBWgLvrbcQshryOtQomYAD3L/c7dCgxKh4uBW4d1twJCiAjwTzZYPxtc8/uPGpGuIiiPPYUHzmXIzHUBthd5Ap1HVGWI9AB9H+05GpckZkNiAcyU99F/Psh6m5Q4/93jtPiTOGlxNk7lQfUBgxHB7+iVpEFRIgGGdd4YL6X91QP3x+8hAcMKJaZOoDu0lESEkQUY1nnjtn79vbPlCdb7F4ozHBNgJXwnmQgjCWDWvK/oeXCfbrK3fofWGsfHcvnAKyzOzSyTwsfBrXYSmzDSPsDU+6M6r8lZSqvzhoPG8Z55RzhNzkHXiBWj2AL0av4RPt58WL1eF0tUDMK8I0oEUzGan5uNvfOMFQz14nNFX/Nh/7rnLe9RwxUNUobRarVOo4Iu3ix9+sG9d785bbfPr9tWrBnQzRhfHY7PufiZ2lZ1EJdl8lAW6q+xsTzEIJYAmUy2dnXqGVfna7UFt0Tmzvha8HvieoNYS+D09PT8/uREk5NyD8Ds6sD5otFouHBLmO95f2LqW+TYmoVweTDWTE4CLBaLxWKxWCwWi8UynL8B5p0geIiyiUEAAAAASUVORK5CYII=" alt="">
+      </div>
+      <!-- nav -->
+      <div class="offcanvas offcanvas-start w-100 d-lg-none" tabindex="-1"
+           id="Navbar"
+           aria-labelledby="Navbar">
+        <div
+             class="offcanvas-header py-6 d-flex justify-content-between border-bottom border-neutral-300">
+          <div>
+            <button class="navbar-toggler p-0 mx-2 border-0 rounded-0"
+                    type="button">
+              <span class="navbar-toggler-icon align-middle img-3"></span>
+            </button>
+            <img class="img-1" src="/AAPD/assets/index-logo-638fb9ac.png"
+                 alt="">
+          </div>
+
+          <button type="button" class="btn-close text-reset img-4 p-1 m-0 me-6"
+                  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body px-8">
+          <ul class="navbar-nav">
+            <li class="nav-item mb-3">
+              <a class="nav-link active py-3 px-2 fw-medium" aria-current="page"
+                 href="Course-details.html">探索課程</a>
+            </li>
+            <li class="nav-item mb-3">
+              <a class="nav-link active py-3 px-2 fw-medium" aria-current="page"
+                 href="../pages/market.html">創意市集</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active py-3 px-2 fw-medium" aria-current="page"
+                 href="learn.html">我的課程</a>
+            </li>
+          </ul>
+        </div>
+        <div class="offcanvas-footer py-9 px-8">
+          <button type="button"
+                  class="w-100 btn hover-1 border border-frame-01 text-neutral-950 fw-medium py-2">登出</button>
+        </div>
+      </div>
+      <!-- search -->
+      <div class="offcanvas offcanvas-start collapse  w-100 d-lg-none"
+           tabindex="-1"
+           id="search"
+           aria-labelledby="search">
+
+        <div class="d-flex align-items-center p-3 position-relative">
+          <form class="d-flex me-3 w-100">
+            <input class="form-control ps-5 rounded-pill" type="search"
+                   placeholder="想上什麼課呢？"
+                   aria-label="Search">
+          </form>
+          <img class="img-3 position-absolute top-50 translate-middle-y ms-10"
+               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAABTlJREFUeF7tnc1S2zAQx6WE92h4ksIRODQcyExPkCcBngQ4dSYcSA/AseFJ6gchUSvHoh4PsVarj93U65nOQMey7P9vtatdS0YrOUgV0KS9S+dKABAbgQAQAMQKEHcvI0AAECtA3L2MAAFArABx9zICBACxAsTdywgYMoDXpx8TNTq4tBoYY44aLSZKKfuvan6vjPvZqLeR0tXJ+cWKWLdk3RcfAU50Y8xVIzTmYSyU1cjoh32HUQzA69PjkdHmLkL0XaAqrfX9ybeLWwxJ6jbZAWQUvqtdpY2e79uIyArgZbn4pZRyvr2Usa1Op7PjUp3F9pMFgPXzRo+tuyktvtOj0mZ9fHL+3QXyWJ2ytU8OoHE51vKpj8oYdXt2PrunvpG+/pMCeH5aXGmtrOVzOdgH6GQAIiy/Fklt1NuW2ntlXUc9Xa2Pg8lGmYnS6qveurTm/8GMWQfnJAAan/8bLIlSSmt9ozbvD6F+upVH3AT0xzYmJAEQONtZabOehwrfFduC2OjxtVbKJnSQozqdzg4hJ5Y8JxpAiPjGqHnqoPj68/HaGAMdDeymqFEAAvx+Vj/cuEA78/LGB230MadkLQoA0Pqziu/cRQAEVq4IDQA65SxpcdDJQA5XiI0baAAvy4Wd9fQO+ZLiOwGAhsFmFKAAQB7SKHV/Np3NsZYR0w7iGimM47NnwgFYLu580z/KB4S4IkoDaYNAAfC5Hw4P9+w3EhZuCAvA9BaYzPowNtGKcUG2LWQUUI5S93zBACD+/3Q6C75urOCftffFAlsOoX6TFiyUb2hzcD8fuYEnS+Zwr+kBZCg3YEcHIFMnL00EA/AOa0ap/v8KoDcB0wwCcKc80VcmJ58JYUZA7wyISwAGzoQEANa/Q9u9LBesDQYzAsQFQekDzsMA6F3rwyG5+RcD6tV4fSs0ZBYEMBL0Kb6k8f/MAwiroF1S+5A0BrsgwDtY8pmFA+EtGjJIGsMBbJcd9i5B4RAHAEmY4pCzBAOw1uXLhjn4Vp/7+btulTwAWy1RACBuiHKpOMj6GVRC8QC2my18C3DJLMw3QusHZ1IywY0A4PJzino7xPo5uEj0C5nQ1QclXRFEfE7Wj3ZBrWkeZAdMkYWxkFeQ9r45WX80AKjF2S2nOUdCyH1wW6CLigHtjBMS8Jrzs2yW8JUb2vfKIT/pZuvRAALWZNZ9WxcwMuvb2FUTmOXpHPeNRQNovfgArU52owG70Rq5QcMZXpF4FFI9TAIA+PZp133Vu95V8xmCXVuURiP9JWAfQJ8GrCAkA2CfOMQfh1hJhnPZQEgKAOmOMugLuiQLCMkBMIFgN2h7d8tsp8e0G7qzAHAQ7KdoEvltkEm7fMPGEaPH0EkBKYRsAJxipT5b0K07BU6PySBkB9CpHV0DXQPU4nv3G+8DhGIAPtyS3fmuzaXe+mjsxzzAWTV3CEUBdM26zmbV+Mh+hqApTLnPlbkA+vHZMq11/ZkyzHJyzhBIAYD9TIITuUIYDADE9LhIYB4UAI4QBgeAG4RBAuAEYbAAuEAYNAAOEAYPgBqCAGhyDKo8QQC0kjwKCAKgk2WXhiAAPilzlIQgAHbUmUpBEAA9hb4SEASAp9IaCCF4Sb4AAJS6gRBQe+MEAAAAIFlDid+8hALegZzmvsLVXW2BFl8AIIyq446ixBcACAAtd3SX4k+lSAxAQkjVTACkUhJ5HQGAFC5VMwGQSknkdQQAUrhUzQRAKiWR1xEASOFSNRMAqZREXkcAIIVL1UwApFISeR0BgBQuVTMBkEpJ5HX+AJQ0Xo5vswgPAAAAAElFTkSuQmCC"
+               alt="">
+          <button type="button" class="btn-close text-reset img-4 p-1 m-0"
+                  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body px-3 pt-0">
+          <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門課程</h3>
+          <ul class="navbar-nav mb-3">
+            <li class="nav-item mb-2 py-1">
+              <p
+                 class="py-1 mb-0 d-inline px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                手作耳環工作坊：從設計到完成</p>
+            </li>
+            <li class="nav-item mb-2 py-1">
+              <p
+                 class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                飾品擺拍選修課</p>
+            </li>
+            <li class="nav-item mb-2 py-1">
+              <p
+                 class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                手作飾品初級班：設計與製作</p>
+            </li>
+            <li class="nav-item mb-2 d-flex">
+              <p
+                 class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                縫紉中級證照課</p>
+              <p
+                 class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                縫紉服飾</p>
+            </li>
+            <li class="nav-item py-1">
+              <p
+                 class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                繪畫設計</p>
+            </li>
+          </ul>
+          <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門作品</h3>
+          <ul class="navbar-nav">
+            <li class="nav-item mb-2 d-flex">
+              <p
+                 class="py-1 mb-0 d-inline px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                手作耳環工作坊：從設計到完成</p>
+            </li>
+            <li class="nav-item mb-2 d-flex">
+              <p
+                 class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                多媒體藝術品</p>
+              <p
+                 class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                手工織造靠墊</p>
+            </li>
+            <li class="nav-item mb-2 d-flex">
+              <p
+                 class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                精緻的刺繡手帕</p>
+              <p
+                 class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                可愛小廢物</p>
+            </li>
+            <li class="nav-item py-1">
+              <p
+                 class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+                手工項鍊</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- pc-search -->
+      <div class="dropdown-menu mt-3 ms-11 border-0 rounded-3 p-3" aria-labelledby="pc-search">
+        <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門課程</h3>
+        <ul class="navbar-nav d-lg-block d-none mb-3">
+          <li class="nav-item mb-2 py-1">
+            <p
+               class="py-1 me-2 mb-0 d-inline px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              手作耳環工作坊：從設計到完成</p>
+            <p
+               class="d-inline me-2 py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              飾品擺拍選修課</p>
+            <p
+               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              手作飾品初級班：設計與製作</p>
+          </li>
+          <li class="nav-item mb-2 d-flex">
+            <p
+               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              縫紉中級證照課</p>
+            <p
+               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              縫紉服飾</p>
+            <p
+               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              繪畫設計</p>
+          </li>
+        </ul>
+
+        <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門作品</h3>
+        <ul class="navbar-nav d-lg-block d-none ">
+          <li class="nav-item mb-2 py-1">
+            <p
+               class="py-1 mb-0 d-inline me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              手作耳環工作坊：從設計到完成</p>
+            <p
+               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              多媒體藝術品</p>
+            <p
+               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              手工織造靠墊</p>
+          </li>
+          <li class="nav-item mb-2 d-flex">
+            <p
+               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              精緻的刺繡手帕</p>
+            <p
+               class="d-inline py-1 mb-0 me-2 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              可愛小廢物</p>
+            <p
+               class="d-inline py-1 mb-0 px-3 border border-btn-03 rounded-pill fw-medium fs-6 text-neutral-950">
+              手工項鍊</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</article>
+
+    </div>
+
+    <main>
+      <div class="container my-9">
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">課程探索</a></li>
+            <li class="breadcrumb-item active" aria-current="page">全部</li>
+          </ol>
+        </nav>
+
+        <h1 class="fw-bold">探索課程</h1>
+        <section class="course-list d-none d-xl-block">
+          <ul class="mt-3 p-0 d-flex justify-content-between flex-md-wrap list-style-none">
+            <li><a href="./result.html" class="course-btn">紡織工藝</a></li>
+            <li><a href="./result.html" class="course-btn">皮革工藝</a></li>
+            <li><a href="./result.html" class="course-btn">金屬工藝</a></li>
+            <li><a href="./result.html" class="course-btn">陶藝</a></li>
+            <li><a href="./result.html" class="course-btn">縫紉服飾</a></li>
+            <li><a href="./result.html" class="course-btn">繪畫設計</a></li>
+            <li><a href="./result.html" class="course-btn">釀造調製</a></li>
+            <li><a href="#" class="course-btn">玻璃工藝</a></li>
+            <li><a href="#" class="course-btn">園藝</a></li>
+            <li><a href="#" class="course-btn">珠寶設計</a></li>
+            <li><a href="#" class="course-btn">紙藝</a></li>
+            <li><a href="#" class="course-btn">木工</a></li>
+          </ul>
+        </section>
+
+        <div class="mt-3 mt-lg-9 mb-4 d-flex">
+          <button type="button" class="course-btn">所有課程 <i class="bi bi-chevron-down"></i></button>
+          <div class="assess ms-auto hstack gap-3">
+            <button type="button" class="course-btn d-none d-xl-block">評價</button>
+            <button type="button" class="course-btn d-none d-xl-block">程度</button>
+            <button type="button" class="course-btn d-flex align-items-center"><span>價格 </span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACYSURBVHgB7VNBCoAgEJyif2Q/8yfZT+ol9RP9SRkZiG21FHsQHBhcVsfBHQQKCv6iimrt2TI0znNKetbTEP3LoZVBS2j3fk9d2kR1BwHUEIa4QTwiDTpkh5fwuLgL2TK0+YWscbxMEXsG0au/GixhnRMTg2NU49l4+skOz+GqYHDWLqzGc6AEaciccFWi6yEAFUxELi/IABsU8y90mKovwgAAAABJRU5ErkJggg==" alt=""></button>
+          </div>
+        </div>
+
+        <!-- 課程清單 -->
+        <div class="row">
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-1-972a0c7f.png "/>
+                <img class="w-100" src="/AAPD/assets/course-sm-1-e7c81597.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm">熱門課程</span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">毛線鉤織必修課</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-1-ef5783f6.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">毛線妖怪</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">毛線編織工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-2-e0cdba24.png "/>
+                <img class="w-100" src="/AAPD/assets/course-sm-2-9c89a761.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm"></span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-7-1a0974c1.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-3-6421374e.png "/>
+                <img class="w-100" src="/AAPD/assets/course-sm-3-1e4dabd6.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm"></span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">編織初探：基礎技巧與應用</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-2-079d9fa0.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-4-0ab950ba.png "/>
+                <img class="w-100" src="/AAPD/assets/course-sm-4-892bdb88.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm">熱門課程</span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-5-15228487.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-9-3a778bd0.png "/>
+                <img class="w-100" src="/AAPD/assets/course-9-3a778bd0.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm">熱門課程</span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-4-98a2f932.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-10-2984ab8c.png "/>
+                <img class="w-100" src="/AAPD/assets/course-10-2984ab8c.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm"></span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-7-1a0974c1.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-11-911dd563.png "/>
+                <img class="w-100" src="/AAPD/assets/course-11-911dd563.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm"></span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-4-98a2f932.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-12-46cc5b94.png "/>
+                <img class="w-100" src="/AAPD/assets/course-12-46cc5b94.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm"></span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-06-1e74fadc.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-13-7cd4c86d.png "/>
+                <img class="w-100" src="/AAPD/assets/course-13-7cd4c86d.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm">熱門課程</span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-2-079d9fa0.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-6-71b47545.png "/>
+                <img class="w-100" src="/AAPD/assets/course-6-71b47545.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm">熱門課程</span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-7-1a0974c1.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-14-ea9db4e7.png "/>
+                <img class="w-100" src="/AAPD/assets/course-14-ea9db4e7.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm"></span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-1-ef5783f6.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-15-1351af02.png "/>
+                <img class="w-100" src="/AAPD/assets/course-15-1351af02.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm"></span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-5-15228487.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-16-4a4948bc.png "/>
+                <img class="w-100" src="/AAPD/assets/course-16-4a4948bc.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm">熱門課程</span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-06-1e74fadc.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>   
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-17-662d91d8.png "/>
+                <img class="w-100" src="/AAPD/assets/course-17-662d91d8.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm"></span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-1-ef5783f6.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-18-1e7be6cd.png "/>
+                <img class="w-100" src="/AAPD/assets/course-18-1e7be6cd.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm"></span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-7-1a0974c1.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-9">
+            <div class="card">
+              <picture>
+                <source media="(min-width: 992px)" srcset="/AAPD/assets/course-19-c5e3f7b8.png "/>
+                <img class="w-100" src="/AAPD/assets/course-19-c5e3f7b8.png" alt="banner"/>
+              </picture>
+              <div class="card-img-overlay">
+                <div class="d-flex align-items-center text-center">
+                  <span class="badge fs-sm"></span>
+                  <div class="icon-heart d-flex align-items-center ms-auto"><i class="bi bi-heart text-white mx-auto"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img src="/AAPD/assets/teacher-4-98a2f932.png" alt="andychen" width="32" height="32" class="rounded-circle object-fit-cover">
+                  </div>
+                  <div class="ms-2">
+                    <div>
+                      <p class="fs-sm fw-semibold mb-0 text-barley-400 mb-0">珠寶匠人</p>
+                      <p class="fs-xs text-neutral-400 fw-medium mb-0">匠人珠寶工坊</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="price text-end">
+                  <div class="fs-xs text-decoration-line-through text-btn-03">NT$4,000</div>
+                  <div class="text-main-800 fw-medium">NT$2,200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-area d-none d-lg-block">
+          <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center pb-8 gap-2">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
+      </div>
+
+    </main>
+
+
+
+
+
+    <main class="bg-neutral-50">
+    <article class="container p-4">
+        <section class="px-lg-0 pt-lg-12 pb-5">
+            <section class="d-lg-flex pb-3 pb-lg-9 mb-lg-4 border-bottom border-btn-03 mb-3">
+                <div class="mb-4 mb-lg-0 me-lg-5 box-3-576">
+                    <img class="img-5 mb-3" src="/AAPD/assets/index-logo-638fb9ac.png" alt="">
+                    <p class="d-lg-none fw-medium fs-6 text-text-5 mb-3">Craftio 是專為設計創作者打造的平台，提供各種創意相關課程。</p>
+                    <p class="d-none d-lg-block fw-medium fs-6 text-text-5 mb-3">Craftio 是專為設計創作者打造的平台，提供各種創意相關課程。您可以在創意市集上架學習後的延伸作品，未來也可以接案、開課...等，用多種方式將創意變現。</p>
+                    <div class="d-flex">
+                        <img class="img-7 me-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPJSURBVHgBxZhdUhNBEMe7JwkIqAQtCvkoKjxCoSSAD76FE6AnAE+AngA8gdwAOYFyAvDJB8UNShWPrJSAiED4DEnYGbt3SVhgszsLAX5VW7uZ9O78t7tnZnsQQmIYXxK1IjYsFSYRMK1Axak5fvp3FgBNBGUiqjmUxZnu1AsTQoC6hovG/CggjgCoNIQCMxGUk919g9Na1kEGP42vaYGRKfJEAq4BdWQKVBNBwioKMgwjHgU5gQhjUEUEwmReinepVCoLuoKWDCNhofpI4UnCDWB7SxWGvPILvcRIVLPXDdFVRZ0TxGGqQWXctBhX95miwiF3+IT7b86Z2xPDqGStkOPulrKHnGENU3AHKCWHnqaez/F12UOIOA53hEBRdoQtiL1T7VBFozFtWwWQWFr4NmLfZ7cgjtnNFRBCgJQSgmC7xqZH0Bh/VL7n8GAfdrb+wclJEerq6sGSFhTy+Uv3WkqM0mkanTlHLvt11N6ZgM2Ndc8HuWnr6IR71OlFisUiRCIROhdgdcWseL+owYRQwhoGH4SIQG3tPejo7KI3b6po9+Bho6cYJhZzwscvxN6rSFG+FEphGnyQ5OISj5tboLml1TM/Ghru+z3GDiGzm92u3JeCZFQBJvzyh8nljuz4M+wJPvb3duGAjnz+WCu/TihsHHZ/ME1JHTy6tjb/2vlReku3MLszSlgObRWIcw9xPwvuqKW13fZSJTiEbrFecGLrCvKFc4g9EJQjQRQotDqwoGyQEc8j1+Xw8EDHLEvfSxgo6JjC9Wdt1fbUVeBwHfuE/AxlkofUHGihIHek89DL6HqYnEOfuagyOsbHuRzU1ddDWNg7B/u7WrZcqQiUkRkdY07utd8robzE89M63aNLnsom+3toMfN9Nkx5w0vEk7YO36HOYvgFdEcX9Z/pTQ6m7NVeKjVN2Z32M+fOeU2775oQK8Fh2lhfDSEGOIEmndMp5KVlr1m7vuEBfVI0lZcOP9gr2Z1t2KP1Smc5cWH2Jge6+CJaalHKeo0oZi9aHh3u2weHiSfHGvISr95ROrhTaVl2XhUKeVrfsmGFOFABWb50ty8uzL+n0f0GbhMKVW/fwNvSz3NZWaSKkksTuD1Mp88zzgni+ojqpFe8gwG3IYYKxYsl9aVxSwYmF283K4oLRBZzuZT2nEhORaVKQ7G6WmDSqVa9940Ct2N+UIkk7Jrt2mWSKQSO9jzr/+xnpL1h5QhTVC5hyB0RWrwRPvRWa8PqIrQhQVt61jAXB05xiXScbenRA7PUToskZCAmPvX09P+CEPwH4WGsaUVtaV8AAAAASUVORK5CYII=" alt="">
+                        <img class="img-7 me-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANgSURBVHgBzVhdThNRFD7ntqVFQGoMEgkhNT5BEDuoD76VFaArAFfgEsAdsANwBcoKqE8+qJn6k/BkGBvBEKIWiYUyzD2eO+1Mp9NpZypT4Esmnd450/v13Ht+vovQI3T9bS4tUouSMI+ABQLK8nC28bgCgAYCGYhURGluTmuPDegBGNXwi/5hGRCXAKgAPQFLCZRr0/cfvoxkHWbwWX9XEJhYZ0/k4BzgiQyBtBpGrCMhXdezSZCriPAcYoRAWKtJ8ULTtApEJbSt6zkL6RUvTx76ANtbdLoQtL8wiIxE2jrvEv0vqRZCapkGkPR+k/FMXzIJF7zLJ7yP1Z7pRCadTsPg4DWIF5RPC7niHXE9VA9rWA96bWJyCjINMqZpwm55B6SUEBstkgv3tEdFde96CBFXgoyVVzIez6RSKRi5PgpxQqBwHWETUt7ptFRSWm1jlhWfdxQIILf98f2SS4jd0zHX1Go1OKz8dr8fV6tQ/XsEccMisWxTqeccuRP2ghCCrwScnZnQL4gBzCVJWItA3StIMplquXdIOSS9cJ6pqBxIZ0Balu3lSH/ElE+SRFgIs5u6c7fl+973MpwcV2FoeATGxm83yXAE7u2W4RaPZXwp4ujPIfw82O8anZIgLwgwBzHCmyK8UJE5PjEZ8jYWeFPHl5WTnBK8y+uHP4UEgAt6s7mKBbXaCRzs/4BT3jej2Rtwc2y85fnQ0LC93J0ICYgZ+3u7NhkFlS6OfZMrL3aDIlSBmKCSqD+aHHLuhL6o9KHC/RLGRyggg6uwjw4y1KYuwhUBO4fbXKQSXBEopSJQJjbhiqDGsklMa5rB3Ipw6aCSxu2sHfaSKJJm6itYjagPm9Cc9mBDKc5OtqpGeS8Hqi/yjptmewFVtctrE9RfMYzZhl5LOiNE1jNEsRVkXTa+Bg3bfVE5pDc6rPyyr65gAencupna7mkbbrtQ8JyzHjXbUjpMVpRKmsDFwajP2UQLIaWPWCc97bafYiXDQtEvqduKKxsYSrz1l5QSiIpMu5QOrPYNUlpf9hT/Zl2tBp8bhR7HfGKJJGzNdu5GzhACl2fm5t90M4p8YFUnRiyXsMcTEVLRuzEb14GVH3wgwUd61qISB3VxiXw1j/T4Bys8zkUSSpASr2dm5r9BD/gHuPaFNh1C0mIAAAAASUVORK5CYII=" alt="">
+                        <img class="img-7 " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMASURBVHgBzZjfThNBFMa/M91tKwQtQri1txDELuqFd+UJ0CcAn4D4BOAb8AbAEyhPYL3ywj9b/wRMTMx6YQyRSLUhUJbu8cy2lJYWurO00F+y2cnO7O63M2dmzzcEQ1z3TTal7PmAKUegPIMzcjlTry4B5BHYI+ICBf7mpPPIgwEUteEX9/0iiBYAzsMIKiYoWJ2892AjUutuDT67b/OKEmvSE1lcAnmRp4hXugk7V5DruhkLwQoRltBDFGG1EqjnjuOUEFXQtutmq8QvZHhy6ANhb/HRXKf4ok5iAuJXlx2iuKJaBOlhShK7/RbT9PqizzTXPHxWc7WOGQayMODGjSGMjo0jmUpDKdVS9/3b1y53cy6leFkKzxoSTwq1aY01GKCFjN4eP7e+u6C6LA7m7joPC7rc+CQiWoYBlm1fKMYERarREaEg3TumcaOHqlfoMNn++G5Bl2sxRLQUXjbAsuy2a6XSHv783kEcqqwW5bSh9DTv1XrjHx4iPpzf2vpwR7GqzmNQ8IPHFjPlTe4ZHh6BSigk0+m2uvTQUMvKVv73FyYEjJzFoKxJ/IxNTHSMH83IzVvhoalUKsaC5GvyMsv6syoH1SpikNHTPoM+EATxBFmGN6AiM8lXPuyk3TZ0x8c+/CM/LB8eHCAOWpD+sUXupZ1fP8OzXqX1r6OZvd1dlMumcdNCSfIlKmFgYE8HdQEDgnSOpLnERQwI2qkoChKbGBAqYpvUpON4oq2Aa4eLjqSzYfoRMEfyTH1F3Ig+hYJmnPvr2nHi+vCm636tkTEyV5/iuhADeVJsCApz2nq3Xa0YrE43udkWm+CLo9TWBFeHV3vnKW1GUbxZ1haj2C0LSEtOfTav3t8v40jSjshixCg6FxlFU1Hx0Qax8sTpYKVVp+biJEU9OX2JKXlmza123jfquh3zSSySCj3bpXvLU4oWp2ZmX1/UKPKGVU0Yi10iQ4fCevauT/dqw+osOr5S4lS0OaiZS5LjdEtPHliS6/KTRBG2ejk1NfsDBvwHfwsjjHlILnsAAAAASUVORK5CYII=" alt="">
+                    </div>
+                </div>
+    
+                <div class="d-flex mb-4 w-100 mb-lg-0 ">
+                    <ul class="list-group rounded-0 w-50 me-8 me-lg-5 w-100">
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 text-main-800 fw-bold fs-5">關於</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">關於我們</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">加入Craftio</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">新聞媒體中心</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">使用者合約</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 mb-2 fw-medium fs-6 text-text-5 fs-6">服務契約</li>
+                        <li class="list-group-item bg-neutral-50 p-0 border-0 fw-medium fs-6 text-text-5 fs-6">隱私權政策</li>
+                    </ul>
+                    <ul class="list-group rounded-0 me-lg-5 w-100">
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 text-main-800 fw-bold fs-5">幫助</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">我要開課</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">課程許願</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">投資夥伴</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">異業合作</li>
+                        <li class="list-group-item bg-neutral-50 p-0 mb-2 border-0 fw-medium fs-6 text-text-5 fs-6">異業合作</li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-block box-2">
+                    <button type="button" class="w-100 px-13 hover-shadow d-inline bg-white fw-medium border border-btn-03 fs-6 py-2 text-neutral-950 rounded-3">
+                        聯絡我們
+                    </button>
+                </div>
+                    <button type="button"
+                            class="w-100 d-lg-none px-13 hover-shadow d-inline bg-white fw-medium border border-btn-03 fs-6 py-2 text-neutral-950 rounded-3">
+                        聯絡我們
+                    </button>
+            </section>
+
+            <p class="mb-0 text-text-5 fw-medium fs-6 text-center">Copyright © 2024 uiux44team</p>
+        </section>
+    </article>
+</main>    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  </body>
+</html>
