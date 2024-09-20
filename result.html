@@ -10,9 +10,36 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <title>Learning-線上課程網站 搜尋結果</title>
-    <script type="module" crossorigin src="/AAPD/assets/main-71e4e0c9.js"></script>
-    <link rel="stylesheet" href="/AAPD/assets/main-c6bb3b27.css">
+    <script type="module" crossorigin src="/AAPD/assets/main-9cb9cc4d.js"></script>
+    <link rel="stylesheet" href="/AAPD/assets/main-420e0003.css">
   </head>
+
+  <style>
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-button-next, .swiper-button-prev {
+      background-color: $neutral-950;
+      width: 32px !important;
+      height: 32px !important;
+    }
+    .swiper-button-next::after, .swiper-button-prev::after {
+      font-family: swiper-icons;
+      content: '';
+      color: black;
+      font-weight: bold;
+      font-size: 14px !important;
+      text-transform: none !important;
+      letter-spacing: 0;
+      font-variant: initial;
+      line-height: 1;
+    }
+
+  </style>
+
   <body>
     <div class="position-sticky sticky-top">
       <article class="container bg-white px-4">
@@ -34,7 +61,7 @@
       <div class="d-lg-flex align-items-center position-relative d-none me-5 flex-grow-1"
               id="pc-search" data-bs-toggle="dropdown"
               aria-expanded="false" >
-        <form class="d-flex w-100">
+        <form class="d-flex w-75">
           <input class="form-control ps-5 py-lg-2 rounded-pill" type="search"
                  placeholder="想上什麼課呢？"
                  aria-label="Search">
@@ -46,7 +73,7 @@
 
       <div class="d-flex align-items-center flex-shrink-0">
 
-        <ul class="navbar-nav d-none d-lg-flex align-items-center">
+        <!-- <ul class="navbar-nav d-none d-lg-flex align-items-center">
           <li class="nav-item">
             <a class="nav-link active py-0 px-3 me-3 py-2 fw-medium"
                aria-current="page"
@@ -55,14 +82,14 @@
           <li class="nav-item">
             <a class="nav-link active py-0 px-3 me-3 py-2  fw-medium"
                aria-current="page"
-               href="market.html">創意市集</a>
+               href="../pages/market.html">創意市集</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active py-0 px-3 me-9 py-2 fw-medium"
                aria-current="page"
                href="learn.html">我的課程</a>
           </li>
-        </ul>
+        </ul> -->
 
         <a class="navbar-toggler p-0 me-2 rounded-0 border-0"
            type="button"
@@ -70,13 +97,13 @@
            data-bs-target="#search"
            aria-controls="search">
           <img class="img-2 p-1"
-               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASPSURBVHgB7Zq/b9tGFMffOyaO7KCoAFtO0SXK0FZWXFjdOjJ/QZyxk5OxU9y/wPLWrfZfEGUqOrUeO1XeupVBBYm1+4PeCokGGKAN8sPkyz3KMURKVkTqzoaS+wy29WiavO/d+3HvDGAwGAwGg8FgeD9B0EytXC6G83M2oCgSRDfZJgQGFNJRiOS124cOXCJaBOBBnywUNhFogwDKMP4FPEBqUiget1y3CReMUgFqlUo5tKItIrwPOWAxKMIHFymEMgFur6xsCsGDhyJMCSI1rP9ffuN4XgCaUSLA57crDSLagPMf4klXcAgo6H/GovxSBAJ73D1WhHcc1/VAI1MLcO7gEQIg2gnpVaPT+edo1L1lGSsWCoV1Ycn7R4hxESJMJcBq9bMd+e3h8BWq//fs5a6XYQlXK5X7KGgLU0EzFuHZiy90uUNuAdjnEaPvBm0UL3XrXrvdzpXaKjKIXrHo0dBqIGi2On/cAQ1YkAOO9mDR9/LHwhsbDz6Uy7XT6biQE9/3g27v+PGN5dItfszZBYRyaWnpac8//hUUIyAH/VSXjPY8eFeRr1pXC5ss6KBNZoYtri9AMZkF4NkfzvNUdxUGKsdxAnalpBWLJ/PXNkAxmQUILUoEPZ6pVvtgGxTDcUSmzUbKvA6KySyAHLCdMERUB01IAXYTBgR7ZeXWTVBIJgHi4EcDwUkSgtgHTcQbJYRERrFgTukqyCTAyZVkjubqztVfqTUTz0SqgUKyuUBIa4MfkcgD3RA+ST4TlGaCbAIgJR5OXO7qxopSz8BLFOASIBJaRc4mAKH+GU8hy23lxc8gmQRAxKcpi9KANAoKYS1lUToJmQSwomRElhG6pqM8TYBopwxNUEgmAeJ9eSrwvbo+dxc0cVp32IM2pFBpEzVzEJSz3kh8jvL1/yYhFMnBc9n9u/un0sIreymMuJcwyPJ0tVKxQTHx7ANtpZ7eBMVkFqDVkh1bTMUCQY9Ux4J4y53qDoWRUL7pylcHICZehF9UblV/BEWsViv19JZbpsMdHWV3ro5Qt+t7N5aXeMa/PDPKrs1yabH28fUPfv43CJ5DTnjw6aXPvn8Sia+5YwSKyV0JWlfnt9NdG6nCerhw7be+/2aDXajfZE37vXxJeXKka9M1VVeYm5iWoF9wxPFXfLgRiu23tbTPjtGQHo4/VMHtVtutg2KmPhcYJ0IfcuTgmkDWE4r6KwYFlGXg/DAiWOdiavLTJPUiKDkZitvZgrhFrqRZwa4lEH6SwmwOX1UrQq4gmOa0nf3D0mLpSEpak6rmTokc7eWhylcHh3/tyaDKFjv1K/ZyqYTdnt8EBSgR4A0933d6veNdFgIxdomPJroxLq/pWznweweHf+8Fp1lEirqvWwSt/yDBriHTjI0YrqEQiZ2jPE/0kNDh2v5t5e1q9VOZGbA+fGV6d9D+HyKq0CWCUhfQiS53mBkBGB0izJQAjGoRZk4AZqwIi6X9ru97MCEzKQBzrghIHl+b8M/MrgDMKBHkrvFBll3jzKTBcVSrn9QE4F2MoqbqlpnBYDAYDAaDwWB4N3kNeIn+4BxJN0MAAAAASUVORK5CYII="
+               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJHSURBVHgB1VS9bhNBEJ7ZS6zINFYcm5KjCJwPI90bcCUdSUlnniAu6ey8QVLSxR2lXVHivMGhxGfjILF0yD6i6yIU3w67t5xF0K1/kCnySbu3p52Zb2Z2ZgD+M9B04dl2KSnuHAgQL5DQ1tIUM4QuS9h5MBpx+FeCZ7VakzHRIoKSQYkTYOcyHLVhXYK667QBqKX/KJBbFwEDsJKYZpYHDA6AwNfX0N+6+XkYcB6vRHDHOEHzcvj5NE/JdZwGMmpJZZuAzgbh+A0sI/Acx54x+praFtQYjMYdWADXdT2GyUfpSAmJDi+G426eHMsOiSVa2nHp0RLjCmEYBkB0onXwyCQ3JyDCRkok2DGsiK1C8VTmIJbLr9UePzISeO6+95smHq1YfgpBEKjHDVJDbNs3EsyYpcuRMIA1IfPPF92nBFsiibV9sGFNEKKdfgljIwEUHvDUG1l2qoNhPej03opvRoI0lwh9dZ4VC0ewIp67TkOVKcnODq+uAiNBCsSseprufvboC9yWfTNvSkFtk5yVHSaTiD+s7sn0oM8sfFktVz5NoojnGpdNlqD4ID23VeUNhuPXJoI7o8LzvNLs9kZ1p6eDojMQ0EuQuBBWvI1CzaJXWc/8YebYNPhyp2ndfSJDx1yFuSKKE105mVw+iZWnPJn+ON8tVzrygbj0eAe1J6oMOZF4z0i8vRh+eafkqpWyuvXl5lcrFZxMoz5sGiriuvuU9FITeUkE62JRJBshyCPZK+32ptfX3zdG8BdJnCDrRVEUw73HLwA+/bPHI/qzAAAAAElFTkSuQmCC"
                alt="">
         </a>
         <img class="img-2 img-2-576 p-lg-2 p-1 me-2"
-             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMKSURBVHgB7dpdbtpAEAfw/9qI0jxxBPqSWHxI5AbcoOkJSk+QcILQE9CcAHoDeoJwgyKVIBqpCjcoD1UfKvB0l8qNWTuVdj1LQN3fQ0SMWMx4PDu7MuB5nud5nud53v9IwFA9irphSAMiVB+P0rgUB73pYrHEkTEOQKt+9kBALfsOrWQQzo8tCAEMkUhf+TRRXQsa4sgYB0CQ6MkMWOa/iU4zijo4Isa3gK7ZOLsFoYNnJn/IMo6pf7e4/2jyOeMMyH6zeI8DoOqSCPABhgoHYDZbTGT4JzgABLGCoeIZoBxIFgjQCIYK14BEQ06PYmd6pP5sfu80MK3G6ZBIdLffJmvA3fzrKxjiyQB1AnEmC67atVoVjrRapxfJj9+SBRAW2AJQrlTGMp9S96DsC07Kl3BlIwbJy+3VN6z+CbYATKfTFYj0KuwkC1r1qJvuRgOsr2CJLQBKqXxyk8mCly/egh1d/30lC9+X+bdPsMQagLwsEALWVydPsx7101d/EweFCi1rABQ9C9TJygXUazBoR1FNCLp8HJtGi4KLL/YA5GWBXDqzZMEmjK/Ty/CiV19hD4CSqQUMiyR19XemPdlnLBiW3k4CoLJANkWj9DER0FD9CFhQn9sEdJv8r6a9Hz9/3YABWyeoi+RJlwJ6gAMUU9d23tc5yQClov7sTIk8ijQ9eZwFYB2gCwJvEyQDSgjfgJGTW0Dds2vO9FeZFGMai7A3n8+nYFSCA2q6UpuHCduV2j6w3wLZ6QrWK7V9YA/AOtzdGeYuWtz4i6C2QSrIfJ9un9iLoNwl/s5e/XPY7gLrXEyDrFX6Kba7wDr+GrAR71w0QHlsdoF17AFQCxQZhHP5cgyXtr3B4c4u3rFw1wrLfkAO3v6zgVHs+QHu8dLYA7Bdu4f0mTJTod3zA9zj6diL4CaIB5TbB9g9P8A9no49AHJqunjyTUFtPPN4Ov5G6J89gDDvELnH0+y3EySy6Q24x9uxv05QHltT0IMh7vF07jtBdfKEiTpms43NPZ7neZ7neZ7neZ7yGy5SbqscpmDMAAAAAElFTkSuQmCC" alt="">
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADKSURBVHgB3ZXBDcIwDEW/YIGOkBEYIRswAl2BG8duwAgdJSMgJghXTmEDSFVbRKqaOq5yaJ/01R6+66TfUYA94aO+9LygAtxgUIhqUAmXNNLK5xrY2g3SXZRm0UnrLBkfkGMwZieu4dCt0N+T3wj9aKnACbyGvD0KGMY0YHkXDf6ZGRRyh3xyilbPeOHHHRQHs4NwprXw6s+oBAe86gQfMg2uUS9smRbjb1q6H6S+CemIBq0vl0E61x+t7zhfh3fUid5vUc+Vvo3yA/o0ekWHCxQoAAAAAElFTkSuQmCC" alt="">
         <img class="img-2 img-2-576 p-lg-2 p-1"
-             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATjSURBVHgB7ZnNUhtHEMe7Z4Ut4kpFFT7sykk5GISARLnlKG65GZ4gcMwp8ASIJ4CcUjkZn1w5GY45WXmCyAVIK0hV9kgsXKVUviDSTqdHISm0u5JZbS/E5fkdYD+0szv/meme7gawWCwWi8VisVjeShBugVI+nzvPZnMZgLw518pv3/mj49U8rw03zI0JUCwWSwr0Mnf3Eb+2FP0rqiFS1fGdr2qu68ENkLoApUIh33XoMRCU4zzHQuw6vtpKWwgHUmR+bm4dHHrKnS9AbLCkEdanp6bwZeusCimRmgALxdkdHsVNPsxCMsr3pydzL1uvvoMUSGUJmM7zvy8h+o1t0nrXUVgjpb3eNd/JaSC2D1jGS8MYegxh5+CouQHCiAuwUCxU2JhtBq8TgAeaKkfu8ZNhzxcLhVVUtBklBBFsHDWaOyCIqAA9g6fop9ANgupvf16seNd0cwVuJ6Nomw+XAw21M1p9ImkYFQjiO3oz4vLeYaO55MXw8S538LDeXOHhqfbfwVwX2aMIIiaAGX0iXL16zUz7rsaR121mbHylt3SuglAuPnxYAiHEBPAdChs9XvNugulaq9XYYOJW8Loaw0cghJgAPFLlwLn3OoN3Hequu2s8R3/buAxCyNkAgsC0pCoIwZZ6N3BeMvEECCAiQKkYXpM8SnsgBeGL4KWLcXwPBBARoKuc0Gg42heL7EgFDCGTIScPAoi6wTcREQEy3fAIaUflQQhEHZphvo+/gAAyMyCbbYcbJjFfDRpCbq9+clIDAUQEMP6aTXPfBwU3RYkgLPedAoh03iDoBilg9TH30fzM55CQxWJhlQKBkUJdBSHEBOhqFdr08CyoJPHXZnsdFVl2OGUGQogJ0NvyBoIXM3Ld8bvPYET8DG0HR5+Adl3BaFA0HO6FsQ79wF8ZGHXa4zB247phrJk13XssXEQekYOrDyUFEE2JnZ2dtacmJy84e/NZ/x0sEMLyg+mJ9s+tVy+GtdFb82POUz6M8CJUqTea+yBIKimxxfnZbc7erEP0C3mpcJygYZ9I9dwnKp7m6H/MK3KVQrPn8jnUnBI7+f+nxP5lmAhxSavzhtS2woS4H0pmjNIOt+EIWv0g4jOgxBWgLvrbcQshryOtQomYAD3L/c7dCgxKh4uBW4d1twJCiAjwTzZYPxtc8/uPGpGuIiiPPYUHzmXIzHUBthd5Ap1HVGWI9AB9H+05GpckZkNiAcyU99F/Psh6m5Q4/93jtPiTOGlxNk7lQfUBgxHB7+iVpEFRIgGGdd4YL6X91QP3x+8hAcMKJaZOoDu0lESEkQUY1nnjtn79vbPlCdb7F4ozHBNgJXwnmQgjCWDWvK/oeXCfbrK3fofWGsfHcvnAKyzOzSyTwsfBrXYSmzDSPsDU+6M6r8lZSqvzhoPG8Z55RzhNzkHXiBWj2AL0av4RPt58WL1eF0tUDMK8I0oEUzGan5uNvfOMFQz14nNFX/Nh/7rnLe9RwxUNUobRarVOo4Iu3ix9+sG9d785bbfPr9tWrBnQzRhfHY7PufiZ2lZ1EJdl8lAW6q+xsTzEIJYAmUy2dnXqGVfna7UFt0Tmzvha8HvieoNYS+D09PT8/uREk5NyD8Ds6sD5otFouHBLmO95f2LqW+TYmoVweTDWTE4CLBaLxWKxWCwWi8UynL8B5p0geIiyiUEAAAAASUVORK5CYII=" alt="">
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJOSURBVHgBzVVdbtNAEJ7ZTSR4qxTSSrxgJCCuSST3BCRvvFFOQHqD9ARJTtDeAHqC5AaEGzhKk5oEqeYNQST8Ag8l3mF3vS6h+CcRfegn2V57Zr6Zncx+AbhLsG3bUtc2MVjkUK/bTSDqSkeXCHZ0EEIIQEMesb7n+0FePM8ld+yeJH8rl5a87q2Z5BpdgdDZrVbx67flKIuD5ZIDdfULwYghtSO6sgSIAyHwiACC2JO6sW86Ulvkyj6vGF1qBxSnk+niOM2v8bx2ItvW0S8CW+e+P4JNdhBx0Y0LhyCLXGEy/XgsSxzFpZrdbpKAAA/jqqgHBUDCM7NwN0qg2gNmWiiiMRSAC7MDwJ39/cePChOsg0qr71AEFu3kmm9+0HOt51waWbkJBYiAm9ZQeHFx+bkwQZJH3VBgGwpByUAM06zpCRD78ROaahQhA3WndkrxIYRIsH4qVXbwM1kZ9oxTgEi9FdFYCB6WGTQJ6Y0su2l20TufzbdLYCocyMdhng8BvZvO5kdZ9lQtUqP6YK+iyF9CAVBq0t5uxXpYqY6/LJfhv/YbcGy7zTmdJMqpdEjeh0iRt8IoUJ9KJW7RirskxQ7Nb6CmiAR0pv78LDOBImdMq6eWCSai9sT/9AFyoGKQaTm3dJyg9nqS6wTrAif76v34edUKgiCEDaD+hEqcBjJQnwnxSxzMFgs96tdjGjF6D6bybcgVfHk4S+X7rUTCeZkNEhtLqv8zz7gVeQLP80IC/toUabmW9beENJzaq4b95AX8JxznqXsbPHcHvwG4PfSoFA0XGQAAAABJRU5ErkJggg==" alt="">
       </div>
       <!-- nav -->
       <div class="offcanvas offcanvas-start w-100 d-lg-none" tabindex="-1"
@@ -257,9 +284,7 @@
 
     </div>
   </nav>
-</article>
-
-    </div>
+</article>    </div>
     <section class="bg-main-50 py-3 py-lg-9">
       <div class="container text-center text-lg-start">
         <h1 class="fs-4 mt-3 fw-bold">有 6 項和<span class="text-secondary-500"> 毛線 </span>相關的結果</h1>
@@ -273,7 +298,7 @@
             <button type="button" class="course-btn d-none d-lg-block">評價</button>
             <button type="button" class="course-btn d-none d-lg-block">程度</button>
             <button type="button" class="course-btn d-flex align-items-center d-none d-lg-block"><span>價格 </span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACYSURBVHgB7VNBCoAgEJyif2Q/8yfZT+ol9RP9SRkZiG21FHsQHBhcVsfBHQQKCv6iimrt2TI0znNKetbTEP3LoZVBS2j3fk9d2kR1BwHUEIa4QTwiDTpkh5fwuLgL2TK0+YWscbxMEXsG0au/GixhnRMTg2NU49l4+skOz+GqYHDWLqzGc6AEaciccFWi6yEAFUxELi/IABsU8y90mKovwgAAAABJRU5ErkJggg==" alt=""></button>
-            <button type="button" class="course-btn d-flex align-items-center d-lg-block"><span>排序 </span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACYSURBVHgB7VNBCoAgEJyif2Q/8yfZT+ol9RP9SRkZiG21FHsQHBhcVsfBHQQKCv6iimrt2TI0znNKetbTEP3LoZVBS2j3fk9d2kR1BwHUEIa4QTwiDTpkh5fwuLgL2TK0+YWscbxMEXsG0au/GixhnRMTg2NU49l4+skOz+GqYHDWLqzGc6AEaciccFWi6yEAFUxELi/IABsU8y90mKovwgAAAABJRU5ErkJggg==" alt=""></button>
+            <button type="button" class="course-btn d-flex align-items-center d-lg-none"><span>排序 </span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACYSURBVHgB7VNBCoAgEJyif2Q/8yfZT+ol9RP9SRkZiG21FHsQHBhcVsfBHQQKCv6iimrt2TI0znNKetbTEP3LoZVBS2j3fk9d2kR1BwHUEIa4QTwiDTpkh5fwuLgL2TK0+YWscbxMEXsG0au/GixhnRMTg2NU49l4+skOz+GqYHDWLqzGc6AEaciccFWi6yEAFUxELi/IABsU8y90mKovwgAAAABJRU5ErkJggg==" alt=""></button>
           </div>
         </div>
 
@@ -294,7 +319,7 @@
             </div>
             <div class="card-body p-3">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">毛線鉤織必修課</h5>
+                <h5 class="card-title w-80 fs-16 fw-bold text-truncate">毛線鉤織必修課</h5>
                 <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
               </div>
               <div class="d-flex justify-content-between">
@@ -331,7 +356,7 @@
             </div>
             <div class="card-body p-3">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
+                <h5 class="card-title w-80 fs-16 fw-bold text-truncate">手作飾品初級班：設計與製作</h5>
                 <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.3</div>
               </div>
               <div class="d-flex justify-content-between">
@@ -368,7 +393,7 @@
             </div>
             <div class="card-body p-3">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">編織初探：基礎技巧與應用</h5>
+                <h5 class="card-title w-80 fs-16 fw-bold text-truncate">編織初探：基礎技巧與應用</h5>
                 <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.3</div>
               </div>
               <div class="d-flex justify-content-between">
@@ -405,7 +430,7 @@
             </div>
             <div class="card-body p-3">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">DIY工坊：打造屬於你的手工藝品</h5>
+                <h5 class="card-title w-80 fs-16 fw-bold text-truncate">DIY工坊：打造屬於你的手工藝品</h5>
                 <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.3</div>
               </div>
               <div class="d-flex justify-content-between">
@@ -442,7 +467,7 @@
             </div>
             <div class="card-body p-3">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">創意縫紉：從廢布到寶藏</h5>
+                <h5 class="card-title w-80 fs-16 fw-bold text-truncate">創意縫紉：從廢布到寶藏</h5>
                 <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.2</div>
               </div>
               <div class="d-flex justify-content-between">
@@ -479,7 +504,7 @@
             </div>
             <div class="card-body p-3">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="card-title w-80 fs-14 fw-bold text-truncate">手作耳環工作坊：從設計到完成</h5>
+                <h5 class="card-title w-80 fs-16 fw-bold text-truncate">手作耳環工作坊：從設計到完成</h5>
                 <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.5</div>
               </div>
               <div class="d-flex justify-content-between">
@@ -524,7 +549,7 @@
                 <div class="col-8">
                   <div class="card-body p-0">
                     <span class="badge fs-xs fw-normal mb-2">熱門課程</span>
-                    <h5 class="card-title text-truncate mb-0 fs-14 fw-bold mb-2">鉤針藝術：從基礎到進階</h5>
+                    <h5 class="card-title text-truncate mb-0 fs-16 fw-bold mb-2">鉤針藝術：從基礎到進階</h5>
                     <div class="d-flex justify-content-between">
                       <div class="d-flex align-items-center">
                         <div class="flex-shrink-0 pic-32">
@@ -555,7 +580,7 @@
                 <div class="col-8">
                   <div class="card-body p-0">
                     <span class="badge fs-xs fw-normal mb-2">熱門課程</span>
-                    <h5 class="card-title text-truncate mb-0 fs-14 fw-bold mb-2">鉤針花樣：設計與製作獨特配飾</h5>
+                    <h5 class="card-title text-truncate mb-0 fs-16 fw-bold mb-2">鉤針花樣：設計與製作獨特配飾</h5>
                     <div class="d-flex justify-content-between">
                       <div class="d-flex align-items-center">
                         <div class="flex-shrink-0 pic-32">
@@ -586,7 +611,7 @@
                 <div class="col-8">
                   <div class="card-body p-0">
                     <span class="badge fs-xs fw-normal mb-2">熱門課程</span>
-                    <h5 class="card-title text-truncate mb-0 fs-14 fw-bold mb-2">縫製你的第一件服裝</h5>
+                    <h5 class="card-title text-truncate mb-0 fs-16 fw-bold mb-2">縫製你的第一件服裝</h5>
                     <div class="d-flex justify-content-between">
                       <div class="d-flex align-items-center">
                         <div class="flex-shrink-0 pic-32">
@@ -617,7 +642,7 @@
                 <div class="col-8">
                   <div class="card-body p-0">
                     <span class="badge fs-xs fw-normal mb-2">熱門課程</span>
-                    <h5 class="card-title text-truncate mb-0 fs-14 fw-bold mb-2">創意縫紉：從廢布到寶藏</h5>
+                    <h5 class="card-title text-truncate mb-0 fs-16 fw-bold mb-2">創意縫紉：從廢布到寶藏</h5>
                     <div class="d-flex justify-content-between">
                       <div class="d-flex align-items-center">
                         <div class="flex-shrink-0 pic-32">
@@ -670,7 +695,7 @@
                   </div>
                   <div class="card-body p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="card-title w-80 fs-14 fw-bold text-truncate mb-0">鉤針藝術：從基礎到進階</h5>
+                      <h5 class="card-title w-80 fs-16 fw-bold text-truncate mb-0">鉤針藝術：從基礎到進階</h5>
                       <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.6</div>
                     </div>
                     <div class="d-flex justify-content-between">
@@ -706,7 +731,7 @@
                   </div>
                   <div class="card-body p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="card-title w-80 fs-14 fw-bold text-truncate mb-0">鉤針花樣：設計與製作獨特配飾</h5>
+                      <h5 class="card-title w-80 fs-16 fw-bold text-truncate mb-0">鉤針花樣：設計與製作獨特配飾</h5>
                       <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.8</div>
                     </div>
                     <div class="d-flex justify-content-between">
@@ -742,7 +767,7 @@
                   </div>
                   <div class="card-body p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="card-title w-80 fs-14 fw-bold text-truncate mb-0">縫製你的第一件服裝</h5>
+                      <h5 class="card-title w-80 fs-16 fw-bold text-truncate mb-0">縫製你的第一件服裝</h5>
                       <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.6</div>
                     </div>
                     <div class="d-flex justify-content-between">
@@ -778,7 +803,7 @@
                   </div>
                   <div class="card-body p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="card-title w-80 fs-14 fw-bold text-truncate mb-0">創意縫紉：從廢布到寶藏</h5>
+                      <h5 class="card-title w-80 fs-16 fw-bold text-truncate mb-0">創意縫紉：從廢布到寶藏</h5>
                       <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.6</div>
                     </div>
                     <div class="d-flex justify-content-between">
@@ -814,7 +839,7 @@
                   </div>
                   <div class="card-body p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="card-title w-80 fs-14 fw-bold text-truncate mb-0">鉤針藝術：從基礎到進階</h5>
+                      <h5 class="card-title w-80 fs-16 fw-bold text-truncate mb-0">鉤針藝術：從基礎到進階</h5>
                       <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.6</div>
                     </div>
                     <div class="d-flex justify-content-between">
@@ -850,7 +875,7 @@
                   </div>
                   <div class="card-body p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="card-title w-80 fs-14 fw-bold text-truncate mb-0">鉤針藝術：從基礎到進階</h5>
+                      <h5 class="card-title w-80 fs-16 fw-bold text-truncate mb-0">鉤針藝術：從基礎到進階</h5>
                       <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.6</div>
                     </div>
                     <div class="d-flex justify-content-between">
@@ -886,7 +911,7 @@
                   </div>
                   <div class="card-body p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="card-title w-80 fs-14 fw-bold text-truncate mb-0">鉤針藝術：從基礎到進階</h5>
+                      <h5 class="card-title w-80 fs-16 fw-bold text-truncate mb-0">鉤針藝術：從基礎到進階</h5>
                       <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.6</div>
                     </div>
                     <div class="d-flex justify-content-between">
@@ -922,7 +947,7 @@
                   </div>
                   <div class="card-body p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="card-title w-80 fs-14 fw-bold text-truncate mb-0">鉤針藝術：從基礎到進階</h5>
+                      <h5 class="card-title w-80 fs-16 fw-bold text-truncate mb-0">鉤針藝術：從基礎到進階</h5>
                       <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.6</div>
                     </div>
                     <div class="d-flex justify-content-between">
@@ -958,7 +983,7 @@
                   </div>
                   <div class="card-body p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="card-title w-80 fs-14 fw-bold text-truncate mb-0">鉤針藝術：從基礎到進階</h5>
+                      <h5 class="card-title w-80 fs-16 fw-bold text-truncate mb-0">鉤針藝術：從基礎到進階</h5>
                       <div class="star text-main-500"><i class="bi bi-star-fill"></i> 4.6</div>
                     </div>
                     <div class="d-flex justify-content-between">
