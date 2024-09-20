@@ -7,13 +7,14 @@
            data-bs-toggle="offcanvas"
            data-bs-target="#Navbar"
            aria-controls="Navbar">
-           <img class="align-middle img-3" src="../assets/images/icon/Icon/mune, Style=Outline.png" alt="">
+           <img class="align-middle img-3  " src="../assets/images/icon/Icon/mune, Style=Outline.png" alt="">
+           <img class="align-middle img-3  " src="../assets/images/icon/Icon/mune, Style=Outline.png" alt="">
         </a>
         <a href="index.html">
-          <img class="img-1 img-1-576" src="../assets/images/icon/index-logo.png" alt="">
+          <img class="img-1 img-1-576 " src="../assets/images/icon/index-logo.png" alt="">
+          <img class="img-1 img-1-576 " src="../assets/images/icon/icon-sm/Logo.png" alt="">
         </a>
       </div>
-
       <div class="d-lg-flex align-items-center position-relative d-none me-5 flex-grow-1"
               id="pc-search" data-bs-toggle="dropdown"
               aria-expanded="false" >
@@ -52,14 +53,22 @@
            data-bs-toggle="offcanvas"
            data-bs-target="#search"
            aria-controls="search">
-          <img class="img-2 p-1"
-               src="../assets/images/icon/Icon/search, Style=Outline.png"
-               alt="">
+          <img class="img-2 p-1" src="../assets/images/icon/icon-sm/search.svg" alt="">
+          <img class="img-2 p-1" src="../assets/images/icon/Icon/search, Style=Outline.png" alt="">
         </a>
-        <img class="img-2 img-2-576 p-lg-2 p-1 me-2"
-             src="../assets/images/icon/Icon/cart, Style=Outline.png" alt="">
-        <img class="img-2 img-2-576 p-lg-2 p-1"
-             src="../assets/images/icon/Icon/user, Style=Outline.png" alt="">
+        <picture>
+          <source srcset="../assets/images/icon/icon-sm/cart.svg"
+                  media="(max-width: 576px)">
+          <img class="img-2 img-2-576 p-lg-2 p-1 me-2"
+               src="../assets/images/icon/Icon/cart, Style=Outline.png" alt="">
+        </picture>
+        <picture>
+          <source srcset="../assets/images/icon/icon-sm/edit.svg"
+                  media="(max-width: 576px)">
+          <img class="img-2 img-2-576 p-lg-2 p-1"
+               src="../assets/images/icon/Icon/user, Style=Outline.png" alt="">
+        </picture>
+        
       </div>
       <!-- nav -->
       <div class="offcanvas offcanvas-start w-100 d-lg-none" tabindex="-1"
