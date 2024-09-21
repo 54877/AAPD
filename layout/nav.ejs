@@ -7,18 +7,26 @@
            data-bs-toggle="offcanvas"
            data-bs-target="#Navbar"
            aria-controls="Navbar">
-           <img class="align-middle img-3" src="../assets/images/icon/Icon/mune, Style=Outline.png" alt="">
+          <img class="align-middle img-3  d-none d-lg-block"
+               src="../assets/images/icon/Icon/mune, Style=Outline.png"
+               alt="">
+          <img class="align-middle img-3  d-lg-none"
+               src="../assets/images/icon/Icon/mune, Style=Outline.png"
+               alt="">
         </a>
         <a href="index.html">
-          <img class="img-1 img-1-576" src="../assets/images/icon/index-logo.png" alt="">
+          <img class="img-1 img-1-576 d-none d-lg-block"
+               src="../assets/images/icon/index-logo.png" alt="">
+          <img class="img-1 img-1-576 d-lg-none"
+               src="../assets/images/icon/icon-sm/Logo.png" alt="">
         </a>
       </div>
-
       <div class="d-lg-flex align-items-center position-relative d-none me-5 flex-grow-1"
-              id="pc-search" data-bs-toggle="dropdown"
-              aria-expanded="false" >
+           id="pc-search" data-bs-toggle="dropdown"
+           aria-expanded="false">
         <form class="d-flex w-100">
-          <input class="form-control ps-5 py-lg-2 rounded-pill" type="search"
+          <input class="form-control ps-5 py-lg-2 rounded-pill"
+                 type="search"
                  placeholder="想上什麼課呢？"
                  aria-label="Search">
         </form>
@@ -53,13 +61,23 @@
            data-bs-target="#search"
            aria-controls="search">
           <img class="img-2 p-1"
-               src="../assets/images/icon/Icon/search, Style=Outline.png"
-               alt="">
+               src="../assets/images/icon/icon-sm/search.svg" alt="">
         </a>
-        <img class="img-2 img-2-576 p-lg-2 p-1 me-2"
-             src="../assets/images/icon/Icon/cart, Style=Outline.png" alt="">
-        <img class="img-2 img-2-576 p-lg-2 p-1"
-             src="../assets/images/icon/Icon/user, Style=Outline.png" alt="">
+        <picture>
+          <source srcset="../assets/images/icon/icon-sm/cart.svg"
+                  media="(max-width: 576px)">
+          <img class="img-2 img-2-576 p-lg-2 p-1 me-2"
+               src="../assets/images/icon/Icon/cart, Style=Outline.png"
+               alt="">
+        </picture>
+        <picture>
+          <source srcset="../assets/images/icon/icon-sm/edit.svg"
+                  media="(max-width: 576px)">
+          <img class="img-2 img-2-576 p-lg-2 p-1"
+               src="../assets/images/icon/Icon/user, Style=Outline.png"
+               alt="">
+        </picture>
+
       </div>
       <!-- nav -->
       <div class="offcanvas offcanvas-start w-100 d-lg-none" tabindex="-1"
@@ -70,14 +88,18 @@
           <div>
             <button class="navbar-toggler p-0 mx-2 border-0 rounded-0"
                     type="button">
-              <span class="navbar-toggler-icon align-middle img-3"></span>
+              <span
+                    class="navbar-toggler-icon align-middle img-3"></span>
             </button>
-            <img class="img-1" src="../assets/images/icon/index-logo.png"
+            <img class="img-1"
+                 src="../assets/images/icon/index-logo.png"
                  alt="">
           </div>
 
-          <button type="button" class="btn-close text-reset img-4 p-1 m-0 me-6"
-                  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <button type="button"
+                  class="btn-close text-reset img-4 p-1 m-0 me-6"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
         </div>
 
         <div class="offcanvas-body px-8">
@@ -91,7 +113,8 @@
                  href="market.html">創意市集</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active py-3 px-2 fw-medium" aria-current="page"
+              <a class="nav-link active py-3 px-2 fw-medium"
+                 aria-current="page"
                  href="learn.html">我的課程</a>
             </li>
           </ul>
@@ -109,15 +132,18 @@
 
         <div class="d-flex align-items-center p-3 position-relative">
           <form class="d-flex me-3 w-100">
-            <input class="form-control ps-5 rounded-pill" type="search"
+            <input class="form-control ps-5 rounded-pill"
+                   type="search"
                    placeholder="想上什麼課呢？"
                    aria-label="Search">
           </form>
           <img class="img-3 position-absolute top-50 translate-middle-y ms-10"
                src="../assets/images/icon/Icon/search_24dp_B6B0AA_FILL0_wght400_GRAD0_opsz24.png"
                alt="">
-          <button type="button" class="btn-close text-reset img-4 p-1 m-0"
-                  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <button type="button"
+                  class="btn-close text-reset img-4 p-1 m-0"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
         </div>
 
         <div class="offcanvas-body px-3 pt-0">
@@ -184,7 +210,8 @@
         </div>
       </div>
       <!-- pc-search -->
-      <div class="dropdown-menu mt-3 ms-11 border-0 rounded-3 p-3" aria-labelledby="pc-search">
+      <div class="dropdown-menu mt-3 ms-11 border-0 rounded-3 p-3"
+           aria-labelledby="pc-search">
         <h3 class="fw-semibold fs-6 text-main-800 mb-3">熱門課程</h3>
         <ul class="navbar-nav d-lg-block d-none mb-3">
           <li class="nav-item mb-2 py-1">
@@ -241,4 +268,3 @@
     </div>
   </nav>
 </article>
-
