@@ -9,8 +9,8 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <title>Craftio 創境｜線上手作學習平台</title>
-  <script type="module" crossorigin src="/AAPD/assets/main-c0071c0b.js"></script>
-  <link rel="stylesheet" href="/AAPD/assets/main-0cc9a2d6.css">
+  <script type="module" crossorigin src="/AAPD/assets/main-8716d986.js"></script>
+  <link rel="stylesheet" href="/AAPD/assets/main-e1fbc653.css">
 </head>
 
 <style>
@@ -84,8 +84,6 @@
   }
   }
 </style>
-
-
 
 <body>
   <main class="position-sticky sticky-top bg-white">
@@ -491,7 +489,7 @@
     <div class=" swiper-pagination pb-4 d-lg-none"></div>
   </main>
   <!-- pc -->
-  <main class="swiper mySwiper-banner d-none d-lg-block">
+  <main class="swiper mySwiper-banner d-none d-lg-block" data-aos="fade-down">
     <div class="swiper-wrapper">
       <!-- 1 -->
       <div class="swiper-slide swiper-h-none bgi-1">
@@ -1255,7 +1253,7 @@
         </div>
       </section>
       <!-- 創作作品 pc -->
-      <div class="swiper mySwiper-index d-none d-lg-block mb-lg-12">
+      <div class="swiper mySwiper-index d-none d-lg-block mb-lg-12" data-aos="zoom-out-down">
         <div class="swiper-wrapper container">
           <!-- 1 -->
           <div class="swiper-slide w-20 me-3">
@@ -1598,7 +1596,7 @@
 
       <!-- 熱門創作 pc -->
 
-      <div class="swiper mySwiper-hot d-none d-lg-block mb-lg-12">
+      <div class="swiper mySwiper-hot d-none d-lg-block mb-lg-12" data-aos="zoom-out-up">
         <div class="swiper-wrapper mx-3">
           <!-- 1 -->
           <div class="swiper-slide w-33  ">
@@ -1753,7 +1751,7 @@
     </article>
   </main>
 
-
+  <div data-aos="fade-up">
   <main class="bg-neutral-50">
     <article class="container p-4">
         <section class="px-lg-0 pt-lg-12 pb-5">
@@ -1802,7 +1800,9 @@
             <p class="mb-0 text-text-5 fw-medium fs-6 text-center">Copyright © 2024 uiux44team</p>
         </section>
     </article>
-</main>    
+</main>  </div>
+
+    
     <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
@@ -1838,7 +1838,6 @@
       });
     </script>
 
-
     <script>
       var swiper = new Swiper(".mySwiper-hot", {
         loop: true,
@@ -1855,6 +1854,13 @@
         },
       });
     </script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
 </body>
 
 </html>
