@@ -1766,7 +1766,9 @@
             </div>
         </div>
     </div>
-    <%- include('./layout/footer'); -%>
+    <div data-aos="fade-up" data-aos-offset="300">
+        <%- include('./layout/footer'); -%>
+    </div>        
     <div class="bg-white border border-neutral-300 border-top p-3 d-lg-none">
         <p class="fw-semibold text-neutral-950 fs-16 mb-2">購買單堂課</p>
         <div class="d-flex mb-2 align-items-center">
@@ -1830,6 +1832,13 @@
                 },
             });
         </script>
+
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script> 
+        
 </body>
 
 </html>

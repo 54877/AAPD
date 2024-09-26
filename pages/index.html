@@ -83,8 +83,6 @@
   }
 </style>
 
-
-
 <body>
   <main class="position-sticky sticky-top bg-white">
     <%- include('./layout/nav'); -%>
@@ -221,7 +219,7 @@
     <div class=" swiper-pagination pb-4 d-lg-none"></div>
   </main>
   <!-- pc -->
-  <main class="swiper mySwiper-banner d-none d-lg-block">
+  <main class="swiper mySwiper-banner d-none d-lg-block" data-aos="fade-down">
     <div class="swiper-wrapper">
       <!-- 1 -->
       <div class="swiper-slide swiper-h-none bgi-1">
@@ -985,7 +983,7 @@
         </div>
       </section>
       <!-- 創作作品 pc -->
-      <div class="swiper mySwiper-index d-none d-lg-block mb-lg-12">
+      <div class="swiper mySwiper-index d-none d-lg-block mb-lg-12" data-aos="zoom-out-down">
         <div class="swiper-wrapper container">
           <!-- 1 -->
           <div class="swiper-slide w-20 me-3">
@@ -1328,7 +1326,7 @@
 
       <!-- 熱門創作 pc -->
 
-      <div class="swiper mySwiper-hot d-none d-lg-block mb-lg-12">
+      <div class="swiper mySwiper-hot d-none d-lg-block mb-lg-12" data-aos="zoom-out-up">
         <div class="swiper-wrapper mx-3">
           <!-- 1 -->
           <div class="swiper-slide w-33  ">
@@ -1483,8 +1481,10 @@
     </article>
   </main>
 
-
+  <div data-aos="fade-up">
   <%- include('./layout/footer'); -%>
+  </div>
+
     <script type="module" src="../main.js"></script>
     <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
@@ -1521,7 +1521,6 @@
       });
     </script>
 
-
     <script>
       var swiper = new Swiper(".mySwiper-hot", {
         loop: true,
@@ -1538,6 +1537,13 @@
         },
       });
     </script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
 </body>
 
 </html>
